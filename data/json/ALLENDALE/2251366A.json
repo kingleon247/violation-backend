@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ALLENDALE\\2251366A.pdf",
+  "neighborhood": "ALLENDALE",
+  "row": {
+    "address": "(Descriptive Address)",
+    "type": "Exterior",
+    "date_notice": "2023-06-01",
+    "notice_number": "2251366A",
+    "district": "SOUTHWEST",
+    "neighborhood_cell": "ALLENDALE"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2251366A"
+  },
+  "has_text": true
+}

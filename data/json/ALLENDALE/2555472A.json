@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ALLENDALE\\2555472A.pdf",
+  "neighborhood": "ALLENDALE",
+  "row": {
+    "address": "226 N CULVER",
+    "type": "Vacant",
+    "date_notice": "2025-08-19",
+    "notice_number": "2555472A",
+    "district": "SOUTHWEST",
+    "neighborhood_cell": "ALLENDALE"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2555472A"
+  },
+  "has_text": true
+}

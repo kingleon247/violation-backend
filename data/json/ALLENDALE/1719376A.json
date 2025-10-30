@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ALLENDALE\\1719376A.pdf",
+  "neighborhood": "ALLENDALE",
+  "row": {
+    "address": "3409 EDMONDSON",
+    "type": "Vacant",
+    "date_notice": "2018-09-06",
+    "notice_number": "1719376A",
+    "district": "SOUTHWEST",
+    "neighborhood_cell": "ALLENDALE"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "1719376A"
+  },
+  "has_text": true
+}

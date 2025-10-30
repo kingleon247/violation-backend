@@ -1,0 +1,46 @@
+python -m venv .venv && source .venv/bin/activate   # on Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python -m playwright install chromium
+
+# All neighborhoods since Jan 1, 2025
+python baltimore_violations_scraper.py --all --since 2025-01-01 --out ./data
+
+# Specific neighborhoods
+python baltimore_violations_scraper.py --neighborhoods ABELL "BALTIMORE HIGHLANDS" --out ./data
+
+# Debug with visible browser
+python baltimore_violations_scraper.py --neighborhoods ABELL --headed
+
+
+
+***********
+
+
+py -3.11 -m venv .venv
+source .venv/Scripts/activate
+python -m pip install -U pip
+pip install -r requirements.txt
+python -m playwright install chromium
+
+# Headed for debugging
+python baltimore_violations_scraper.py --neighborhoods ABELL --headed --slow-mo 200 --out ./data
+
+# All neighborhoods, filter since date
+python baltimore_violations_scraper.py --all --since 2025-01-01 --out ./data
+
+
+*************
+# from your project root
+source .venv/Scripts/activate
+# (optional) re-install deps if you edited requirements
+pip install -r requirements.txt
+python -m playwright install chromium
+
+# watch one neighborhood (visible) + extract + OCR:
+python baltimore_violations_scraper.py --neighborhoods ABELL --headed --slow-mo 200 --out ./data --extract --ocr
+
+# full pull since date (headless) + extract + OCR:
+python baltimore_violations_scraper.py --all --since 2025-01-01 --out ./data --extract --ocr
+
+# if you ever interrupt a run and the CSV is empty, rebuild it instantly:
+python rebuild_csv_from_json.py data

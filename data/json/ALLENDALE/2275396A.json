@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ALLENDALE\\2275396A.pdf",
+  "neighborhood": "ALLENDALE",
+  "row": {
+    "address": "3803 EDMONDSON",
+    "type": "Vacant",
+    "date_notice": "2023-07-24",
+    "notice_number": "2275396A",
+    "district": "SOUTHWEST",
+    "neighborhood_cell": "ALLENDALE"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2275396A"
+  },
+  "has_text": true
+}

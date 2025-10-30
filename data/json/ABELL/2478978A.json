@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ABELL\\2478978A.pdf",
+  "neighborhood": "ABELL",
+  "row": {
+    "address": "3242 BARCLAY",
+    "type": "Exterior",
+    "date_notice": "2025-02-20",
+    "notice_number": "2478978A",
+    "district": "NORTHERN",
+    "neighborhood_cell": "ABELL"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2478978A"
+  },
+  "has_text": true
+}
