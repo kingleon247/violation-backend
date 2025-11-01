@@ -1,0 +1,27 @@
+# --- Frontend (Next.js + pnpm)
+frontend-app/.next/
+frontend-app/node_modules/
+frontend-app/.env*
+frontend-app/package-lock.json
+frontend-app/.vercel/
+frontend-app/.turbo/
+
+# --- Backend (Python + Playwright)
+backend-app/.venv/
+backend-app/__pycache__/
+backend-app/*.log
+backend-app/.pytest_cache/
+backend-app/.ruff_cache/
+# scraped/output data (large + noisy)
+backend-app/data/
+
+# --- Common junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# --- Editor / tooling
+.vscode/
+.idea/
+.qodo/

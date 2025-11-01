@@ -1,42 +1,26 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# --- Frontend (Next.js) ---
+frontend-app/.next/
+frontend-app/node_modules/
+frontend-app/.env*
 frontend-app/package-lock.json
+frontend-app/pnpm-debug.log*
+frontend-app/.vercel/
+
+# --- Backend (Python) ---
+backend-app/.venv/
+backend-app/__pycache__/
+backend-app/*.log
+
+# Ignore scraper outputs; keep an empty marker file if you want the dirs in git
+backend-app/data/
+!backend-app/data/.gitkeep
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.orig
+
+# --- Project tooling ---
+.qodo/
