@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -21,10 +23,13 @@
     "paths": {
       "@/*": ["./*"],
       "#/*": ["./public/*"],
-      "@db/*": ["./src/db/*"],
-      "@app/*": ["./src/app/*"],
-      "@styles/*": ["./src/styles/*"],
-      "@components/*": ["./src/components/*"]
+      "@db/*": ["./db/*"],
+      "@app/*": ["./app/*"],
+      "@styles/*": ["./styles/*"],
+      "@components/*": ["./components/*"],
+      "@data": ["./data"],
+      "@data/*": ["./data/*"],
+      "@lib/*": ["./lib/*"]
     }
   },
   "include": [
