@@ -1,86 +1,72 @@
 // src/app/api/scrape/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import { spawn } from "node:child_process";
-import { getBackendPaths } from "@/lib/python";
+import { db } from "@db/config/configureClient";
+import { scrapeRequests } from "@/db/migrations/schema";
 
-type Body = {
-  neighborhoods?: string[];
-  all?: boolean;
-  since?: string | null;
-  extract?: boolean;
-  ocr?: boolean;
-  maxPdfsPerNeighborhood?: number | null;
-  headed?: boolean;
-  slowMo?: number | null;
-};
+// OPTIONAL: if you want to see job status quickly from the UI without making a new route
+import { eq, desc } from "drizzle-orm";
 
+/**
+ * POST /api/scrape
+ * Enqueue a scrape job. The worker (scrapeRunner) will pick it up.
+ *
+ * Body (all optional; empty payload means "all neighborhoods incremental"):
+ * {
+ *   "neighborhoods": ["ABELL","ALLENDALE"],
+ *   "extract": true,
+ *   "ocr": false
+ * }
+ */
 export async function POST(req: NextRequest) {
-  try {
-    const body = (await req.json()) as Body;
-    const {
-      neighborhoods = [],
-      all = false,
-      since = null,
-      extract = false,
-      ocr = false,
-      maxPdfsPerNeighborhood = null,
-      headed = false,
-      slowMo = null,
-    } = body;
+  const body = await req.json().catch(() => ({} as any));
 
-    const { backend, venvPy, script, dataDir } = getBackendPaths();
+  const neighborhoods: string[] = Array.isArray(body?.neighborhoods)
+    ? body.neighborhoods
+    : [];
 
-    const args: string[] = [script];
-    if (all) {
-      args.push("--all");
-    } else if (neighborhoods.length) {
-      args.push("--neighborhoods", ...neighborhoods);
-    } else {
+  const extract: boolean = !!body?.extract;
+  const ocr: boolean = !!body?.ocr;
+
+  const payload = { neighborhoods, extract, ocr };
+
+  const [row] = await db
+    .insert(scrapeRequests)
+    .values({ payload }) // status defaults to 'queued'
+    .returning({ id: scrapeRequests.id });
+
+  return NextResponse.json({ ok: true, id: row.id });
+}
+
+/**
+ * GET /api/scrape?id=<jobId>
+ * - If id is provided: return the single job’s status.
+ * - If id is missing: return the most recent 20 jobs (for a simple “Jobs” panel).
+ */
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const id = searchParams.get("id");
+
+  if (id) {
+    const rows = await db
+      .select()
+      .from(scrapeRequests)
+      .where(eq(scrapeRequests.id, id))
+      .limit(1);
+
+    if (rows.length === 0) {
       return NextResponse.json(
-        { ok: false, error: "Provide --all or neighborhoods[]" },
-        { status: 400 }
+        { ok: false, error: "job not found", id },
+        { status: 404 }
       );
     }
-
-    args.push("--out", dataDir);
-    if (since) args.push("--since", since);
-    if (extract) args.push("--extract");
-    if (ocr) args.push("--ocr");
-    if (maxPdfsPerNeighborhood != null) {
-      args.push("--max-pdfs-per-neighborhood", String(maxPdfsPerNeighborhood));
-    }
-    if (headed) args.push("--headed");
-    if (slowMo != null) {
-      args.push("--slow-mo", String(slowMo));
-    }
-
-    const child = spawn(venvPy, args, {
-      cwd: backend,
-      env: { ...process.env }, // inherits PATH, TESSDATA_PREFIX, etc.
-      stdio: ["ignore", "pipe", "pipe"],
-    });
-
-    let stdout = "";
-    let stderr = "";
-    child.stdout.on("data", (d) => (stdout += d.toString()));
-    child.stderr.on("data", (d) => (stderr += d.toString()));
-
-    const exitCode: number = await new Promise((resolve) => {
-      child.on("close", resolve);
-    });
-
-    const ok = exitCode === 0;
-    return NextResponse.json({
-      ok,
-      exitCode,
-      stdout,
-      stderr,
-      cmd: [venvPy, ...args],
-    });
-  } catch (err: any) {
-    return NextResponse.json(
-      { ok: false, error: String(err?.message || err) },
-      { status: 500 }
-    );
+    return NextResponse.json({ ok: true, job: rows[0] });
   }
+
+  const jobs = await db
+    .select()
+    .from(scrapeRequests)
+    .orderBy(desc(scrapeRequests.createdAt))
+    .limit(20);
+
+  return NextResponse.json({ ok: true, jobs });
 }
