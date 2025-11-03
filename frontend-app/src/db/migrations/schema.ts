@@ -14,6 +14,8 @@ import {
   //   time,
   integer,
   primaryKey,
+  jsonb, // ⬅️ added for scrape_requests.payload
+  pgEnum, // ⬅️ enum for scrape status
 } from "drizzle-orm/pg-core";
 
 /* ==========
@@ -44,9 +46,7 @@ export const users = pgTable(
     firstName: text("first_name"),
     lastName: text("last_name"),
   },
-  (t) => ({
-    usersEmailUnique: unique("users_email_unique").on(t.email),
-  })
+  (t) => [unique("users_email_unique").on(t.email)]
 );
 
 export const accounts = pgTable(
@@ -64,14 +64,14 @@ export const accounts = pgTable(
     id_token: text("id_token"),
     session_state: text("session_state"),
   },
-  (t) => ({
-    fkUser: foreignKey({
+  (t) => [
+    foreignKey({
       columns: [t.userId],
       foreignColumns: [users.id],
     }).onDelete("cascade"),
-    pk: primaryKey({ columns: [t.provider, t.providerAccountId] }),
-    byUser: index("accounts_user_id_idx").on(t.userId),
-  })
+    primaryKey({ columns: [t.provider, t.providerAccountId] }),
+    index("accounts_user_id_idx").on(t.userId),
+  ]
 );
 
 export const sessions = pgTable(
@@ -81,14 +81,14 @@ export const sessions = pgTable(
     userId: uuid("user_id").notNull(), // was text -> uuid
     expires: timestamp("expires", { mode: "date" }).notNull(),
   },
-  (t) => ({
-    fkUser: foreignKey({
+  (t) => [
+    foreignKey({
       columns: [t.userId],
       foreignColumns: [users.id],
     }).onDelete("cascade"),
-    byUser: index("sessions_user_id_idx").on(t.userId),
-    byExpires: index("sessions_expires_idx").on(t.expires),
-  })
+    index("sessions_user_id_idx").on(t.userId),
+    index("sessions_expires_idx").on(t.expires),
+  ]
 );
 
 export const verificationTokens = pgTable(
@@ -98,14 +98,82 @@ export const verificationTokens = pgTable(
     token: text("token").notNull(),
     expires: timestamp("expires", { mode: "date" }).notNull(),
   },
-  (t) => ({
-    pk: primaryKey({
+  (t) => [
+    primaryKey({
       columns: [t.identifier, t.token],
       name: "verification_tokens_pk",
     }),
-  })
+  ]
 );
 
 /* ==========
   END AUTH TABLES
    ========== */
+
+/* ==========
+   APP TABLES
+   ========== */
+
+/**
+ * Violations — single source of truth for scraped records.
+ * - Natural key = notice_number (unique), we also index by neighborhood & date.
+ * - pdfUrl/textUrl are stable URLs (local nginx alias or Spaces/S3).
+ */
+export const violations = pgTable(
+  "violations",
+  {
+    // natural key from city — promote to PRIMARY KEY for clean upserts
+    noticeNumber: text("notice_number").primaryKey(),
+
+    address: text("address").notNull(),
+    type: text("type").notNull(),
+    district: text("district"),
+    neighborhood: text("neighborhood").notNull(),
+    dateNotice: timestamp("date_notice", { mode: "date" }).notNull(),
+
+    pdfUrl: text("pdf_url"),
+    textUrl: text("text_url"),
+
+    createdAt: timestamp("created_at", { withTimezone: true, mode: "date" })
+      .defaultNow()
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true, mode: "date" })
+      .defaultNow()
+      .notNull(),
+  },
+  (t) => [
+    // With PK on noticeNumber we don't also need a unique constraint.
+    index("violations_neighborhood_idx").on(t.neighborhood),
+    index("violations_date_neighborhood_idx").on(t.dateNotice, t.neighborhood),
+  ]
+);
+
+/**
+ * Scrape requests — queue table for on-demand scrapes.
+ * A worker/process polls for `queued` rows and runs the scraper out of band.
+ */
+export const scrapeStatus = pgEnum("scrape_status", [
+  // queued | running | success | error
+  "queued",
+  "running",
+  "success",
+  "error",
+]);
+
+export const scrapeRequests = pgTable("scrape_requests", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  createdAt: timestamp("created_at", { withTimezone: true, mode: "date" })
+    .defaultNow()
+    .notNull(),
+  startedAt: timestamp("started_at", { withTimezone: true, mode: "date" }),
+  finishedAt: timestamp("finished_at", { withTimezone: true, mode: "date" }),
+
+  // queued | running | success | error
+  status: scrapeStatus("status").default("queued").notNull(),
+
+  // Arbitrary JSON payload: { neighborhoods?: string[], extract?: boolean, ocr?: boolean }
+  payload: jsonb("payload").notNull(),
+
+  ok: boolean("ok"),
+  error: text("error"),
+});
