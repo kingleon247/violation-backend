@@ -1,3 +1,5 @@
+// src/app/(app)/events/page.tsx
+
 import { Badge } from "@components/catalyst/badge";
 import { Button } from "@components/catalyst/button";
 import { Divider } from "@components/catalyst/divider";

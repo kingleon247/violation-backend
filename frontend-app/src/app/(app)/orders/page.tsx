@@ -1,3 +1,5 @@
+// src/app/(app)/orders/page.tsx
+
 import { Avatar } from "@components/catalyst/avatar";
 import { Button } from "@components/catalyst/button";
 import { Heading } from "@components/catalyst/heading";
