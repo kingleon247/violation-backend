@@ -99,7 +99,7 @@ next-scraper/
 - Node 20+, **pnpm** (`corepack enable`)
 - Python **3.11** (`py -0p` should show a 3.11 install on Windows)
 - PostgreSQL 14+
-- Tesseract OCR *(optional, only if enabling OCR)*
+- Tesseract OCR _(optional, only if enabling OCR)_
 - Playwright Chromium **installed in the backend venv**
 
 **Sanity checks:**
@@ -120,7 +120,7 @@ Create `frontend-app/.env.local`:
 
 ```ini
 # --- Auth/DB ---
-DATABASE_URL=postgres://user:pass@host:5432/db
+DB_URL=postgres://user:pass@host:5432/db
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=replace_me
 
@@ -207,10 +207,10 @@ python baltimore_violations_scraper.py --neighborhoods ABELL --out ./data --extr
 
 ```json
 {
-  "neighborhoods": ["ABELL"],       // omit or [] => all
-  "since": "2025-01-01",            // optional; worker auto-computes if missing
-  "extract": true,                  // pdf -> text
-  "ocr": false,                     // enable only for image-based PDFs (slow)
+  "neighborhoods": ["ABELL"], // omit or [] => all
+  "since": "2025-01-01", // optional; worker auto-computes if missing
+  "extract": true, // pdf -> text
+  "ocr": false, // enable only for image-based PDFs (slow)
   "maxPdfsPerNeighborhood": null
 }
 ```
@@ -352,4 +352,3 @@ curl -s http://localhost:3000/api/neighborhoods
 curl -s -X POST http://localhost:3000/api/scrape -H 'content-type: application/json' -d '{"neighborhoods":["ABELL"],"extract":true,"ocr":false}'
 curl -s "http://localhost:3000/api/violations?neighborhood=ABELL&from=2025-01-01"
 ```
-

@@ -9,54 +9,54 @@ A production-focused monorepo that **scrapes Baltimore City Violation Notices**,
 
 ## Table of Contents
 
-1. [High-level Overview](#high-level-overview)  
-2. [What You Get](#what-you-get)  
-3. [System Diagram](#system-diagram)  
-4. [Repo Layout](#repo-layout)  
-5. [Requirements](#requirements)  
-6. [Environment Variables](#environment-variables)  
-7. [Install & Setup](#install--setup)  
-   - [Frontend](#frontend)  
-   - [Backend](#backend)  
-   - [Database (Drizzle)](#database-drizzle)  
-8. [Run (Development)](#run-development)  
-   - [One-off Debug Run (Headful)](#one-off-debug-run-headful)  
-9. [API](#api)  
-   - [POST /api/scrape (enqueue)](#post-apiscrape-enqueue)  
-   - [GET /api/violations (query)](#get-apiviolations-query)  
-10. [Incremental Strategy](#incremental-strategy)  
-11. [Production (DigitalOcean)](#production-digitalocean)  
-    - [Base Stack](#base-stack)  
-    - [Clone + Install](#clone--install)  
-    - [Env on Server](#env-on-server)  
-    - [PM2](#pm2)  
-    - [Nginx](#nginx)  
-    - [Cron (Daily Incremental)](#cron-daily-incremental)  
-12. [Ops: Logging, Locks, Retries, Politeness](#ops-logging-locks-retries-politeness)  
-13. [Security & Roles](#security--roles)  
-14. [Troubleshooting](#troubleshooting)  
-15. [Roadmap (Nice-to-haves)](#roadmap-nice-to-haves)  
+1. [High-level Overview](#high-level-overview)
+2. [What You Get](#what-you-get)
+3. [System Diagram](#system-diagram)
+4. [Repo Layout](#repo-layout)
+5. [Requirements](#requirements)
+6. [Environment Variables](#environment-variables)
+7. [Install & Setup](#install--setup)
+   - [Frontend](#frontend)
+   - [Backend](#backend)
+   - [Database (Drizzle)](#database-drizzle)
+8. [Run (Development)](#run-development)
+   - [One-off Debug Run (Headful)](#one-off-debug-run-headful)
+9. [API](#api)
+   - [POST /api/scrape (enqueue)](#post-apiscrape-enqueue)
+   - [GET /api/violations (query)](#get-apiviolations-query)
+10. [Incremental Strategy](#incremental-strategy)
+11. [Production (DigitalOcean)](#production-digitalocean)
+    - [Base Stack](#base-stack)
+    - [Clone + Install](#clone--install)
+    - [Env on Server](#env-on-server)
+    - [PM2](#pm2)
+    - [Nginx](#nginx)
+    - [Cron (Daily Incremental)](#cron-daily-incremental)
+12. [Ops: Logging, Locks, Retries, Politeness](#ops-logging-locks-retries-politeness)
+13. [Security & Roles](#security--roles)
+14. [Troubleshooting](#troubleshooting)
+15. [Roadmap (Nice-to-haves)](#roadmap-nice-to-haves)
 16. [Smoke Test](#smoke-test)
 
 ---
 
 ## High-level Overview
 
-- **DB as source of truth**: `violations` table keyed by `notice_number` (unique).  
-- **Incremental scraping**: compute per-neighborhood `since` from DB; avoid full rescrapes.  
-- **Separation of concerns**: Python (Playwright) handles brittle browser/PDF flows; Node serves API/UI and orchestrates jobs.  
+- **DB as source of truth**: `violations` table keyed by `notice_number` (unique).
+- **Incremental scraping**: compute per-neighborhood `since` from DB; avoid full rescrapes.
+- **Separation of concerns**: Python (Playwright) handles brittle browser/PDF flows; Node serves API/UI and orchestrates jobs.
 - **Deployable now** on a single **DigitalOcean droplet** using **PM2 + Nginx**. Schedule daily or run on-demand.
 
 ---
 
 ## What You Get
 
-- A Next.js (App Router) app using **Tailwind Catalyst v2** components.  
+- A Next.js (App Router) app using **Tailwind Catalyst v2** components.
 - An API layer:
-  - `POST /api/scrape` to queue scrape requests (enqueue-only; fast).  
-  - `GET /api/violations` to query data from Postgres.  
-- A background **worker** (`scrapeRunner.ts`) that claims jobs, computes `since`, and spawns Python with args.  
-- A Python **Playwright** scraper that downloads PDFs, extracts text (with optional OCR), and emits JSON/TXT/PDF artifacts.  
+  - `POST /api/scrape` to queue scrape requests (enqueue-only; fast).
+  - `GET /api/violations` to query data from Postgres.
+- A background **worker** (`scrapeRunner.ts`) that claims jobs, computes `since`, and spawns Python with args.
+- A Python **Playwright** scraper that downloads PDFs, extracts text (with optional OCR), and emits JSON/TXT/PDF artifacts.
 - **Idempotent upserts** keyed by `notice_number` to prevent duplication across runs.
 
 ---
@@ -107,22 +107,23 @@ next-scraper/
    └─ data/                            # pdf/, text/, json/ artifacts (if kept local)
 ```
 
-**Why this split?**  
-- Web/API stays responsive.  
-- Worker does heavy scraping, retries, locks.  
-- Python handles flaky PDF flows.  
+**Why this split?**
+
+- Web/API stays responsive.
+- Worker does heavy scraping, retries, locks.
+- Python handles flaky PDF flows.
 - DB dedupes & drives incremental logic.
 
 ---
 
 ## Requirements
 
-- **OS:** Windows (Git Bash) **or** Linux  
-- **Node:** 20+ with **pnpm** (`corepack enable`)  
-- **Python:** **3.11** (Windows: `py -0p` should list 3.11)  
-- **PostgreSQL:** 14+  
-- **Playwright Chromium** installed **inside backend venv**  
-- **Tesseract OCR** *(optional, only when `ocr` is enabled)*
+- **OS:** Windows (Git Bash) **or** Linux
+- **Node:** 20+ with **pnpm** (`corepack enable`)
+- **Python:** **3.11** (Windows: `py -0p` should list 3.11)
+- **PostgreSQL:** 14+
+- **Playwright Chromium** installed **inside backend venv**
+- **Tesseract OCR** _(optional, only when `ocr` is enabled)_
 
 **Sanity checks**
 
@@ -141,10 +142,16 @@ tesseract -v    # optional
 Create `frontend-app/.env.local`:
 
 ```ini
-# --- Auth/DB ---
-DATABASE_URL=postgres://user:pass@host:5432/db
+# --- Database & Auth ---
+# Prefer DATABASE_URL; the app also accepts DB_URL for convenience.
+DATABASE_URL=postgres://USER:PASS@HOST:5432/DBNAME
+# DB_URL=postgres://USER:PASS@HOST:5432/DBNAME
+
 NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=replace_me
+NEXTAUTH_SECRET=REPLACE_WITH_openssl_rand_-base64_32
+
+# Optional allowlist: auto-admit specific emails on first sign-in
+ALLOWED_ADMIN_EMAILS=you@domain.com,another@domain.com
 
 # --- Scraper wiring (Windows) ---
 SCRAPER_PY=py
@@ -164,6 +171,8 @@ TESSDATA_PREFIX=C:/Program Files/Tesseract-OCR/tessdata
 > **Important:** Use **absolute** paths for `SCRAPER_PATH` and `SCRAPER_OUT` (avoid relative).  
 > Add Tesseract to PATH if enabling OCR.
 
+> **PowerShell tip:** Setting env vars inline like `FOO=bar` is a Unix-ism. In PS use `$env:FOO = "bar"` or, better, put them in `.env.local` as above.
+
 ---
 
 ## Install & Setup
@@ -180,7 +189,11 @@ pnpm install
 ```bash
 cd ../backend-app
 py -3.11 -m venv .venv
-source .venv/Scripts/activate        # Linux: source .venv/bin/activate
+# Windows
+.\.venv\Scriptsctivate
+# Linux/Mac
+# source .venv/bin/activate
+
 python -m pip install -U pip
 pip install -r requirements.txt
 python -m playwright install chromium
@@ -207,17 +220,25 @@ pnpm dev
 
 ### Terminal B — Worker
 
+Use **tsx** (fast, zero-config).
+
 ```bash
-cd next-scraper/frontend-app
-pnpm ts-node src/worker/scrapeRunner.ts
+# one-off
+pnpm dlx tsx src/worker/scrapeRunner.ts
+
+# or add scripts
+pnpm add -D tsx typescript @types/node dotenv
+# package.json
+# { "scripts": { "worker:dev": "tsx src/worker/scrapeRunner.ts" } }
+pnpm run worker:dev
 ```
 
 ### One-off Debug Run (Headful)
 
 ```bash
 cd next-scraper/backend-app
-source .venv/Scripts/activate        # Linux: source .venv/bin/activate
-python baltimore_violations_scraper.py --neighborhoods ABELL --out ./data --extract --headed --slow-mo 200
+# venv should still be active
+python baltimore_violations_scraper.py --neighborhoods ABELL --since 2025-01-01 --out ./data --extract --headed --slow-mo 150
 ```
 
 ---
@@ -228,10 +249,10 @@ python baltimore_violations_scraper.py --neighborhoods ABELL --out ./data --extr
 
 ```json
 {
-  "neighborhoods": ["ABELL"],       // omit or [] => all
-  "since": "2025-01-01",            // optional; worker auto-computes if missing
-  "extract": true,                  // pdf -> text
-  "ocr": false,                     // enable only for image-based PDFs (slow)
+  "neighborhoods": ["ABELL"],  // omit or [] => all
+  "since": "2025-01-01",       // optional; worker auto-computes if missing
+  "extract": true,             // pdf -> text
+  "ocr": false,                // enable only for image-based PDFs (slow)
   "maxPdfsPerNeighborhood": null
 }
 ```
@@ -241,17 +262,17 @@ python baltimore_violations_scraper.py --neighborhoods ABELL --out ./data --extr
 ### GET /api/violations (query)
 
 Example:  
-`GET /api/violations?neighborhood=ABELL&from=2025-01-01&to=2025-12-31`  
+`GET /api/violations?neighborhood=ABELL&from=2025-01-01&to=2025-12-31&page=1&limit=25`  
 Returns rows suitable for Catalyst tables/cards.
 
 ---
 
 ## Incremental Strategy
 
-- **Natural key:** `violations.notice_number` (unique).  
-- **Since window:** compute `since = (MAX(date_notice) + 1 day)` per neighborhood.  
-- **Idempotent upserts:** repeating the same `notice_number` is harmless (upsert overwrites).  
-- Leverages the site’s “Record Count” / “Date Notice” to avoid blanket rescraping.
+- **Natural key:** `violations.notice_number` (unique).
+- **Since window:** compute `since = (MAX(date_notice) + 1 day)` per neighborhood.
+- **Idempotent upserts:** repeating the same `notice_number` is harmless (upsert overwrites).
+- Uses the site’s “Record Count” / “Date Notice” to avoid blanket rescraping.
 
 ---
 
@@ -274,9 +295,7 @@ sudo mkdir -p /srv/next-scraper && sudo chown -R $USER:$USER /srv/next-scraper
 cd /srv/next-scraper
 git clone <your-repo-url> .
 
-cd backend-app && python3.11 -m venv .venv && source .venv/bin/activate && \
-  python -m pip install -U pip && pip install -r requirements.txt && \
-  python -m playwright install chromium
+cd backend-app && python3.11 -m venv .venv && source .venv/bin/activate &&   python -m pip install -U pip && pip install -r requirements.txt &&   python -m playwright install chromium
 
 cd ../frontend-app && pnpm install && pnpm build
 ```
@@ -295,8 +314,8 @@ pm2 save && pm2 startup
 
 ### Nginx
 
-- Reverse proxy to `127.0.0.1:3000`  
-- Enable **HTTPS** with Certbot  
+- Reverse proxy to `127.0.0.1:3000`
+- Enable **HTTPS** with Certbot
 - Set `client_max_body_size 64m` if you upload large files
 
 ### Cron (Daily Incremental)
@@ -309,38 +328,36 @@ pm2 save && pm2 startup
 
 ## Ops: Logging, Locks, Retries, Politeness
 
-- **Logs:** `pm2 logs` (web + worker). Consider separate file logs.
-- **Advisory locks:** one global lock for the runner + per-neighborhood locks to prevent clobbering.
+- **Logs:** `pm2 logs` (web + worker). Per-job Python logs in `backend-app/data/logs/scrape-<jobId>.log`.
+- **Advisory locks:** one global lock for the runner + per-neighborhood locks.
 - **Retries:** worker retries up to 3× with backoff.
-- **Politeness:** built-in waits; adjust if the city portal throttles or changes behavior.
+- **Politeness:** built-in waits; adjust if the city portal throttles.
 
 ---
 
 ## Security & Roles
 
-- Protect `POST /api/scrape` behind **NextAuth** role (e.g., `admin`).  
-- Avoid exposing raw artifact paths; if pushing to S3/Spaces, prefer signed URLs.  
+- Protect `POST /api/scrape` behind **NextAuth** role (e.g., `admin`).
+- Avoid exposing raw artifact paths; if pushing to S3/Spaces, prefer signed URLs.
 - Keep `.env.local` **out** of version control.
 
 ---
 
 ## Troubleshooting
 
-**Playwright not found / ModuleNotFoundError**  
+**Playwright not found / ModuleNotFoundError**
+
 ```bash
 cd backend-app && source .venv/Scripts/activate     # Linux: source .venv/bin/activate
 pip install -r requirements.txt
 python -m playwright install chromium
 ```
 
-**Worker “idle”**  
-It’s waiting for jobs. Enqueue via `POST /api/scrape`.
+**Worker shows “no queued jobs”**  
+It’s waiting. Enqueue via `POST /api/scrape` or the UI page.
 
-**CSV empty after interrupt**  
-Use JSON snapshots to restore (helper script in backend, if added).
-
-**OCR slow**  
-Enable `ocr` only for image-based PDFs; default to `extract` only.
+**Job shows `error`**  
+Open `backend-app/data/logs/scrape-<jobId>.log` for the full Traceback. Common issues: bad `SCRAPER_PATH`, Playwright not installed in venv, site markup changed.
 
 **Windows path bugs**  
 Use absolute forward-slash paths in `.env.local` (e.g., `C:/path/...`).
@@ -348,14 +365,17 @@ Use absolute forward-slash paths in `.env.local` (e.g., `C:/path/...`).
 **Drizzle execute results**  
 `db.execute()` returns an **array**, **not** `{ rows }`.
 
+**Postgres warning `25P01: SET LOCAL ...`**  
+In `src/app/api/violations/route.ts`, execute `SET LOCAL` **inside a transaction** and run both queries using `tx`. (A drop-in example is in recent commits.)
+
 ---
 
 ## Roadmap (Nice-to-haves)
 
 - Push artifacts to S3/Spaces; store only URLs in DB.
 - Completion webhooks (Slack/Email).
-- Admin UI: job queue, failure drill-down, re-try button.
-- Persist a canonical neighborhood catalog table (don’t rely on live scrape for discovery).
+- Admin UI: job queue, failure drill-down, retry button.
+- Canonical `neighborhoods` table (don’t rely on live scrape for discovery).
 
 ---
 
@@ -366,16 +386,10 @@ Use absolute forward-slash paths in `.env.local` (e.g., `C:/path/...`).
 cd frontend-app && pnpm dev
 
 # Worker
-cd frontend-app && pnpm ts-node src/worker/scrapeRunner.ts
+cd frontend-app && pnpm dlx tsx src/worker/scrapeRunner.ts
 
 # Calls
 curl -s http://localhost:3000/api/neighborhoods
 curl -s -X POST http://localhost:3000/api/scrape -H 'content-type: application/json' -d '{"neighborhoods":["ABELL"],"extract":true,"ocr":false}'
 curl -s "http://localhost:3000/api/violations?neighborhood=ABELL&from=2025-01-01"
 ```
-
----
-
-## License
-
-Private, all rights reserved (update if you intend to open-source).

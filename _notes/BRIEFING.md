@@ -12,10 +12,11 @@ Worker (PM2) claims a job, computes since per neighborhood from DB, spawns Pytho
 Python downloads PDFs, writes JSON/TXT; app upserts into violations (unique by notice_number), so re-runs are incremental.
 
 Dev quickstart (Windows + Git Bash)
+
 ```bash
 # frontend
 cd next-scraper/frontend-app && pnpm install
-cp .env.example .env.local  # set DATABASE_URL, NEXTAUTH_SECRET
+cp .env.example .env.local  # set DB_URL, NEXTAUTH_SECRET
 
 # backend
 cd ../backend-app
@@ -33,6 +34,7 @@ pnpm ts-node src/worker/scrapeRunner.ts
 ```
 
 Smoke test
+
 ```bash
 curl -s http://localhost:3000/api/neighborhoods
 curl -s -X POST http://localhost:3000/api/scrape -H 'content-type: application/json' \
@@ -41,6 +43,7 @@ curl -s "http://localhost:3000/api/violations?neighborhood=ABELL&from=2025-01-01
 ```
 
 Env (worker)
+
 ```ini
 SCRAPER_PY=py
 SCRAPER_PY_VERSION=-3.11
@@ -50,13 +53,16 @@ TESSDATA_PREFIX=C:/Program Files/Tesseract-OCR/tessdata
 ```
 
 Production
+
 ```bash
 cd frontend-app && pnpm build
 pm2 start ecosystem.config.js && pm2 save
 ```
+
 Schedule daily incremental by POSTing /api/scrape with {}.
 
 Pitfalls
+
 - Use py -3.11 to avoid Python path issues.
 - Install Playwright browser in the backend venv.
 - db.execute() returns an array (not {rows}).

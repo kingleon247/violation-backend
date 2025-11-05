@@ -28,29 +28,30 @@ next-scraper/
    └─ data/ # pdf/, text/, json/ artifacts
 ```
 
-**Why this split?**  
-- Web/API stays responsive.  
-- Worker does the heavy scrape.  
-- Python handles flaky PDF flows.  
+**Why this split?**
+
+- Web/API stays responsive.
+- Worker does the heavy scrape.
+- Python handles flaky PDF flows.
 - DB dedupes & drives incremental logic.
 
 ---
 
 ## 1) “Done” definition
 
-- `/api/violations` returns DB rows.  
-- `/api/scrape` enqueues jobs; worker consumes and writes artifacts to `backend-app/data/*`.  
-- DB table `violations` up-to-date (incremental by `date_notice`).  
+- `/api/violations` returns DB rows.
+- `/api/scrape` enqueues jobs; worker consumes and writes artifacts to `backend-app/data/*`.
+- DB table `violations` up-to-date (incremental by `date_notice`).
 - UI lists/filter/sorts violations.
 
 ---
 
 ## 2) Requirements (Windows)
 
-- Node 20+, **pnpm**, Git Bash  
-- Python **3.11** via `py -3.11`  
-- PostgreSQL (`DATABASE_URL`)  
-- Playwright browser: `python -m playwright install chromium`  
+- Node 20+, **pnpm**, Git Bash
+- Python **3.11** via `py -3.11`
+- PostgreSQL (`DB_URL`)
+- Playwright browser: `python -m playwright install chromium`
 - Optional OCR: Tesseract on PATH
 
 ---
@@ -61,7 +62,7 @@ next-scraper/
 # frontend
 cd next-scraper/frontend-app
 pnpm install
-cp .env.example .env.local  # set DATABASE_URL, NEXTAUTH_SECRET, etc.
+cp .env.example .env.local  # set DB_URL, NEXTAUTH_SECRET, etc.
 
 # backend
 cd ../backend-app
@@ -101,7 +102,7 @@ curl -s "http://localhost:3000/api/violations?neighborhood=ABELL&from=2025-01-01
 `frontend-app/.env.local`
 
 ```ini
-DATABASE_URL=postgres://user:pass@host:5432/db
+DB_URL=postgres://user:pass@host:5432/db
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=replace_me
 GOOGLE_CLIENT_ID=...
@@ -122,8 +123,8 @@ TESSDATA_PREFIX=C:/Program Files/Tesseract-OCR/tessdata
 
 ## 5) Data model
 
-- **violations** (unique `notice_number`, indexes on `neighborhood`, `(date_notice, neighborhood)`, URLs to PDFs/Text)  
-- **scrape_requests** (queue: `queued→running→success|error`, JSON payload)  
+- **violations** (unique `notice_number`, indexes on `neighborhood`, `(date_notice, neighborhood)`, URLs to PDFs/Text)
+- **scrape_requests** (queue: `queued→running→success|error`, JSON payload)
 - **Auth tables** (users, accounts, sessions, verification_tokens)
 
 **Incremental rule:** per neighborhood, since = (MAX(date_notice) + 1 day).
@@ -132,11 +133,11 @@ TESSDATA_PREFIX=C:/Program Files/Tesseract-OCR/tessdata
 
 ## 6) Flow
 
-1. `POST /api/scrape` → `scrape_requests` row.  
-2. Worker takes global lock, sets job running, iterates neighborhoods:  
-   - compute since, spawn Python with `--neighborhoods N --since ISO --out data [--extract] [--ocr]`  
-   - retries (x3, backoff)  
-3. Python downloads PDFs, writes JSON/TXT, and the app ensures DB upserts/deduping.  
+1. `POST /api/scrape` → `scrape_requests` row.
+2. Worker takes global lock, sets job running, iterates neighborhoods:
+   - compute since, spawn Python with `--neighborhoods N --since ISO --out data [--extract] [--ocr]`
+   - retries (x3, backoff)
+3. Python downloads PDFs, writes JSON/TXT, and the app ensures DB upserts/deduping.
 4. Artifacts: `backend-app/data/pdf|text|json/<NEIGHBORHOOD>/`.
 
 ---
@@ -150,25 +151,25 @@ pm2 start ecosystem.config.js
 pm2 save
 ```
 
-- Nginx → reverse proxy :3000.  
+- Nginx → reverse proxy :3000.
 - Schedule daily incremental: `POST /api/scrape` with `{}`.
 
 ---
 
 ## 8) Troubleshooting
 
-- Use `py -3.11` always (don’t rely on venv activation from Node).  
-- `python -m playwright install chromium` inside backend venv.  
-- **Drizzle:** `db.execute()` returns an array, not `{rows}`.  
-- **Tesseract path:** add to User PATH; new shell → `tesseract -v`.  
+- Use `py -3.11` always (don’t rely on venv activation from Node).
+- `python -m playwright install chromium` inside backend venv.
+- **Drizzle:** `db.execute()` returns an array, not `{rows}`.
+- **Tesseract path:** add to User PATH; new shell → `tesseract -v`.
 - **Worker “idle”** = waiting; enqueue a job.
 
 ---
 
 ## 9) Checklist
 
-- [ ] Frontend boots, no TS errors.  
-- [ ] Worker runs, acquires lock.  
-- [ ] Enqueue scrape → artifacts written.  
-- [ ] `/api/violations` returns expected rows.  
+- [ ] Frontend boots, no TS errors.
+- [ ] Worker runs, acquires lock.
+- [ ] Enqueue scrape → artifacts written.
+- [ ] `/api/violations` returns expected rows.
 - [ ] Re-run does not duplicate (incremental works).
