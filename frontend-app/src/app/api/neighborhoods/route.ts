@@ -1,11 +1,13 @@
-// src/app/api/neighborhoods/route.ts
 import { NextResponse } from "next/server";
 import { db } from "@db/config/configureClient";
 import { sql } from "drizzle-orm";
-import { violations } from "@/db/migrations/schema"; // adjust import path if needed
+import { violations } from "@/db/migrations/schema";
 
-// Minimal but broad Baltimore neighborhood catalog (extend as desired).
-// Tip: keep UPPERCASE to match the city's dropdown exactly.
+/**
+ * Baltimore neighborhood catalog (from your screenshots of the city site).
+ * Kept in UPPERCASE to match the picker. Duplicates & near-dups are kept if
+ * they appear distinctly in the city UI (e.g., dashes vs slashes).
+ */
 const STATIC_NEIGHBORHOODS = [
   "ABELL",
   "ALLENDALE",
@@ -45,6 +47,7 @@ const STATIC_NEIGHBORHOODS = [
   "CAMERON VILLAGE",
   "CANTON",
   "CANTON INDUSTRIAL AREA",
+  "CARROLL - CAMDEN INDUSTRIAL AR",
   "CARROLL PARK",
   "CARROLL-SOUTH HILTON",
   "CARROLLTON RIDGE",
@@ -64,7 +67,7 @@ const STATIC_NEIGHBORHOODS = [
   "CLIFTON PARK",
   "COLDSPRING",
   "COLDSTREAM HOMESTEAD MONTEBELLO",
-  "CONCERNED CITIZENS OF FOREST PARK",
+  "CONCERNED CITIZENS OF FOREST P",
   "COPPIN HEIGHTS/ASH-CO-EAST",
   "CROSS COUNTRY",
   "CROSS KEYS",
@@ -154,6 +157,7 @@ const STATIC_NEIGHBORHOODS = [
   "JONESTOWN",
   "JOSEPH LEE",
   "KENILWORTH PARK",
+  "KERNWOOD",
   "KERNEWOOD",
   "KESWICK",
   "KRESSON",
@@ -184,123 +188,198 @@ const STATIC_NEIGHBORHOODS = [
   "MCELDERRY PARK",
   "MEDFIELD",
   "MEDFORD",
-  "MEDICAL INSTITUTIONS",
+  "MEDFORD/BROENING MANOR",
+  "MED-CHARLES",
+  "MID-CHARLES",
   "MID-GOVANS",
   "MID-TOWN BELVEDERE",
+  "MIDDLE BRANCH/REEDBIRD PARKS",
   "MIDDLE EAST",
   "MIDTOWN-EDMONDSON",
-  "MILFORD MILL",
+  "MILL HILL",
   "MILLHILL",
+  "MILTON-MONTFORD",
   "MONDAWMIN",
+  "MONDAWMIN NEIGHBORHOOD",
   "MONTEBELLO",
+  "MORAVIA-WALTHER",
+  "MORGAN PARK",
+  "MORGAN STATE UNIVERSITY",
   "MORRELL PARK",
   "MOSHER",
+  "MOUNT ALTO",
+  "MOUNT CLARE",
   "MOUNT HOLLY",
   "MOUNT VERNON",
   "MOUNT VERNON PLACE",
-  "MT WASHINGTON",
+  "MOUNT WASHINGTON",
+  "MOUNT WINANS",
+  "MT PLEASANT PARK",
+  "NEW NORTH ROLAND PK/POPLAR HIL",
   "NEW NORTHWOOD",
+  "NEW SOUTHWEST/MOUNT CLARE",
+  "NORTH HARFORD ROAD",
   "NORTH ROLAND PARK/POPLAR HILL",
   "NORTHWOOD",
-  "NOTTINGHAM",
-  "OAKLEE",
+  "NORTHWEST COMMUNITY ACTION",
+  "NORTHWEST NEIGHBORHOOD ACTION",
   "O'DONNELL HEIGHTS",
+  "OAKENSHAWE",
+  "OAKLEE",
+  "OAKLEY",
   "OLD GOUCHER",
   "OLDTOWN",
+  "OLIVER",
+  "ORCHARD-BIDDLE",
+  "ORIGINAL NORTHWOOD",
   "ORANGEVILLE",
+  "ORANGEVILLE INDUSTRIAL AREA",
   "OTTERBEIN",
+  "OVERCREST",
   "OVERLEA",
-  "PANWAY/BRADDISH AVE.",
+  "PANWAY/BRADDISH AVENUE",
+  "PARK CIRCLE",
+  "PARK HEIGHTS",
+  "PARKLANE",
+  "PARKSIDE",
+  "PARKVIEW",
+  "PARKVIEW/WOODBROOK",
   "PATTERSON PARK",
   "PATTERSON PARK NEIGHBORHOOD",
+  "PATTERSON PLACE",
+  "PAYSON",
+  "PEN LUCY",
+  "PEN-FALLSWAY",
   "PENN NORTH",
+  "PENN STATION COMMUNITY",
   "PENN-FALLSWAY",
-  "PENROSE/FAYETTE STREET OUTR",
-  "PIGTOWN/WASHINGTON VILLAGE",
+  "PENROSE",
+  "PENROSE/FAYETTE STREET OUTREAC",
+  "PERKINS HOMES",
+  "PERRING LOCH",
   "PIMLICO GOOD NEIGHBORS",
   "PLEASANT VIEW GARDENS",
-  "PULASKI INDUSTRIAL AREA",
+  "POPPLETON",
+  "PORT COVINGTON",
+  "PRATT-MONROE",
+  "PUBLIC SERVICE COMMISSION",
   "PULASKI HIGHWAY",
+  "PULASKI INDUSTRIAL AREA",
   "PURNELL",
   "RADNOR-WINSTON",
-  "Ramblewood",
   "REISTERSTOWN STATION",
-  "REMSEN",
+  "REMINGTON",
   "RESERVOIR HILL",
   "RIDGELY'S DELIGHT",
+  "RICHNOR SPRINGS",
   "RIVERSIDE",
-  "RIVERWOOD",
+  "ROGNEL HEIGHTS",
   "ROLAND PARK",
+  "ROSEBANK",
   "ROSEMONT",
+  "ROSEMONT AVENUE",
   "ROSEMONT EAST",
+  "ROSEMONT HOMEOWNERS",
+  "ROSEMONT HOMEOWNERS/TENANTS",
   "SABINA-MATTHEW STAWHI",
+  "SAINT AGNES",
+  "SAINT HELENA",
+  "SAINT JOSEPH'S",
+  "SAINT JOSEPHS",
+  "SAINT PAUL",
+  "SANDTOWN WINCHESTER",
   "SANDTOWN-WINCHESTER",
+  "SBIC",
+  "SETON BUSINESS PARK",
   "SETON HILL",
   "SHARP-LEADENHALL",
   "SHIPLEY HILL",
+  "SOUTH BALTIMORE",
   "SOUTH CLIFTON PARK",
+  "SOUTHEASTERN/DUNDALK",
   "SOUTH FULTON",
   "SOUTH GOVANS",
-  "SOUTH BALTIMORE",
-  "SOUTHBROOK",
   "SOUTHWEST INDUSTRIAL AREA",
   "SPRING GARDEN INDUSTRIAL AREA",
+  "STADIUM AREA",
   "STONEWOOD-PENTWOOD-WINSTON",
+  "TAYLOR HEIGHTS",
   "TEN HILLS",
+  "THE ORCHARDS",
   "TOWANDA-GRANTLEY",
   "TREMONT",
-  "TRIANA",
   "TUSCANY-CANTERBURY",
+  "UNASSIGNED CAMDEN STATION",
+  "UNASSIGNED CANTON",
+  "UNASSIGNED CURTIS BAY",
+  "UNASSIGNED EAST BALTIMORE",
+  "UNASSIGNED SCOTTSVILLE",
   "UNION SQUARE",
+  "UNIVERSITY OF MARYLAND",
+  "UPLANDS",
   "UPPER FELLS POINT",
   "UPPER NORTHWOOD",
   "UPTON",
-  "VIOLETVILLE",
   "VILLAGES OF HOMELAND",
-  "WALTHerson",
+  "VIOLETVILLE",
+  "WAGNER'S POINT",
+  "WAKEFIELD",
+  "WALBROOK",
+  "WALTHERSON",
   "WASHINGTON HILL",
   "WASHINGTON VILLAGE",
   "WAVERLY",
   "WEST ARLINGTON",
+  "WEST CANTON",
   "WEST FOREST PARK",
+  "WEST HILLS",
+  "WESTFIELD",
   "WESTGATE",
+  "WESTPORT",
+  "WILSON HEIGHTS",
   "WILSON PARK",
   "WINCHESTER",
   "WINDSOR HILLS",
-  "WISTERIA",
+  "WINSTON GOVANS",
+  "WINSTON-GOVANS",
+  "WOMEN'S CIVIC LEAGUE OF PIMLIC",
   "WOODBERRY",
+  "WOODBOURNE HEIGHTS",
+  "WOODBOURNE-McCABE",
+  "WOODBOURNE-MCCABE",
+  "WOODMERE",
+  "WOODRING",
+  "WYMAN PARK",
+  "WYNDHURST",
   "YALE HEIGHTS",
 ];
 
 export async function GET() {
   try {
-    // Try distinct neighborhood values from DB first
+    // Prefer distinct values seen in DB (if any)
     const rows = await db
       .select({ neighborhood: violations.neighborhood })
       .from(violations)
       .where(sql`neighborhood is not null and neighborhood <> ''`)
       .groupBy(violations.neighborhood)
-      .limit(1000);
+      .limit(2000);
 
-    const fromDb = rows
-      .map((r) => r.neighborhood as unknown as string)
-      .filter(Boolean);
+    const fromDb = rows.map((r) => String(r.neighborhood)).filter(Boolean);
 
-    // union with static fallback
-    const set = new Set<string>([...fromDb, ...STATIC_NEIGHBORHOODS]);
-    const neighborhoods = Array.from(set).sort((a, b) => a.localeCompare(b));
+    // Merge + sort
+    const list = Array.from(new Set([...fromDb, ...STATIC_NEIGHBORHOODS])).sort(
+      (a, b) => a.localeCompare(b)
+    );
 
     return NextResponse.json(
-      { neighborhoods },
+      { neighborhoods: list },
       { headers: { "cache-control": "no-store" } }
     );
   } catch {
-    // If DB is unreachable, still return the static list
-    const neighborhoods = [...STATIC_NEIGHBORHOODS].sort((a, b) =>
-      a.localeCompare(b)
-    );
+    // If DB is unreachable, still return the static catalog
+    const list = [...STATIC_NEIGHBORHOODS].sort((a, b) => a.localeCompare(b));
     return NextResponse.json(
-      { neighborhoods },
+      { neighborhoods: list },
       { headers: { "cache-control": "no-store" } }
     );
   }
