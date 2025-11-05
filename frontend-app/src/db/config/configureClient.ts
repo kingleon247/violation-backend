@@ -3,6 +3,9 @@ import { drizzle } from "drizzle-orm/postgres-js";
 import postgres, { Sql } from "postgres";
 import * as schema from "@db/migrations/schema";
 
+import { config as loadEnv } from "dotenv";
+loadEnv({ path: ".env.local" }); // allow running outside Next dev
+
 const DB_URL = process.env.DB_URL!;
 if (!DB_URL) throw new Error("DB_URL is not set");
 

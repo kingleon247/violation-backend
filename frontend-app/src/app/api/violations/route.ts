@@ -1,19 +1,16 @@
 // src/app/api/violations/route.ts
 import { NextResponse, NextRequest } from "next/server";
 import { and, desc, eq, gte, lte, ilike, or, sql } from "drizzle-orm";
-import { db } from "@db/config/configureClient"; // your drizzle(db) using postgres.js
-import { violations } from "@/db/migrations/schema"; // adjust path if different
-
+import { db } from "@db/config/configureClient";
+import { violations } from "@/db/migrations/schema";
 type Row = typeof violations.$inferSelect;
 
 export async function GET(req: NextRequest) {
   const url = new URL(req.url);
-
   const neighborhood = url.searchParams.get("neighborhood") ?? undefined;
-  const from = url.searchParams.get("from") ?? undefined; // YYYY-MM-DD
-  const to = url.searchParams.get("to") ?? undefined; // YYYY-MM-DD
+  const from = url.searchParams.get("from") ?? undefined;
+  const to = url.searchParams.get("to") ?? undefined;
   const q = url.searchParams.get("q") ?? undefined;
-
   const page = Math.max(1, Number(url.searchParams.get("page") ?? "1") || 1);
   const limit = Math.min(
     Math.max(Number(url.searchParams.get("limit") ?? "25") || 25, 5),
@@ -21,7 +18,6 @@ export async function GET(req: NextRequest) {
   );
   const offset = (page - 1) * limit;
 
-  // Build WHERE
   const where: any[] = [];
   if (neighborhood) where.push(eq(violations.neighborhood, neighborhood));
   if (from) where.push(gte(violations.dateNotice, new Date(from)));
@@ -39,32 +35,34 @@ export async function GET(req: NextRequest) {
   const whereExpr = where.length ? and(...where) : undefined;
 
   try {
-    // Keep slow queries from hanging forever
-    await db.execute(sql`set local statement_timeout to 15000`);
+    let total = 0;
+    let rows: Row[] = [];
 
-    // Total count
-    const [{ count }] = await db
-      .select({ count: sql<number>`count(*)` })
-      .from(violations)
-      .where(whereExpr);
+    await db.transaction(async (tx) => {
+      await tx.execute(sql`set local statement_timeout to 15000`); // <- inside tx now
 
-    // Page rows
-    const rows: Row[] = await db
-      .select()
-      .from(violations)
-      .where(whereExpr)
-      .orderBy(desc(violations.dateNotice))
-      .limit(limit)
-      .offset(offset);
+      const [{ count }] = await tx
+        .select({ count: sql<number>`count(*)` })
+        .from(violations)
+        .where(whereExpr);
 
-    const pages = Math.max(1, Math.ceil(Number(count) / Math.max(1, limit)));
+      rows = await tx
+        .select()
+        .from(violations)
+        .where(whereExpr)
+        .orderBy(desc(violations.dateNotice))
+        .limit(limit)
+        .offset(offset);
 
+      total = Number(count);
+    });
+
+    const pages = Math.max(1, Math.ceil(total / Math.max(1, limit)));
     return NextResponse.json(
-      { rows, total: Number(count), page, pages, limit },
+      { rows, total, page, pages, limit },
       { headers: { "cache-control": "no-store" } }
     );
   } catch (err: any) {
-    // Return a friendly, consumable payload so the UI stays up
     return NextResponse.json(
       {
         rows: [],
