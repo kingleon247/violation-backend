@@ -143,8 +143,8 @@ Create `frontend-app/.env.local`:
 
 ```ini
 # --- Database & Auth ---
-# Prefer DATABASE_URL; the app also accepts DB_URL for convenience.
-DATABASE_URL=postgres://USER:PASS@HOST:5432/DBNAME
+# Prefer DB_URL; the app also accepts DB_URL for convenience.
+DB_URL=postgres://USER:PASS@HOST:5432/DBNAME
 # DB_URL=postgres://USER:PASS@HOST:5432/DBNAME
 
 NEXTAUTH_URL=http://localhost:3000
@@ -249,10 +249,10 @@ python baltimore_violations_scraper.py --neighborhoods ABELL --since 2025-01-01 
 
 ```json
 {
-  "neighborhoods": ["ABELL"],  // omit or [] => all
-  "since": "2025-01-01",       // optional; worker auto-computes if missing
-  "extract": true,             // pdf -> text
-  "ocr": false,                // enable only for image-based PDFs (slow)
+  "neighborhoods": ["ABELL"], // omit or [] => all
+  "since": "2025-01-01", // optional; worker auto-computes if missing
+  "extract": true, // pdf -> text
+  "ocr": false, // enable only for image-based PDFs (slow)
   "maxPdfsPerNeighborhood": null
 }
 ```

@@ -1,23 +1,29 @@
+// src/db/incremental.ts
 import { db } from "@db/config/configureClient";
-import { sql, desc, and, eq } from "drizzle-orm";
-import { violations } from "@/db/migrations/schema";
+import { sql, eq } from "drizzle-orm";
+import { violations } from "@db/migrations/schema";
 
-// Return ISO 'YYYY-MM-DD' cutoff per neighborhood.
-// If none exist yet, return a safe early date.
-export async function getSinceDateForNeighborhood(n: string): Promise<string> {
+function yyyymmdd(d: Date) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+/** Return YYYY-MM-DD for the day AFTER the latest notice in this neighborhood, or "" if none. */
+export async function getSinceDateForNeighborhood(
+  neighborhood: string
+): Promise<string> {
   const rows = await db
-    .select({ d: violations.dateNotice })
+    .select({ max: sql<Date | null>`max(${violations.dateNotice})` })
     .from(violations)
-    .where(eq(violations.neighborhood, n))
-    .orderBy(desc(violations.dateNotice))
+    .where(eq(violations.neighborhood, neighborhood))
     .limit(1);
 
-  // if DB empty -> start far back so we fetch everything once
-  const fallback = "2000-01-01";
-  if (rows.length === 0 || !rows[0].d) return fallback;
-
-  // Add 1 day to be safe (avoid off-by-one same-day dupes)
-  const d = new Date(rows[0].d as unknown as string);
-  d.setUTCDate(d.getUTCDate() + 1);
-  return d.toISOString().slice(0, 10);
+  const max = rows[0]?.max ?? null;
+  if (!max) return ""; // no prior data → scraper can let the site decide (or you set a default)
+  const next = new Date(max);
+  // start the day after
+  next.setDate(next.getDate() + 1);
+  return yyyymmdd(next);
 }

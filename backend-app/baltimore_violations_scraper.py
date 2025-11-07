@@ -1,30 +1,4 @@
 #!/usr/bin/env python3
-"""
-Baltimore City Code Violations scraper — RESUME/NO-REDO DROP-IN (Windows-friendly)
-
-Key features
-------------
-- Neighborhood search (--all or --neighborhoods ...), optional --since date filter.
-- Scrapes rows (Address, Type, Date Notice, Notice Number, District, Neighborhood).
-- Downloads every "See Notice" PDF (direct download, popup/new-tab, same-tab).
-- Optional text/JSON extraction per PDF (pdfplumber). Optional OCR for scans (ocrmypdf/Tesseract).
-- **Crash-proof CSV**: append/resume; row-by-row flush + fsync; clean Ctrl-C handling.
-- **Resume logic**: --skip-existing (don't click rows if PDF already exists), --force-extract (rebuild text/json).
-
-Usage (Windows, Git Bash)
--------------------------
-py -3.11 -m venv .venv
-source .venv/Scripts/activate
-pip install -r requirements.txt
-python -m playwright install chromium
-
-# Watch one neighborhood and skip already-downloaded PDFs:
-python baltimore_violations_scraper.py --neighborhoods ABELL --headed --slow-mo 200 --out ./data --extract --ocr --skip-existing
-
-# Full run since a date (resumable):
-python baltimore_violations_scraper.py --all --since 2025-01-01 --out ./data --extract --ocr --skip-existing
-"""
-
 from __future__ import annotations
 import asyncio, csv, os, re, json, sys
 from datetime import datetime
@@ -33,7 +7,6 @@ from typing import List, Optional, Tuple
 
 from playwright.async_api import async_playwright, TimeoutError as PWTimeout
 
-# Optional deps (ok if missing when --extract/--ocr not used)
 try:
     import pdfplumber
 except Exception:
@@ -61,8 +34,7 @@ def parse_date(s: str) -> Optional[str]:
             pass
     return s or None
 
-# ---------- Locate controls ----------
-
+# ---------- locate controls ----------
 async def _find_neighborhood_select_by_options(page):
     selects = page.locator("select")
     for i in range(await selects.count()):
@@ -83,14 +55,12 @@ async def get_neighborhood_controls(page):
         await page.locator("select").first.wait_for(state="attached", timeout=20000)
     except PWTimeout:
         pass
-
     for trigger in ["By Neighborhood", "Neighborhood"]:
         for locator in [f"xpath=//label[contains(normalize-space(.), '{trigger}')]", f"text={trigger}"]:
             try:
                 el = page.locator(locator)
                 if await el.count(): await el.first.click(timeout=1000)
             except Exception: pass
-
     sel = await _find_neighborhood_select_by_options(page)
     if sel is None:
         bigs = page.locator("select")
@@ -102,7 +72,6 @@ async def get_neighborhood_controls(page):
             except Exception: continue
     if sel is None: raise PWTimeout("Could not locate the Neighborhood <select> control.")
     await sel.wait_for(state="visible", timeout=10000)
-
     cb = sel.locator("xpath=preceding::input[@type='checkbox'][1]")
     if await cb.count() == 0:
         cb = page.locator(
@@ -115,8 +84,7 @@ async def get_neighborhood_options(page) -> List[str]:
     _, select = await get_neighborhood_controls(page)
     return await select.evaluate("(el)=>Array.from(el.options).map(o=>o.text.trim()).filter(Boolean)")
 
-# ---------- Search + results ----------
-
+# ---------- search + results ----------
 async def submit_search_for_neighborhood(page, neighborhood: str):
     checkbox, select = await get_neighborhood_controls(page)
     try:
@@ -125,14 +93,12 @@ async def submit_search_for_neighborhood(page, neighborhood: str):
         try: await checkbox.click()
         except Exception: pass
     await select.select_option(label=neighborhood)
-
     try:
         await page.get_by_role("button", name=re.compile(r"Search", re.I)).click()
     except Exception:
         submit = page.locator("xpath=//input[@type='submit' and (contains(@value,'Search') or contains(@name,'Search'))]")
         if await submit.count(): await submit.first.click()
         else: await page.locator("button, input[type=submit]").first.click()
-
     try: await page.wait_for_url(re.compile(r"TL_On_Map\.aspx"), timeout=30000)
     except PWTimeout: pass
     await page.wait_for_load_state("domcontentloaded")
@@ -160,8 +126,7 @@ async def extract_rows_on_results(page) -> List[Tuple[str,str,str,str,str,str]]:
         out.append((addr, typ, d, notice, dist, nh))
     return out
 
-# ---------- PDF capture paths ----------
-
+# ---------- pdf helpers ----------
 async def _wait_pdf_response(new_page):
     try:
         return await new_page.wait_for_event(
@@ -175,7 +140,6 @@ async def _save_pdf_via_popup(context, page, click_callable, dest_path: Path) ->
         async with context.expect_page(timeout=8000) as pinfo:
             await click_callable()
         new_page = await pinfo.value
-
         resp = await _wait_pdf_response(new_page)
         if resp:
             data = await resp.body()
@@ -183,7 +147,7 @@ async def _save_pdf_via_popup(context, page, click_callable, dest_path: Path) ->
             dest_path.write_bytes(data)
             await new_page.close()
             return True
-
+        # fallback: try direct GET of the new tab URL
         for _ in range(30):
             url = new_page.url or ""
             if url.startswith(("http://","https://")):
@@ -200,7 +164,6 @@ async def _save_pdf_via_popup(context, page, click_callable, dest_path: Path) ->
                     pass
                 break
             await asyncio.sleep(0.5)
-
         await new_page.close()
         return False
     except PWTimeout:
@@ -246,54 +209,66 @@ async def _save_pdf_via_navigation(context, page, click_callable, dest_path: Pat
     return False
 
 async def download_all_pdfs_for_results(page, out_dir: Path, rows: List[Tuple[str,str,str,str,str,str]], *,
-                                        after_download=None, max_pdfs: Optional[int]=None, skip_existing: bool=False) -> int:
+                                        after_download=None, max_pdfs: Optional[int]=None,
+                                        skip_existing: bool=False, row_timeout_sec: int=12) -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     table = await find_results_table(page)
     trs = table.locator("tr")
+    total = await trs.count() - 1
     downloaded = 0
+
     for i in range(1, await trs.count()):
         row = trs.nth(i)
+        human_i = f"{i}/{total}"
         notice = (rows[i-1][3] if i-1 < len(rows) else "").strip().replace("/", "-").replace("\\","-")
         base = notice if notice else f"row-{i:04d}"
         dest = out_dir / f"{base}.pdf"
+        print(f"[row] {human_i} try {base}")
 
-        # --- SKIP IF PDF ALREADY EXISTS ---
         if skip_existing and dest.exists():
+            print(f"[row] {human_i} skip (exists)")
             if after_download:
                 try:
                     await after_download(dest, i-1, rows[i-1] if i-1 < len(rows) else None)
                 except Exception:
                     pass
             continue
-        # ----------------------------------
 
         cell = row.locator("td").last
         cands = [cell.locator("a"), cell.locator("input[type=image]"), cell.locator("img[onclick]"), cell.locator("img")]
-
         got = False
-        for c in cands:
-            for j in range(await c.count()):
-                elem = c.nth(j)
-                async def click_middle(): await elem.click(button="middle")
-                async def click_ctrl():   await elem.click(modifiers=["Control"])
-                async def click_plain():  await elem.click()
 
-                if await _save_pdf_via_download(page, click_middle, dest): got = True; break
-                if await _save_pdf_via_popup(page.context, page, click_ctrl, dest): got = True; break
-                if await _save_pdf_via_navigation(page.context, page, click_plain, dest): got = True; break
-            if got:
-                downloaded += 1
-                if after_download:
-                    try: await after_download(dest, i-1, rows[i-1] if i-1 < len(rows) else None)
-                    except Exception: pass
-                break
+        async def _try_all_click_paths():
+            nonlocal got
+            for c in cands:
+                for j in range(await c.count()):
+                    elem = c.nth(j)
+                    async def click_middle(): await elem.click(button="middle")
+                    async def click_ctrl():   await elem.click(modifiers=["Control"])
+                    async def click_plain():  await elem.click()
+                    if await _save_pdf_via_download(page, click_middle, dest): print(f"[row] {human_i} path=download"); got = True; return
+                    if await _save_pdf_via_popup(page.context, page, click_ctrl, dest): print(f"[row] {human_i} path=popup"); got = True; return
+                    if await _save_pdf_via_navigation(page.context, page, click_plain, dest): print(f"[row] {human_i} path=navigate"); got = True; return
+
+        try:
+            await asyncio.wait_for(_try_all_click_paths(), timeout=row_timeout_sec)
+        except asyncio.TimeoutError:
+            print(f"[row] {human_i} timeout after {row_timeout_sec}s")
+
+        if got:
+            downloaded += 1
+            if after_download:
+                try: await after_download(dest, i-1, rows[i-1] if i-1 < len(rows) else None)
+                except Exception: pass
+        else:
+            print(f"[row] {human_i} no-pdf")
 
         if max_pdfs and downloaded >= max_pdfs: break
-        await page.wait_for_timeout(200)
+        await page.wait_for_timeout(150)
+
     return downloaded
 
-# ---------- Extraction ----------
-
+# ---------- extraction ----------
 def _extract_text(pdf_path: Path) -> str:
     if pdfplumber is None: return ""
     try:
@@ -327,18 +302,14 @@ async def make_after_download(out_root: Path, nhood: str, do_extract: bool, do_o
 
     async def _after(pdf_path: Path, row_idx: int, row: Tuple[str,str,str,str,str,str] | None):
         if not do_extract: return
-
         txt_path = text_root / (pdf_path.stem + ".txt")
         json_path = json_root / (pdf_path.stem + ".json")
-
         if not force_extract and txt_path.exists() and json_path.exists():
             return
-
         text = _extract_text(pdf_path)
         if do_ocr and len(text) < 50:
             ocr_path = ocr_root / pdf_path.name
             if _ocr_pdf(pdf_path, ocr_path): text = _extract_text(ocr_path)
-
         txt_path.write_text(text, encoding="utf-8")
         payload = {
             "source_pdf": str(pdf_path),
@@ -357,8 +328,7 @@ async def make_after_download(out_root: Path, nhood: str, do_extract: bool, do_o
         json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     return _after
 
-# ---------- Orchestration ----------
-
+# ---------- orchestration ----------
 async def run(all_neighborhoods: bool,
               neighborhoods: List[str],
               out_dir: Path,
@@ -369,12 +339,12 @@ async def run(all_neighborhoods: bool,
               do_extract: bool = False,
               do_ocr: bool = False,
               skip_existing: bool = False,
-              force_extract: bool = False):
+              force_extract: bool = False,
+              row_timeout_sec: int = 12):
 
     out_dir.mkdir(parents=True, exist_ok=True)
     csv_path = out_dir / "violations.csv"
 
-    # append/resume + write header if file is new
     file_exists = csv_path.exists()
     csv_file = open(csv_path, "a", newline="", encoding="utf-8")
     writer = csv.writer(csv_file)
@@ -382,7 +352,6 @@ async def run(all_neighborhoods: bool,
         writer.writerow(["address","type","date_notice","notice_number","district","neighborhood","pdf_path","text_path"])
         csv_file.flush(); os.fsync(csv_file.fileno())
 
-    # Build set of existing notice_numbers to avoid duplicate CSV rows
     existing_notices = set()
     if file_exists:
         try:
@@ -403,17 +372,21 @@ async def run(all_neighborhoods: bool,
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=headless, args=["--disable-gpu"] if headless else None)
-        context = await browser.new_context(accept_downloads=True,
+        context = await browser.new_context(
+            accept_downloads=True,
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) PlaywrightScraper/1.0",
-            viewport={"width": 1440, "height": 900})
+            viewport={"width": 1440, "height": 900}
+        )
         page = await context.new_page()
+        page.set_default_timeout(8000)
+        page.set_default_navigation_timeout(10000)
 
         async def goto(url: str):
             await page.goto(url, timeout=60000)
             await page.wait_for_load_state("domcontentloaded")
             if slow_mo_ms: await page.wait_for_timeout(slow_mo_ms)
 
-        await goto(SEARCH_URL); await page.wait_for_timeout(500)
+        await goto(SEARCH_URL); await page.wait_for_timeout(300)
 
         all_options = await get_neighborhood_options(page)
         if all_neighborhoods:
@@ -431,7 +404,7 @@ async def run(all_neighborhoods: bool,
 
         for nhood in targets:
             print(f"\n=== {nhood} ===")
-            await goto(SEARCH_URL); await page.wait_for_timeout(400)
+            await goto(SEARCH_URL); await page.wait_for_timeout(250)
 
             try: await submit_search_for_neighborhood(page, nhood)
             except PWTimeout: print(f"[warn] Timeout submitting search for {nhood}; skipping."); continue
@@ -455,8 +428,11 @@ async def run(all_neighborhoods: bool,
 
             after = await make_after_download(out_dir, nhood, do_extract, do_ocr, force_extract)
             downloaded = await download_all_pdfs_for_results(
-                page, pdf_dir, filtered, after_download=after,
-                max_pdfs=max_pdfs_per_neighborhood, skip_existing=skip_existing
+                page, pdf_dir, filtered,
+                after_download=after,
+                max_pdfs=max_pdfs_per_neighborhood,
+                skip_existing=skip_existing,
+                row_timeout_sec=row_timeout_sec
             )
             print(f"[info] Downloaded {downloaded} PDFs for {nhood}.")
 
@@ -466,20 +442,15 @@ async def run(all_neighborhoods: bool,
             for r in filtered:
                 addr, typ, date_notice, notice_num, district, neighborhood = r
                 key = (notice_num or "").strip().upper()
-
-                # dedupe CSV rows if resuming
                 if skip_existing and key and key in existing_notices:
                     continue
-
                 pdf_path = os.path.relpath(pdf_files[key].as_posix(), out_dir.as_posix()) if key in pdf_files else ""
                 text_path = os.path.relpath(text_files[key].as_posix(), out_dir.as_posix()) if key in text_files else ""
-
                 writer.writerow([addr, typ, date_notice, notice_num, district, neighborhood, pdf_path, text_path])
                 csv_file.flush(); os.fsync(csv_file.fileno())
-
                 if key: existing_notices.add(key)
 
-            await page.wait_for_timeout(500)
+            await page.wait_for_timeout(300)
 
         await browser.close()
     csv_file.close()
@@ -500,6 +471,7 @@ if __name__ == "__main__":
     parser.add_argument("--ocr", action="store_true", help="When no text layer, try OCR (needs Tesseract installed).")
     parser.add_argument("--skip-existing", action="store_true", help="Skip rows whose PDF already exists (resume).")
     parser.add_argument("--force-extract", action="store_true", help="Rebuild text/json even if they exist.")
+    parser.add_argument("--row-timeout", type=int, default=12, help="Per-row watchdog in seconds (prevents hangs).")
     args = parser.parse_args()
 
     try:
@@ -515,6 +487,7 @@ if __name__ == "__main__":
             do_ocr=args.ocr,
             skip_existing=args.skip_existing,
             force_extract=args.force_extract,
+            row_timeout_sec=args.row_timeout,
         ))
     except KeyboardInterrupt:
         print("\n[warn] Stopped by user. CSV may be partial but is flushed.")

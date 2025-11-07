@@ -1,0 +1,2528 @@
+2025-11-07 11:07:39.221 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:07:39.221 -05:00: @ECHO off
+2025-11-07 11:07:39.221 -05:00: ^
+2025-11-07 11:07:39.221 -05:00: 
+2025-11-07 11:07:39.221 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:07:39.221 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:07:39.221 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:07:39.221 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:07:39.221 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:07:39.221 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:07:39.221 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:07:39.221 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:07:39.221 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:07:39.221 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:07:39.221 -05:00: 
+2025-11-07 11:07:39.221 -05:00: Node.js v23.11.0
+2025-11-07 11:07:41.279 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:07:41.279 -05:00: @ECHO off
+2025-11-07 11:07:41.279 -05:00: ^
+2025-11-07 11:07:41.279 -05:00: 
+2025-11-07 11:07:41.279 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:07:41.279 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:07:41.279 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:07:41.279 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:07:41.279 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:07:41.279 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:07:41.279 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:07:41.279 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:07:41.279 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:07:41.279 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:07:41.279 -05:00: 
+2025-11-07 11:07:41.279 -05:00: Node.js v23.11.0
+2025-11-07 11:07:44.319 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:07:44.319 -05:00: @ECHO off
+2025-11-07 11:07:44.319 -05:00: ^
+2025-11-07 11:07:44.319 -05:00: 
+2025-11-07 11:07:44.319 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:07:44.319 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:07:44.319 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:07:44.319 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:07:44.319 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:07:44.319 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:07:44.319 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:07:44.319 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:07:44.319 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:07:44.319 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:07:44.319 -05:00: 
+2025-11-07 11:07:44.319 -05:00: Node.js v23.11.0
+2025-11-07 11:07:48.861 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:07:48.861 -05:00: @ECHO off
+2025-11-07 11:07:48.861 -05:00: ^
+2025-11-07 11:07:48.861 -05:00: 
+2025-11-07 11:07:48.861 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:07:48.861 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:07:48.861 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:07:48.861 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:07:48.861 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:07:48.861 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:07:48.861 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:07:48.861 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:07:48.861 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:07:48.861 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:07:48.861 -05:00: 
+2025-11-07 11:07:48.861 -05:00: Node.js v23.11.0
+2025-11-07 11:07:55.660 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:07:55.660 -05:00: @ECHO off
+2025-11-07 11:07:55.660 -05:00: ^
+2025-11-07 11:07:55.660 -05:00: 
+2025-11-07 11:07:55.660 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:07:55.660 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:07:55.660 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:07:55.660 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:07:55.660 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:07:55.660 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:07:55.660 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:07:55.660 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:07:55.660 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:07:55.660 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:07:55.660 -05:00: 
+2025-11-07 11:07:55.660 -05:00: Node.js v23.11.0
+2025-11-07 11:08:05.843 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:08:05.843 -05:00: @ECHO off
+2025-11-07 11:08:05.843 -05:00: ^
+2025-11-07 11:08:05.843 -05:00: 
+2025-11-07 11:08:05.843 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:08:05.843 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:08:05.843 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:08:05.843 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:08:05.843 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:08:05.843 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:08:05.843 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:08:05.843 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:08:05.843 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:08:05.843 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:08:05.843 -05:00: 
+2025-11-07 11:08:05.843 -05:00: Node.js v23.11.0
+2025-11-07 11:08:20.883 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:08:20.883 -05:00: @ECHO off
+2025-11-07 11:08:20.883 -05:00: ^
+2025-11-07 11:08:20.883 -05:00: 
+2025-11-07 11:08:20.883 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:08:20.883 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:08:20.883 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:08:20.883 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:08:20.883 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:08:20.883 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:08:20.883 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:08:20.883 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:08:20.883 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:08:20.883 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:08:20.883 -05:00: 
+2025-11-07 11:08:20.883 -05:00: Node.js v23.11.0
+2025-11-07 11:08:35.929 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:08:35.929 -05:00: @ECHO off
+2025-11-07 11:08:35.929 -05:00: ^
+2025-11-07 11:08:35.929 -05:00: 
+2025-11-07 11:08:35.929 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:08:35.929 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:08:35.929 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:08:35.929 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:08:35.929 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:08:35.929 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:08:35.929 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:08:35.929 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:08:35.929 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:08:35.930 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:08:35.930 -05:00: 
+2025-11-07 11:08:35.930 -05:00: Node.js v23.11.0
+2025-11-07 11:08:50.969 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:08:50.969 -05:00: @ECHO off
+2025-11-07 11:08:50.969 -05:00: ^
+2025-11-07 11:08:50.969 -05:00: 
+2025-11-07 11:08:50.969 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:08:50.969 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:08:50.969 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:08:50.969 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:08:50.969 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:08:50.969 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:08:50.969 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:08:50.969 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:08:50.969 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:08:50.969 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:08:50.969 -05:00: 
+2025-11-07 11:08:50.969 -05:00: Node.js v23.11.0
+2025-11-07 11:09:06.033 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:09:06.033 -05:00: @ECHO off
+2025-11-07 11:09:06.033 -05:00: ^
+2025-11-07 11:09:06.033 -05:00: 
+2025-11-07 11:09:06.033 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:09:06.033 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:09:06.033 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:09:06.033 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:09:06.033 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:09:06.033 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:09:06.033 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:09:06.033 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:09:06.033 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:09:06.033 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:09:06.033 -05:00: 
+2025-11-07 11:09:06.033 -05:00: Node.js v23.11.0
+2025-11-07 11:09:21.073 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:09:21.073 -05:00: @ECHO off
+2025-11-07 11:09:21.073 -05:00: ^
+2025-11-07 11:09:21.073 -05:00: 
+2025-11-07 11:09:21.073 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:09:21.073 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:09:21.074 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:09:21.074 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:09:21.074 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:09:21.074 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:09:21.074 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:09:21.074 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:09:21.074 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:09:21.074 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:09:21.074 -05:00: 
+2025-11-07 11:09:21.074 -05:00: Node.js v23.11.0
+2025-11-07 11:09:36.109 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:09:36.109 -05:00: @ECHO off
+2025-11-07 11:09:36.109 -05:00: ^
+2025-11-07 11:09:36.109 -05:00: 
+2025-11-07 11:09:36.109 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:09:36.109 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:09:36.109 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:09:36.109 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:09:36.109 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:09:36.109 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:09:36.109 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:09:36.109 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:09:36.109 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:09:36.109 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:09:36.109 -05:00: 
+2025-11-07 11:09:36.109 -05:00: Node.js v23.11.0
+2025-11-07 11:09:51.159 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:09:51.159 -05:00: @ECHO off
+2025-11-07 11:09:51.159 -05:00: ^
+2025-11-07 11:09:51.159 -05:00: 
+2025-11-07 11:09:51.159 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:09:51.159 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:09:51.160 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:09:51.160 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:09:51.160 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:09:51.160 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:09:51.160 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:09:51.160 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:09:51.160 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:09:51.160 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:09:51.160 -05:00: 
+2025-11-07 11:09:51.160 -05:00: Node.js v23.11.0
+2025-11-07 11:10:06.218 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:10:06.218 -05:00: @ECHO off
+2025-11-07 11:10:06.218 -05:00: ^
+2025-11-07 11:10:06.218 -05:00: 
+2025-11-07 11:10:06.218 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:10:06.218 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:10:06.218 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:10:06.218 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:10:06.218 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:10:06.218 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:10:06.218 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:10:06.218 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:10:06.218 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:10:06.218 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:10:06.218 -05:00: 
+2025-11-07 11:10:06.218 -05:00: Node.js v23.11.0
+2025-11-07 11:10:21.258 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:10:21.258 -05:00: @ECHO off
+2025-11-07 11:10:21.258 -05:00: ^
+2025-11-07 11:10:21.258 -05:00: 
+2025-11-07 11:10:21.258 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:10:21.258 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:10:21.258 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:10:21.258 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:10:21.258 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:10:21.258 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:10:21.258 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:10:21.258 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:10:21.258 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:10:21.258 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:10:21.258 -05:00: 
+2025-11-07 11:10:21.258 -05:00: Node.js v23.11.0
+2025-11-07 11:10:36.295 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:10:36.295 -05:00: @ECHO off
+2025-11-07 11:10:36.295 -05:00: ^
+2025-11-07 11:10:36.295 -05:00: 
+2025-11-07 11:10:36.295 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:10:36.295 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:10:36.295 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:10:36.295 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:10:36.295 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:10:36.295 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:10:36.295 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:10:36.295 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:10:36.295 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:10:36.295 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:10:36.295 -05:00: 
+2025-11-07 11:10:36.295 -05:00: Node.js v23.11.0
+2025-11-07 11:10:51.347 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:10:51.347 -05:00: @ECHO off
+2025-11-07 11:10:51.347 -05:00: ^
+2025-11-07 11:10:51.347 -05:00: 
+2025-11-07 11:10:51.347 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:10:51.347 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:10:51.347 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:10:51.347 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:10:51.347 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:10:51.347 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:10:51.347 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:10:51.347 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:10:51.347 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:10:51.347 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:10:51.347 -05:00: 
+2025-11-07 11:10:51.347 -05:00: Node.js v23.11.0
+2025-11-07 11:11:06.408 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:11:06.408 -05:00: @ECHO off
+2025-11-07 11:11:06.408 -05:00: ^
+2025-11-07 11:11:06.408 -05:00: 
+2025-11-07 11:11:06.408 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:11:06.408 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:11:06.408 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:11:06.408 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:11:06.408 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:11:06.408 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:11:06.408 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:11:06.408 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:11:06.408 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:11:06.408 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:11:06.408 -05:00: 
+2025-11-07 11:11:06.408 -05:00: Node.js v23.11.0
+2025-11-07 11:11:21.454 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:11:21.454 -05:00: @ECHO off
+2025-11-07 11:11:21.454 -05:00: ^
+2025-11-07 11:11:21.454 -05:00: 
+2025-11-07 11:11:21.454 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:11:21.454 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:11:21.454 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:11:21.454 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:11:21.454 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:11:21.454 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:11:21.454 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:11:21.454 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:11:21.454 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:11:21.454 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:11:21.454 -05:00: 
+2025-11-07 11:11:21.454 -05:00: Node.js v23.11.0
+2025-11-07 11:11:36.500 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:11:36.500 -05:00: @ECHO off
+2025-11-07 11:11:36.500 -05:00: ^
+2025-11-07 11:11:36.500 -05:00: 
+2025-11-07 11:11:36.500 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:11:36.500 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:11:36.500 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:11:36.500 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:11:36.500 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:11:36.500 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:11:36.500 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:11:36.500 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:11:36.500 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:11:36.500 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:11:36.500 -05:00: 
+2025-11-07 11:11:36.500 -05:00: Node.js v23.11.0
+2025-11-07 11:11:51.546 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:11:51.546 -05:00: @ECHO off
+2025-11-07 11:11:51.546 -05:00: ^
+2025-11-07 11:11:51.546 -05:00: 
+2025-11-07 11:11:51.546 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:11:51.546 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:11:51.546 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:11:51.546 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:11:51.546 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:11:51.546 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:11:51.546 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:11:51.546 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:11:51.546 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:11:51.546 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:11:51.546 -05:00: 
+2025-11-07 11:11:51.546 -05:00: Node.js v23.11.0
+2025-11-07 11:12:06.585 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:12:06.585 -05:00: @ECHO off
+2025-11-07 11:12:06.585 -05:00: ^
+2025-11-07 11:12:06.585 -05:00: 
+2025-11-07 11:12:06.585 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:12:06.585 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:12:06.585 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:12:06.585 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:12:06.585 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:12:06.585 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:12:06.585 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:12:06.585 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:12:06.585 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:12:06.585 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:12:06.585 -05:00: 
+2025-11-07 11:12:06.585 -05:00: Node.js v23.11.0
+2025-11-07 11:12:21.640 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:12:21.640 -05:00: @ECHO off
+2025-11-07 11:12:21.640 -05:00: ^
+2025-11-07 11:12:21.640 -05:00: 
+2025-11-07 11:12:21.640 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:12:21.640 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:12:21.640 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:12:21.640 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:12:21.640 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:12:21.640 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:12:21.640 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:12:21.640 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:12:21.640 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:12:21.640 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:12:21.640 -05:00: 
+2025-11-07 11:12:21.640 -05:00: Node.js v23.11.0
+2025-11-07 11:12:36.689 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:12:36.689 -05:00: @ECHO off
+2025-11-07 11:12:36.689 -05:00: ^
+2025-11-07 11:12:36.689 -05:00: 
+2025-11-07 11:12:36.689 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:12:36.689 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:12:36.689 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:12:36.689 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:12:36.689 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:12:36.689 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:12:36.689 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:12:36.689 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:12:36.689 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:12:36.689 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:12:36.689 -05:00: 
+2025-11-07 11:12:36.689 -05:00: Node.js v23.11.0
+2025-11-07 11:12:51.729 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:12:51.729 -05:00: @ECHO off
+2025-11-07 11:12:51.729 -05:00: ^
+2025-11-07 11:12:51.729 -05:00: 
+2025-11-07 11:12:51.729 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:12:51.729 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:12:51.729 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:12:51.729 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:12:51.729 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:12:51.729 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:12:51.729 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:12:51.729 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:12:51.729 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:12:51.729 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:12:51.729 -05:00: 
+2025-11-07 11:12:51.729 -05:00: Node.js v23.11.0
+2025-11-07 11:13:06.783 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:13:06.783 -05:00: @ECHO off
+2025-11-07 11:13:06.783 -05:00: ^
+2025-11-07 11:13:06.783 -05:00: 
+2025-11-07 11:13:06.783 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:13:06.783 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:13:06.783 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:13:06.783 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:13:06.783 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:13:06.783 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:13:06.783 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:13:06.783 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:13:06.783 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:13:06.783 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:13:06.783 -05:00: 
+2025-11-07 11:13:06.783 -05:00: Node.js v23.11.0
+2025-11-07 11:13:21.827 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:13:21.827 -05:00: @ECHO off
+2025-11-07 11:13:21.827 -05:00: ^
+2025-11-07 11:13:21.827 -05:00: 
+2025-11-07 11:13:21.827 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:13:21.827 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:13:21.827 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:13:21.827 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:13:21.827 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:13:21.827 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:13:21.827 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:13:21.827 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:13:21.827 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:13:21.827 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:13:21.827 -05:00: 
+2025-11-07 11:13:21.827 -05:00: Node.js v23.11.0
+2025-11-07 11:13:36.872 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:13:36.872 -05:00: @ECHO off
+2025-11-07 11:13:36.872 -05:00: ^
+2025-11-07 11:13:36.872 -05:00: 
+2025-11-07 11:13:36.872 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:13:36.872 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:13:36.872 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:13:36.872 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:13:36.872 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:13:36.872 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:13:36.872 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:13:36.872 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:13:36.872 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:13:36.872 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:13:36.872 -05:00: 
+2025-11-07 11:13:36.872 -05:00: Node.js v23.11.0
+2025-11-07 11:13:51.907 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:13:51.907 -05:00: @ECHO off
+2025-11-07 11:13:51.907 -05:00: ^
+2025-11-07 11:13:51.907 -05:00: 
+2025-11-07 11:13:51.907 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:13:51.907 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:13:51.907 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:13:51.907 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:13:51.907 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:13:51.907 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:13:51.907 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:13:51.907 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:13:51.907 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:13:51.907 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:13:51.907 -05:00: 
+2025-11-07 11:13:51.907 -05:00: Node.js v23.11.0
+2025-11-07 11:14:06.940 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:14:06.940 -05:00: @ECHO off
+2025-11-07 11:14:06.940 -05:00: ^
+2025-11-07 11:14:06.940 -05:00: 
+2025-11-07 11:14:06.940 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:14:06.940 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:14:06.940 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:14:06.940 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:14:06.940 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:14:06.940 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:14:06.940 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:14:06.940 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:14:06.940 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:14:06.940 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:14:06.940 -05:00: 
+2025-11-07 11:14:06.940 -05:00: Node.js v23.11.0
+2025-11-07 11:14:21.984 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:14:21.984 -05:00: @ECHO off
+2025-11-07 11:14:21.984 -05:00: ^
+2025-11-07 11:14:21.984 -05:00: 
+2025-11-07 11:14:21.984 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:14:21.984 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:14:21.984 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:14:21.984 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:14:21.984 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:14:21.984 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:14:21.984 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:14:21.984 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:14:21.984 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:14:21.984 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:14:21.984 -05:00: 
+2025-11-07 11:14:21.984 -05:00: Node.js v23.11.0
+2025-11-07 11:14:37.023 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:14:37.023 -05:00: @ECHO off
+2025-11-07 11:14:37.023 -05:00: ^
+2025-11-07 11:14:37.023 -05:00: 
+2025-11-07 11:14:37.023 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:14:37.023 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:14:37.023 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:14:37.023 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:14:37.023 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:14:37.023 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:14:37.023 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:14:37.023 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:14:37.023 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:14:37.023 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:14:37.023 -05:00: 
+2025-11-07 11:14:37.023 -05:00: Node.js v23.11.0
+2025-11-07 11:14:52.065 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:14:52.065 -05:00: @ECHO off
+2025-11-07 11:14:52.065 -05:00: ^
+2025-11-07 11:14:52.065 -05:00: 
+2025-11-07 11:14:52.065 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:14:52.065 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:14:52.065 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:14:52.065 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:14:52.065 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:14:52.065 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:14:52.065 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:14:52.065 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:14:52.065 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:14:52.065 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:14:52.065 -05:00: 
+2025-11-07 11:14:52.065 -05:00: Node.js v23.11.0
+2025-11-07 11:15:07.111 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:15:07.111 -05:00: @ECHO off
+2025-11-07 11:15:07.111 -05:00: ^
+2025-11-07 11:15:07.111 -05:00: 
+2025-11-07 11:15:07.111 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:15:07.111 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:15:07.111 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:15:07.111 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:15:07.111 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:15:07.111 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:15:07.111 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:15:07.111 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:15:07.111 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:15:07.111 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:15:07.111 -05:00: 
+2025-11-07 11:15:07.111 -05:00: Node.js v23.11.0
+2025-11-07 11:15:22.151 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:15:22.151 -05:00: @ECHO off
+2025-11-07 11:15:22.151 -05:00: ^
+2025-11-07 11:15:22.151 -05:00: 
+2025-11-07 11:15:22.151 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:15:22.151 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:15:22.151 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:15:22.151 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:15:22.151 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:15:22.151 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:15:22.151 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:15:22.151 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:15:22.151 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:15:22.151 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:15:22.151 -05:00: 
+2025-11-07 11:15:22.151 -05:00: Node.js v23.11.0
+2025-11-07 11:15:37.186 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:15:37.186 -05:00: @ECHO off
+2025-11-07 11:15:37.186 -05:00: ^
+2025-11-07 11:15:37.186 -05:00: 
+2025-11-07 11:15:37.186 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:15:37.186 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:15:37.186 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:15:37.186 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:15:37.186 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:15:37.186 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:15:37.186 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:15:37.186 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:15:37.187 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:15:37.187 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:15:37.187 -05:00: 
+2025-11-07 11:15:37.187 -05:00: Node.js v23.11.0
+2025-11-07 11:15:52.229 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:15:52.229 -05:00: @ECHO off
+2025-11-07 11:15:52.229 -05:00: ^
+2025-11-07 11:15:52.229 -05:00: 
+2025-11-07 11:15:52.229 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:15:52.229 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:15:52.229 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:15:52.229 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:15:52.229 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:15:52.229 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:15:52.229 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:15:52.229 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:15:52.229 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:15:52.229 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:15:52.229 -05:00: 
+2025-11-07 11:15:52.229 -05:00: Node.js v23.11.0
+2025-11-07 11:16:07.269 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:16:07.269 -05:00: @ECHO off
+2025-11-07 11:16:07.269 -05:00: ^
+2025-11-07 11:16:07.269 -05:00: 
+2025-11-07 11:16:07.269 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:16:07.269 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:16:07.269 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:16:07.269 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:16:07.269 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:16:07.269 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:16:07.269 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:16:07.269 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:16:07.269 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:16:07.269 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:16:07.269 -05:00: 
+2025-11-07 11:16:07.269 -05:00: Node.js v23.11.0
+2025-11-07 11:16:22.328 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:16:22.328 -05:00: @ECHO off
+2025-11-07 11:16:22.328 -05:00: ^
+2025-11-07 11:16:22.328 -05:00: 
+2025-11-07 11:16:22.328 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:16:22.328 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:16:22.328 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:16:22.328 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:16:22.328 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:16:22.328 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:16:22.328 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:16:22.328 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:16:22.328 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:16:22.328 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:16:22.328 -05:00: 
+2025-11-07 11:16:22.328 -05:00: Node.js v23.11.0
+2025-11-07 11:16:37.384 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:16:37.384 -05:00: @ECHO off
+2025-11-07 11:16:37.384 -05:00: ^
+2025-11-07 11:16:37.384 -05:00: 
+2025-11-07 11:16:37.384 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:16:37.384 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:16:37.384 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:16:37.384 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:16:37.384 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:16:37.384 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:16:37.384 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:16:37.384 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:16:37.384 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:16:37.384 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:16:37.384 -05:00: 
+2025-11-07 11:16:37.384 -05:00: Node.js v23.11.0
+2025-11-07 11:16:52.426 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:16:52.426 -05:00: @ECHO off
+2025-11-07 11:16:52.426 -05:00: ^
+2025-11-07 11:16:52.426 -05:00: 
+2025-11-07 11:16:52.426 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:16:52.426 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:16:52.426 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:16:52.426 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:16:52.426 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:16:52.426 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:16:52.426 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:16:52.426 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:16:52.426 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:16:52.426 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:16:52.426 -05:00: 
+2025-11-07 11:16:52.426 -05:00: Node.js v23.11.0
+2025-11-07 11:17:07.481 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:17:07.481 -05:00: @ECHO off
+2025-11-07 11:17:07.481 -05:00: ^
+2025-11-07 11:17:07.481 -05:00: 
+2025-11-07 11:17:07.481 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:17:07.481 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:17:07.481 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:17:07.481 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:17:07.481 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:17:07.481 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:17:07.481 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:17:07.481 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:17:07.481 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:17:07.481 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:17:07.481 -05:00: 
+2025-11-07 11:17:07.481 -05:00: Node.js v23.11.0
+2025-11-07 11:17:22.536 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:17:22.536 -05:00: @ECHO off
+2025-11-07 11:17:22.536 -05:00: ^
+2025-11-07 11:17:22.536 -05:00: 
+2025-11-07 11:17:22.536 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:17:22.536 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:17:22.536 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:17:22.536 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:17:22.536 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:17:22.536 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:17:22.536 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:17:22.536 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:17:22.536 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:17:22.536 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:17:22.536 -05:00: 
+2025-11-07 11:17:22.536 -05:00: Node.js v23.11.0
+2025-11-07 11:17:37.588 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:17:37.588 -05:00: @ECHO off
+2025-11-07 11:17:37.588 -05:00: ^
+2025-11-07 11:17:37.588 -05:00: 
+2025-11-07 11:17:37.588 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:17:37.588 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:17:37.588 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:17:37.588 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:17:37.588 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:17:37.588 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:17:37.588 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:17:37.588 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:17:37.588 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:17:37.588 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:17:37.588 -05:00: 
+2025-11-07 11:17:37.588 -05:00: Node.js v23.11.0
+2025-11-07 11:17:52.633 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:17:52.633 -05:00: @ECHO off
+2025-11-07 11:17:52.633 -05:00: ^
+2025-11-07 11:17:52.633 -05:00: 
+2025-11-07 11:17:52.633 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:17:52.633 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:17:52.633 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:17:52.633 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:17:52.633 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:17:52.633 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:17:52.633 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:17:52.633 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:17:52.633 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:17:52.633 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:17:52.633 -05:00: 
+2025-11-07 11:17:52.633 -05:00: Node.js v23.11.0
+2025-11-07 11:18:07.669 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:18:07.669 -05:00: @ECHO off
+2025-11-07 11:18:07.669 -05:00: ^
+2025-11-07 11:18:07.669 -05:00: 
+2025-11-07 11:18:07.669 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:18:07.669 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:18:07.669 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:18:07.669 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:18:07.669 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:18:07.669 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:18:07.669 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:18:07.669 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:18:07.669 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:18:07.669 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:18:07.669 -05:00: 
+2025-11-07 11:18:07.669 -05:00: Node.js v23.11.0
+2025-11-07 11:18:22.705 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:18:22.705 -05:00: @ECHO off
+2025-11-07 11:18:22.705 -05:00: ^
+2025-11-07 11:18:22.705 -05:00: 
+2025-11-07 11:18:22.705 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:18:22.705 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:18:22.705 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:18:22.705 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:18:22.705 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:18:22.705 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:18:22.705 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:18:22.705 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:18:22.705 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:18:22.705 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:18:22.705 -05:00: 
+2025-11-07 11:18:22.705 -05:00: Node.js v23.11.0
+2025-11-07 11:18:37.746 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:18:37.746 -05:00: @ECHO off
+2025-11-07 11:18:37.746 -05:00: ^
+2025-11-07 11:18:37.746 -05:00: 
+2025-11-07 11:18:37.746 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:18:37.746 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:18:37.746 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:18:37.746 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:18:37.746 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:18:37.746 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:18:37.746 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:18:37.746 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:18:37.746 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:18:37.746 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:18:37.746 -05:00: 
+2025-11-07 11:18:37.746 -05:00: Node.js v23.11.0
+2025-11-07 11:18:52.787 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:18:52.787 -05:00: @ECHO off
+2025-11-07 11:18:52.787 -05:00: ^
+2025-11-07 11:18:52.787 -05:00: 
+2025-11-07 11:18:52.787 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:18:52.787 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:18:52.787 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:18:52.787 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:18:52.787 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:18:52.787 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:18:52.787 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:18:52.787 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:18:52.787 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:18:52.787 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:18:52.787 -05:00: 
+2025-11-07 11:18:52.787 -05:00: Node.js v23.11.0
+2025-11-07 11:19:07.853 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:19:07.853 -05:00: @ECHO off
+2025-11-07 11:19:07.853 -05:00: ^
+2025-11-07 11:19:07.853 -05:00: 
+2025-11-07 11:19:07.853 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:19:07.853 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:19:07.853 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:19:07.853 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:19:07.853 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:19:07.853 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:19:07.853 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:19:07.853 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:19:07.853 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:19:07.853 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:19:07.853 -05:00: 
+2025-11-07 11:19:07.853 -05:00: Node.js v23.11.0
+2025-11-07 11:19:22.892 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:19:22.892 -05:00: @ECHO off
+2025-11-07 11:19:22.892 -05:00: ^
+2025-11-07 11:19:22.892 -05:00: 
+2025-11-07 11:19:22.892 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:19:22.892 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:19:22.892 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:19:22.892 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:19:22.892 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:19:22.892 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:19:22.892 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:19:22.892 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:19:22.892 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:19:22.892 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:19:22.892 -05:00: 
+2025-11-07 11:19:22.892 -05:00: Node.js v23.11.0
+2025-11-07 11:19:37.930 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:19:37.930 -05:00: @ECHO off
+2025-11-07 11:19:37.930 -05:00: ^
+2025-11-07 11:19:37.930 -05:00: 
+2025-11-07 11:19:37.930 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:19:37.930 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:19:37.930 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:19:37.930 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:19:37.930 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:19:37.930 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:19:37.930 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:19:37.930 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:19:37.930 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:19:37.930 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:19:37.930 -05:00: 
+2025-11-07 11:19:37.930 -05:00: Node.js v23.11.0
+2025-11-07 11:19:53.052 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:19:53.052 -05:00: @ECHO off
+2025-11-07 11:19:53.052 -05:00: ^
+2025-11-07 11:19:53.052 -05:00: 
+2025-11-07 11:19:53.052 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:19:53.052 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:19:53.052 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:19:53.052 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:19:53.052 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:19:53.052 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:19:53.052 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:19:53.052 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:19:53.052 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:19:53.052 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:19:53.052 -05:00: 
+2025-11-07 11:19:53.052 -05:00: Node.js v23.11.0
+2025-11-07 11:20:08.104 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:20:08.104 -05:00: @ECHO off
+2025-11-07 11:20:08.104 -05:00: ^
+2025-11-07 11:20:08.104 -05:00: 
+2025-11-07 11:20:08.104 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:20:08.104 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:20:08.104 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:20:08.104 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:20:08.104 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:20:08.104 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:20:08.104 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:20:08.104 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:20:08.104 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:20:08.104 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:20:08.104 -05:00: 
+2025-11-07 11:20:08.104 -05:00: Node.js v23.11.0
+2025-11-07 11:20:23.174 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:20:23.174 -05:00: @ECHO off
+2025-11-07 11:20:23.174 -05:00: ^
+2025-11-07 11:20:23.174 -05:00: 
+2025-11-07 11:20:23.174 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:20:23.174 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:20:23.174 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:20:23.174 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:20:23.174 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:20:23.174 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:20:23.174 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:20:23.174 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:20:23.174 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:20:23.174 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:20:23.174 -05:00: 
+2025-11-07 11:20:23.174 -05:00: Node.js v23.11.0
+2025-11-07 11:20:38.233 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:20:38.233 -05:00: @ECHO off
+2025-11-07 11:20:38.233 -05:00: ^
+2025-11-07 11:20:38.233 -05:00: 
+2025-11-07 11:20:38.233 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:20:38.233 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:20:38.233 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:20:38.233 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:20:38.233 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:20:38.233 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:20:38.233 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:20:38.233 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:20:38.233 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:20:38.233 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:20:38.233 -05:00: 
+2025-11-07 11:20:38.233 -05:00: Node.js v23.11.0
+2025-11-07 11:20:53.273 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:20:53.273 -05:00: @ECHO off
+2025-11-07 11:20:53.273 -05:00: ^
+2025-11-07 11:20:53.273 -05:00: 
+2025-11-07 11:20:53.273 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:20:53.273 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:20:53.273 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:20:53.273 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:20:53.273 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:20:53.273 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:20:53.273 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:20:53.273 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:20:53.273 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:20:53.273 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:20:53.273 -05:00: 
+2025-11-07 11:20:53.273 -05:00: Node.js v23.11.0
+2025-11-07 11:21:08.344 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:21:08.344 -05:00: @ECHO off
+2025-11-07 11:21:08.344 -05:00: ^
+2025-11-07 11:21:08.344 -05:00: 
+2025-11-07 11:21:08.344 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:21:08.344 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:21:08.344 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:21:08.344 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:21:08.344 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:21:08.344 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:21:08.344 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:21:08.344 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:21:08.344 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:21:08.344 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:21:08.344 -05:00: 
+2025-11-07 11:21:08.344 -05:00: Node.js v23.11.0
+2025-11-07 11:21:23.394 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:21:23.394 -05:00: @ECHO off
+2025-11-07 11:21:23.394 -05:00: ^
+2025-11-07 11:21:23.394 -05:00: 
+2025-11-07 11:21:23.394 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:21:23.394 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:21:23.394 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:21:23.394 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:21:23.395 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:21:23.395 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:21:23.395 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:21:23.395 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:21:23.395 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:21:23.395 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:21:23.395 -05:00: 
+2025-11-07 11:21:23.395 -05:00: Node.js v23.11.0
+2025-11-07 11:21:38.445 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:21:38.445 -05:00: @ECHO off
+2025-11-07 11:21:38.445 -05:00: ^
+2025-11-07 11:21:38.445 -05:00: 
+2025-11-07 11:21:38.445 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:21:38.445 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:21:38.445 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:21:38.445 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:21:38.445 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:21:38.445 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:21:38.445 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:21:38.445 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:21:38.445 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:21:38.445 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:21:38.445 -05:00: 
+2025-11-07 11:21:38.445 -05:00: Node.js v23.11.0
+2025-11-07 11:21:53.495 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:21:53.495 -05:00: @ECHO off
+2025-11-07 11:21:53.495 -05:00: ^
+2025-11-07 11:21:53.495 -05:00: 
+2025-11-07 11:21:53.495 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:21:53.495 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:21:53.495 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:21:53.495 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:21:53.495 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:21:53.495 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:21:53.495 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:21:53.495 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:21:53.495 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:21:53.495 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:21:53.495 -05:00: 
+2025-11-07 11:21:53.495 -05:00: Node.js v23.11.0
+2025-11-07 11:22:08.539 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:22:08.539 -05:00: @ECHO off
+2025-11-07 11:22:08.539 -05:00: ^
+2025-11-07 11:22:08.539 -05:00: 
+2025-11-07 11:22:08.539 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:22:08.539 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:22:08.539 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:22:08.539 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:22:08.539 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:22:08.539 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:22:08.539 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:22:08.539 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:22:08.539 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:22:08.539 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:22:08.539 -05:00: 
+2025-11-07 11:22:08.539 -05:00: Node.js v23.11.0
+2025-11-07 11:22:23.584 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:22:23.584 -05:00: @ECHO off
+2025-11-07 11:22:23.584 -05:00: ^
+2025-11-07 11:22:23.584 -05:00: 
+2025-11-07 11:22:23.584 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:22:23.584 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:22:23.584 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:22:23.584 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:22:23.584 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:22:23.584 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:22:23.584 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:22:23.584 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:22:23.584 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:22:23.584 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:22:23.584 -05:00: 
+2025-11-07 11:22:23.584 -05:00: Node.js v23.11.0
+2025-11-07 11:22:38.627 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:22:38.627 -05:00: @ECHO off
+2025-11-07 11:22:38.627 -05:00: ^
+2025-11-07 11:22:38.627 -05:00: 
+2025-11-07 11:22:38.627 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:22:38.627 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:22:38.627 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:22:38.627 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:22:38.627 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:22:38.627 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:22:38.627 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:22:38.627 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:22:38.627 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:22:38.627 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:22:38.627 -05:00: 
+2025-11-07 11:22:38.627 -05:00: Node.js v23.11.0
+2025-11-07 11:22:53.693 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:22:53.693 -05:00: @ECHO off
+2025-11-07 11:22:53.693 -05:00: ^
+2025-11-07 11:22:53.693 -05:00: 
+2025-11-07 11:22:53.693 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:22:53.693 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:22:53.693 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:22:53.693 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:22:53.693 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:22:53.693 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:22:53.693 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:22:53.693 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:22:53.693 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:22:53.693 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:22:53.693 -05:00: 
+2025-11-07 11:22:53.693 -05:00: Node.js v23.11.0
+2025-11-07 11:23:08.734 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:23:08.734 -05:00: @ECHO off
+2025-11-07 11:23:08.734 -05:00: ^
+2025-11-07 11:23:08.734 -05:00: 
+2025-11-07 11:23:08.734 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:23:08.734 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:23:08.734 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:23:08.734 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:23:08.734 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:23:08.734 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:23:08.734 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:23:08.734 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:23:08.734 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:23:08.735 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:23:08.735 -05:00: 
+2025-11-07 11:23:08.735 -05:00: Node.js v23.11.0
+2025-11-07 11:23:23.774 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:23:23.774 -05:00: @ECHO off
+2025-11-07 11:23:23.774 -05:00: ^
+2025-11-07 11:23:23.774 -05:00: 
+2025-11-07 11:23:23.774 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:23:23.774 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:23:23.774 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:23:23.774 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:23:23.774 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:23:23.774 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:23:23.774 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:23:23.774 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:23:23.774 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:23:23.774 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:23:23.774 -05:00: 
+2025-11-07 11:23:23.774 -05:00: Node.js v23.11.0
+2025-11-07 11:23:38.817 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:23:38.817 -05:00: @ECHO off
+2025-11-07 11:23:38.817 -05:00: ^
+2025-11-07 11:23:38.817 -05:00: 
+2025-11-07 11:23:38.817 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:23:38.817 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:23:38.817 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:23:38.817 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:23:38.817 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:23:38.817 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:23:38.817 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:23:38.817 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:23:38.817 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:23:38.817 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:23:38.817 -05:00: 
+2025-11-07 11:23:38.817 -05:00: Node.js v23.11.0
+2025-11-07 11:23:53.862 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:23:53.862 -05:00: @ECHO off
+2025-11-07 11:23:53.862 -05:00: ^
+2025-11-07 11:23:53.862 -05:00: 
+2025-11-07 11:23:53.862 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:23:53.862 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:23:53.862 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:23:53.862 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:23:53.862 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:23:53.862 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:23:53.862 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:23:53.862 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:23:53.862 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:23:53.862 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:23:53.862 -05:00: 
+2025-11-07 11:23:53.862 -05:00: Node.js v23.11.0
+2025-11-07 11:24:08.901 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:24:08.901 -05:00: @ECHO off
+2025-11-07 11:24:08.901 -05:00: ^
+2025-11-07 11:24:08.901 -05:00: 
+2025-11-07 11:24:08.901 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:24:08.901 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:24:08.901 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:24:08.901 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:24:08.901 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:24:08.901 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:24:08.901 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:24:08.901 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:24:08.901 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:24:08.901 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:24:08.901 -05:00: 
+2025-11-07 11:24:08.901 -05:00: Node.js v23.11.0
+2025-11-07 11:24:23.943 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:24:23.943 -05:00: @ECHO off
+2025-11-07 11:24:23.943 -05:00: ^
+2025-11-07 11:24:23.943 -05:00: 
+2025-11-07 11:24:23.943 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:24:23.943 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:24:23.943 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:24:23.943 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:24:23.943 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:24:23.943 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:24:23.943 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:24:23.943 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:24:23.943 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:24:23.943 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:24:23.943 -05:00: 
+2025-11-07 11:24:23.943 -05:00: Node.js v23.11.0
+2025-11-07 11:24:38.989 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:24:38.989 -05:00: @ECHO off
+2025-11-07 11:24:38.989 -05:00: ^
+2025-11-07 11:24:38.989 -05:00: 
+2025-11-07 11:24:38.989 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:24:38.989 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:24:38.989 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:24:38.989 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:24:38.989 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:24:38.989 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:24:38.989 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:24:38.989 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:24:38.989 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:24:38.989 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:24:38.989 -05:00: 
+2025-11-07 11:24:38.989 -05:00: Node.js v23.11.0
+2025-11-07 11:24:54.027 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:24:54.027 -05:00: @ECHO off
+2025-11-07 11:24:54.027 -05:00: ^
+2025-11-07 11:24:54.027 -05:00: 
+2025-11-07 11:24:54.027 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:24:54.027 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:24:54.027 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:24:54.027 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:24:54.027 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:24:54.027 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:24:54.027 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:24:54.027 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:24:54.027 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:24:54.027 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:24:54.027 -05:00: 
+2025-11-07 11:24:54.027 -05:00: Node.js v23.11.0
+2025-11-07 11:25:09.074 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:25:09.074 -05:00: @ECHO off
+2025-11-07 11:25:09.074 -05:00: ^
+2025-11-07 11:25:09.074 -05:00: 
+2025-11-07 11:25:09.074 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:25:09.074 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:25:09.074 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:25:09.074 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:25:09.074 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:25:09.074 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:25:09.074 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:25:09.074 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:25:09.074 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:25:09.074 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:25:09.074 -05:00: 
+2025-11-07 11:25:09.074 -05:00: Node.js v23.11.0
+2025-11-07 11:25:24.132 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:25:24.132 -05:00: @ECHO off
+2025-11-07 11:25:24.132 -05:00: ^
+2025-11-07 11:25:24.132 -05:00: 
+2025-11-07 11:25:24.132 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:25:24.132 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:25:24.132 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:25:24.132 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:25:24.132 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:25:24.132 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:25:24.132 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:25:24.132 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:25:24.132 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:25:24.132 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:25:24.132 -05:00: 
+2025-11-07 11:25:24.132 -05:00: Node.js v23.11.0
+2025-11-07 11:25:39.177 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:25:39.177 -05:00: @ECHO off
+2025-11-07 11:25:39.177 -05:00: ^
+2025-11-07 11:25:39.177 -05:00: 
+2025-11-07 11:25:39.177 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:25:39.177 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:25:39.177 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:25:39.177 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:25:39.177 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:25:39.177 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:25:39.177 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:25:39.177 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:25:39.177 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:25:39.177 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:25:39.177 -05:00: 
+2025-11-07 11:25:39.177 -05:00: Node.js v23.11.0
+2025-11-07 11:25:54.228 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:25:54.228 -05:00: @ECHO off
+2025-11-07 11:25:54.228 -05:00: ^
+2025-11-07 11:25:54.228 -05:00: 
+2025-11-07 11:25:54.228 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:25:54.228 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:25:54.228 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:25:54.228 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:25:54.228 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:25:54.228 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:25:54.228 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:25:54.228 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:25:54.228 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:25:54.228 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:25:54.228 -05:00: 
+2025-11-07 11:25:54.228 -05:00: Node.js v23.11.0
+2025-11-07 11:26:09.276 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:26:09.276 -05:00: @ECHO off
+2025-11-07 11:26:09.276 -05:00: ^
+2025-11-07 11:26:09.276 -05:00: 
+2025-11-07 11:26:09.276 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:26:09.276 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:26:09.276 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:26:09.276 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:26:09.276 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:26:09.276 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:26:09.276 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:26:09.276 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:26:09.276 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:26:09.276 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:26:09.276 -05:00: 
+2025-11-07 11:26:09.276 -05:00: Node.js v23.11.0
+2025-11-07 11:26:24.324 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:26:24.324 -05:00: @ECHO off
+2025-11-07 11:26:24.324 -05:00: ^
+2025-11-07 11:26:24.324 -05:00: 
+2025-11-07 11:26:24.324 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:26:24.324 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:26:24.324 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:26:24.324 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:26:24.324 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:26:24.324 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:26:24.324 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:26:24.324 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:26:24.324 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:26:24.324 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:26:24.324 -05:00: 
+2025-11-07 11:26:24.324 -05:00: Node.js v23.11.0
+2025-11-07 11:26:39.370 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:26:39.370 -05:00: @ECHO off
+2025-11-07 11:26:39.370 -05:00: ^
+2025-11-07 11:26:39.370 -05:00: 
+2025-11-07 11:26:39.370 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:26:39.370 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:26:39.370 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:26:39.370 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:26:39.370 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:26:39.370 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:26:39.370 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:26:39.370 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:26:39.370 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:26:39.370 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:26:39.370 -05:00: 
+2025-11-07 11:26:39.370 -05:00: Node.js v23.11.0
+2025-11-07 11:26:54.423 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:26:54.423 -05:00: @ECHO off
+2025-11-07 11:26:54.423 -05:00: ^
+2025-11-07 11:26:54.423 -05:00: 
+2025-11-07 11:26:54.423 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:26:54.423 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:26:54.423 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:26:54.423 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:26:54.423 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:26:54.423 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:26:54.423 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:26:54.423 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:26:54.423 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:26:54.423 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:26:54.423 -05:00: 
+2025-11-07 11:26:54.423 -05:00: Node.js v23.11.0
+2025-11-07 11:27:09.471 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:27:09.471 -05:00: @ECHO off
+2025-11-07 11:27:09.471 -05:00: ^
+2025-11-07 11:27:09.471 -05:00: 
+2025-11-07 11:27:09.471 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:27:09.471 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:27:09.471 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:27:09.471 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:27:09.471 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:27:09.471 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:27:09.471 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:27:09.471 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:27:09.471 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:27:09.471 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:27:09.471 -05:00: 
+2025-11-07 11:27:09.471 -05:00: Node.js v23.11.0
+2025-11-07 11:27:24.513 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:27:24.513 -05:00: @ECHO off
+2025-11-07 11:27:24.513 -05:00: ^
+2025-11-07 11:27:24.513 -05:00: 
+2025-11-07 11:27:24.513 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:27:24.513 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:27:24.513 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:27:24.513 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:27:24.513 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:27:24.513 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:27:24.513 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:27:24.513 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:27:24.513 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:27:24.513 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:27:24.513 -05:00: 
+2025-11-07 11:27:24.513 -05:00: Node.js v23.11.0
+2025-11-07 11:27:39.550 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:27:39.550 -05:00: @ECHO off
+2025-11-07 11:27:39.550 -05:00: ^
+2025-11-07 11:27:39.550 -05:00: 
+2025-11-07 11:27:39.550 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:27:39.550 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:27:39.550 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:27:39.550 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:27:39.550 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:27:39.550 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:27:39.550 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:27:39.550 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:27:39.550 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:27:39.550 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:27:39.550 -05:00: 
+2025-11-07 11:27:39.550 -05:00: Node.js v23.11.0
+2025-11-07 11:27:54.587 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:27:54.587 -05:00: @ECHO off
+2025-11-07 11:27:54.587 -05:00: ^
+2025-11-07 11:27:54.587 -05:00: 
+2025-11-07 11:27:54.587 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:27:54.587 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:27:54.587 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:27:54.587 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:27:54.587 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:27:54.587 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:27:54.587 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:27:54.587 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:27:54.587 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:27:54.587 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:27:54.587 -05:00: 
+2025-11-07 11:27:54.587 -05:00: Node.js v23.11.0
+2025-11-07 11:28:09.661 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:28:09.661 -05:00: @ECHO off
+2025-11-07 11:28:09.661 -05:00: ^
+2025-11-07 11:28:09.661 -05:00: 
+2025-11-07 11:28:09.661 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:28:09.661 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:28:09.661 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:28:09.661 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:28:09.661 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:28:09.661 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:28:09.661 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:28:09.661 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:28:09.661 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:28:09.661 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:28:09.661 -05:00: 
+2025-11-07 11:28:09.661 -05:00: Node.js v23.11.0
+2025-11-07 11:28:24.709 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:28:24.709 -05:00: @ECHO off
+2025-11-07 11:28:24.709 -05:00: ^
+2025-11-07 11:28:24.709 -05:00: 
+2025-11-07 11:28:24.709 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:28:24.709 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:28:24.709 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:28:24.709 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:28:24.709 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:28:24.709 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:28:24.709 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:28:24.709 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:28:24.709 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:28:24.709 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:28:24.709 -05:00: 
+2025-11-07 11:28:24.709 -05:00: Node.js v23.11.0
+2025-11-07 11:28:39.762 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:28:39.762 -05:00: @ECHO off
+2025-11-07 11:28:39.762 -05:00: ^
+2025-11-07 11:28:39.762 -05:00: 
+2025-11-07 11:28:39.762 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:28:39.762 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:28:39.762 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:28:39.762 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:28:39.762 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:28:39.762 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:28:39.762 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:28:39.762 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:28:39.762 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:28:39.762 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:28:39.762 -05:00: 
+2025-11-07 11:28:39.762 -05:00: Node.js v23.11.0
+2025-11-07 11:28:54.799 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:28:54.799 -05:00: @ECHO off
+2025-11-07 11:28:54.799 -05:00: ^
+2025-11-07 11:28:54.799 -05:00: 
+2025-11-07 11:28:54.799 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:28:54.799 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:28:54.799 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:28:54.799 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:28:54.799 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:28:54.799 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:28:54.799 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:28:54.799 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:28:54.799 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:28:54.799 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:28:54.799 -05:00: 
+2025-11-07 11:28:54.799 -05:00: Node.js v23.11.0
+2025-11-07 11:29:09.842 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:29:09.842 -05:00: @ECHO off
+2025-11-07 11:29:09.842 -05:00: ^
+2025-11-07 11:29:09.842 -05:00: 
+2025-11-07 11:29:09.842 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:29:09.842 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:29:09.842 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:29:09.842 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:29:09.842 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:29:09.842 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:29:09.842 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:29:09.842 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:29:09.842 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:29:09.842 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:29:09.842 -05:00: 
+2025-11-07 11:29:09.842 -05:00: Node.js v23.11.0
+2025-11-07 11:29:24.902 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:29:24.902 -05:00: @ECHO off
+2025-11-07 11:29:24.902 -05:00: ^
+2025-11-07 11:29:24.902 -05:00: 
+2025-11-07 11:29:24.902 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:29:24.902 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:29:24.902 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:29:24.902 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:29:24.902 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:29:24.902 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:29:24.902 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:29:24.902 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:29:24.902 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:29:24.902 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:29:24.902 -05:00: 
+2025-11-07 11:29:24.902 -05:00: Node.js v23.11.0
+2025-11-07 11:29:39.949 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:29:39.949 -05:00: @ECHO off
+2025-11-07 11:29:39.949 -05:00: ^
+2025-11-07 11:29:39.949 -05:00: 
+2025-11-07 11:29:39.949 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:29:39.949 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:29:39.949 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:29:39.949 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:29:39.949 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:29:39.949 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:29:39.949 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:29:39.949 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:29:39.949 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:29:39.949 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:29:39.949 -05:00: 
+2025-11-07 11:29:39.949 -05:00: Node.js v23.11.0
+2025-11-07 11:29:55.009 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:29:55.009 -05:00: @ECHO off
+2025-11-07 11:29:55.009 -05:00: ^
+2025-11-07 11:29:55.009 -05:00: 
+2025-11-07 11:29:55.009 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:29:55.009 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:29:55.009 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:29:55.009 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:29:55.009 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:29:55.009 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:29:55.009 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:29:55.009 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:29:55.009 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:29:55.009 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:29:55.009 -05:00: 
+2025-11-07 11:29:55.009 -05:00: Node.js v23.11.0
+2025-11-07 11:30:10.056 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:30:10.056 -05:00: @ECHO off
+2025-11-07 11:30:10.056 -05:00: ^
+2025-11-07 11:30:10.056 -05:00: 
+2025-11-07 11:30:10.056 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:30:10.056 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:30:10.056 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:30:10.056 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:30:10.056 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:30:10.056 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:30:10.056 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:30:10.056 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:30:10.056 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:30:10.056 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:30:10.056 -05:00: 
+2025-11-07 11:30:10.056 -05:00: Node.js v23.11.0
+2025-11-07 11:30:25.096 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:30:25.096 -05:00: @ECHO off
+2025-11-07 11:30:25.096 -05:00: ^
+2025-11-07 11:30:25.096 -05:00: 
+2025-11-07 11:30:25.096 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:30:25.096 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:30:25.096 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:30:25.096 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:30:25.096 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:30:25.096 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:30:25.096 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:30:25.096 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:30:25.096 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:30:25.096 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:30:25.096 -05:00: 
+2025-11-07 11:30:25.096 -05:00: Node.js v23.11.0
+2025-11-07 11:30:40.142 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:30:40.142 -05:00: @ECHO off
+2025-11-07 11:30:40.142 -05:00: ^
+2025-11-07 11:30:40.142 -05:00: 
+2025-11-07 11:30:40.142 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:30:40.142 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:30:40.142 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:30:40.142 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:30:40.142 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:30:40.142 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:30:40.142 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:30:40.142 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:30:40.142 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:30:40.142 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:30:40.142 -05:00: 
+2025-11-07 11:30:40.142 -05:00: Node.js v23.11.0
+2025-11-07 11:30:55.194 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:30:55.194 -05:00: @ECHO off
+2025-11-07 11:30:55.194 -05:00: ^
+2025-11-07 11:30:55.194 -05:00: 
+2025-11-07 11:30:55.194 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:30:55.194 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:30:55.194 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:30:55.194 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:30:55.194 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:30:55.194 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:30:55.194 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:30:55.194 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:30:55.194 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:30:55.194 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:30:55.194 -05:00: 
+2025-11-07 11:30:55.194 -05:00: Node.js v23.11.0
+2025-11-07 11:31:10.251 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:31:10.251 -05:00: @ECHO off
+2025-11-07 11:31:10.251 -05:00: ^
+2025-11-07 11:31:10.251 -05:00: 
+2025-11-07 11:31:10.251 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:31:10.251 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:31:10.251 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:31:10.251 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:31:10.251 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:31:10.251 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:31:10.251 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:31:10.251 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:31:10.251 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:31:10.251 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:31:10.251 -05:00: 
+2025-11-07 11:31:10.251 -05:00: Node.js v23.11.0
+2025-11-07 11:31:25.300 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:31:25.300 -05:00: @ECHO off
+2025-11-07 11:31:25.300 -05:00: ^
+2025-11-07 11:31:25.300 -05:00: 
+2025-11-07 11:31:25.300 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:31:25.300 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:31:25.300 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:31:25.300 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:31:25.300 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:31:25.300 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:31:25.300 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:31:25.300 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:31:25.300 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:31:25.300 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:31:25.300 -05:00: 
+2025-11-07 11:31:25.300 -05:00: Node.js v23.11.0
+2025-11-07 11:31:40.341 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:31:40.341 -05:00: @ECHO off
+2025-11-07 11:31:40.341 -05:00: ^
+2025-11-07 11:31:40.341 -05:00: 
+2025-11-07 11:31:40.341 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:31:40.341 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:31:40.341 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:31:40.341 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:31:40.341 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:31:40.341 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:31:40.341 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:31:40.341 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:31:40.341 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:31:40.341 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:31:40.341 -05:00: 
+2025-11-07 11:31:40.341 -05:00: Node.js v23.11.0
+2025-11-07 11:31:55.395 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:31:55.395 -05:00: @ECHO off
+2025-11-07 11:31:55.395 -05:00: ^
+2025-11-07 11:31:55.395 -05:00: 
+2025-11-07 11:31:55.395 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:31:55.395 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:31:55.395 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:31:55.395 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:31:55.395 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:31:55.395 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:31:55.395 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:31:55.395 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:31:55.395 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:31:55.395 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:31:55.395 -05:00: 
+2025-11-07 11:31:55.395 -05:00: Node.js v23.11.0
+2025-11-07 11:32:10.445 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:32:10.445 -05:00: @ECHO off
+2025-11-07 11:32:10.445 -05:00: ^
+2025-11-07 11:32:10.445 -05:00: 
+2025-11-07 11:32:10.445 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:32:10.445 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:32:10.445 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:32:10.445 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:32:10.445 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:32:10.445 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:32:10.445 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:32:10.445 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:32:10.445 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:32:10.445 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:32:10.445 -05:00: 
+2025-11-07 11:32:10.445 -05:00: Node.js v23.11.0
+2025-11-07 11:32:25.488 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:32:25.488 -05:00: @ECHO off
+2025-11-07 11:32:25.488 -05:00: ^
+2025-11-07 11:32:25.488 -05:00: 
+2025-11-07 11:32:25.488 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:32:25.488 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:32:25.488 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:32:25.488 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:32:25.488 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:32:25.488 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:32:25.488 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:32:25.488 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:32:25.488 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:32:25.488 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:32:25.488 -05:00: 
+2025-11-07 11:32:25.488 -05:00: Node.js v23.11.0
+2025-11-07 11:32:40.548 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:32:40.548 -05:00: @ECHO off
+2025-11-07 11:32:40.548 -05:00: ^
+2025-11-07 11:32:40.548 -05:00: 
+2025-11-07 11:32:40.548 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:32:40.548 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:32:40.548 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:32:40.548 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:32:40.548 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:32:40.549 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:32:40.549 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:32:40.549 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:32:40.549 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:32:40.549 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:32:40.549 -05:00: 
+2025-11-07 11:32:40.549 -05:00: Node.js v23.11.0
+2025-11-07 11:32:55.599 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:32:55.599 -05:00: @ECHO off
+2025-11-07 11:32:55.599 -05:00: ^
+2025-11-07 11:32:55.599 -05:00: 
+2025-11-07 11:32:55.599 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:32:55.599 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:32:55.599 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:32:55.599 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:32:55.599 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:32:55.599 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:32:55.599 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:32:55.599 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:32:55.599 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:32:55.599 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:32:55.599 -05:00: 
+2025-11-07 11:32:55.599 -05:00: Node.js v23.11.0
+2025-11-07 11:33:10.645 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:33:10.645 -05:00: @ECHO off
+2025-11-07 11:33:10.645 -05:00: ^
+2025-11-07 11:33:10.645 -05:00: 
+2025-11-07 11:33:10.645 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:33:10.645 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:33:10.645 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:33:10.645 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:33:10.645 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:33:10.645 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:33:10.645 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:33:10.645 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:33:10.645 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:33:10.645 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:33:10.645 -05:00: 
+2025-11-07 11:33:10.645 -05:00: Node.js v23.11.0
+2025-11-07 11:33:25.688 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:33:25.688 -05:00: @ECHO off
+2025-11-07 11:33:25.688 -05:00: ^
+2025-11-07 11:33:25.688 -05:00: 
+2025-11-07 11:33:25.688 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:33:25.688 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:33:25.688 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:33:25.688 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:33:25.688 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:33:25.688 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:33:25.688 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:33:25.688 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:33:25.688 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:33:25.688 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:33:25.688 -05:00: 
+2025-11-07 11:33:25.688 -05:00: Node.js v23.11.0
+2025-11-07 11:33:40.742 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:33:40.742 -05:00: @ECHO off
+2025-11-07 11:33:40.742 -05:00: ^
+2025-11-07 11:33:40.742 -05:00: 
+2025-11-07 11:33:40.742 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:33:40.742 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:33:40.742 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:33:40.742 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:33:40.742 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:33:40.742 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:33:40.742 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:33:40.742 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:33:40.742 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:33:40.742 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:33:40.742 -05:00: 
+2025-11-07 11:33:40.742 -05:00: Node.js v23.11.0
+2025-11-07 11:33:55.783 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:33:55.783 -05:00: @ECHO off
+2025-11-07 11:33:55.783 -05:00: ^
+2025-11-07 11:33:55.783 -05:00: 
+2025-11-07 11:33:55.783 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:33:55.783 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:33:55.783 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:33:55.783 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:33:55.783 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:33:55.783 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:33:55.783 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:33:55.783 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:33:55.783 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:33:55.783 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:33:55.783 -05:00: 
+2025-11-07 11:33:55.783 -05:00: Node.js v23.11.0
+2025-11-07 11:34:10.830 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:34:10.830 -05:00: @ECHO off
+2025-11-07 11:34:10.830 -05:00: ^
+2025-11-07 11:34:10.830 -05:00: 
+2025-11-07 11:34:10.830 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:34:10.830 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:34:10.830 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:34:10.830 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:34:10.830 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:34:10.830 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:34:10.830 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:34:10.830 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:34:10.830 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:34:10.830 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:34:10.830 -05:00: 
+2025-11-07 11:34:10.830 -05:00: Node.js v23.11.0
+2025-11-07 11:34:25.879 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:34:25.879 -05:00: @ECHO off
+2025-11-07 11:34:25.879 -05:00: ^
+2025-11-07 11:34:25.879 -05:00: 
+2025-11-07 11:34:25.879 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:34:25.879 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:34:25.879 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:34:25.879 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:34:25.879 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:34:25.879 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:34:25.879 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:34:25.879 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:34:25.879 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:34:25.879 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:34:25.879 -05:00: 
+2025-11-07 11:34:25.879 -05:00: Node.js v23.11.0
+2025-11-07 11:34:40.923 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:34:40.923 -05:00: @ECHO off
+2025-11-07 11:34:40.923 -05:00: ^
+2025-11-07 11:34:40.923 -05:00: 
+2025-11-07 11:34:40.923 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:34:40.923 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:34:40.923 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:34:40.923 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:34:40.923 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:34:40.923 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:34:40.923 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:34:40.923 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:34:40.923 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:34:40.923 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:34:40.923 -05:00: 
+2025-11-07 11:34:40.923 -05:00: Node.js v23.11.0
+2025-11-07 11:34:55.979 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:34:55.979 -05:00: @ECHO off
+2025-11-07 11:34:55.979 -05:00: ^
+2025-11-07 11:34:55.979 -05:00: 
+2025-11-07 11:34:55.979 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:34:55.979 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:34:55.979 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:34:55.979 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:34:55.979 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:34:55.979 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:34:55.979 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:34:55.979 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:34:55.979 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:34:55.979 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:34:55.979 -05:00: 
+2025-11-07 11:34:55.979 -05:00: Node.js v23.11.0
+2025-11-07 11:35:11.027 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:35:11.027 -05:00: @ECHO off
+2025-11-07 11:35:11.027 -05:00: ^
+2025-11-07 11:35:11.027 -05:00: 
+2025-11-07 11:35:11.027 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:35:11.027 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:35:11.027 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:35:11.027 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:35:11.027 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:35:11.027 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:35:11.027 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:35:11.027 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:35:11.027 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:35:11.027 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:35:11.027 -05:00: 
+2025-11-07 11:35:11.027 -05:00: Node.js v23.11.0
+2025-11-07 11:35:26.070 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:35:26.070 -05:00: @ECHO off
+2025-11-07 11:35:26.070 -05:00: ^
+2025-11-07 11:35:26.070 -05:00: 
+2025-11-07 11:35:26.070 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:35:26.070 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:35:26.070 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:35:26.070 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:35:26.070 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:35:26.070 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:35:26.070 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:35:26.070 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:35:26.070 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:35:26.070 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:35:26.070 -05:00: 
+2025-11-07 11:35:26.070 -05:00: Node.js v23.11.0
+2025-11-07 11:35:41.111 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:35:41.111 -05:00: @ECHO off
+2025-11-07 11:35:41.111 -05:00: ^
+2025-11-07 11:35:41.111 -05:00: 
+2025-11-07 11:35:41.111 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:35:41.111 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:35:41.111 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:35:41.111 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:35:41.111 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:35:41.111 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:35:41.111 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:35:41.111 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:35:41.111 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:35:41.111 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:35:41.111 -05:00: 
+2025-11-07 11:35:41.111 -05:00: Node.js v23.11.0
+2025-11-07 11:35:56.160 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:35:56.160 -05:00: @ECHO off
+2025-11-07 11:35:56.160 -05:00: ^
+2025-11-07 11:35:56.160 -05:00: 
+2025-11-07 11:35:56.160 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:35:56.160 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:35:56.160 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:35:56.160 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:35:56.160 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:35:56.160 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:35:56.160 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:35:56.160 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:35:56.160 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:35:56.160 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:35:56.160 -05:00: 
+2025-11-07 11:35:56.160 -05:00: Node.js v23.11.0
+2025-11-07 11:36:11.214 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:36:11.214 -05:00: @ECHO off
+2025-11-07 11:36:11.214 -05:00: ^
+2025-11-07 11:36:11.214 -05:00: 
+2025-11-07 11:36:11.214 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:36:11.214 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:36:11.214 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:36:11.214 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:36:11.214 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:36:11.214 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:36:11.214 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:36:11.214 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:36:11.214 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:36:11.214 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:36:11.214 -05:00: 
+2025-11-07 11:36:11.214 -05:00: Node.js v23.11.0
+2025-11-07 11:36:26.278 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:36:26.278 -05:00: @ECHO off
+2025-11-07 11:36:26.278 -05:00: ^
+2025-11-07 11:36:26.278 -05:00: 
+2025-11-07 11:36:26.278 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:36:26.278 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:36:26.278 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:36:26.278 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:36:26.278 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:36:26.278 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:36:26.278 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:36:26.278 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:36:26.278 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:36:26.278 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:36:26.278 -05:00: 
+2025-11-07 11:36:26.278 -05:00: Node.js v23.11.0
+2025-11-07 11:36:41.317 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:36:41.317 -05:00: @ECHO off
+2025-11-07 11:36:41.317 -05:00: ^
+2025-11-07 11:36:41.317 -05:00: 
+2025-11-07 11:36:41.317 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:36:41.317 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:36:41.317 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:36:41.317 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:36:41.317 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:36:41.317 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:36:41.317 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:36:41.317 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:36:41.317 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:36:41.317 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:36:41.317 -05:00: 
+2025-11-07 11:36:41.317 -05:00: Node.js v23.11.0
+2025-11-07 11:36:56.357 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:36:56.357 -05:00: @ECHO off
+2025-11-07 11:36:56.357 -05:00: ^
+2025-11-07 11:36:56.357 -05:00: 
+2025-11-07 11:36:56.357 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:36:56.357 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:36:56.357 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:36:56.357 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:36:56.357 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:36:56.357 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:36:56.357 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:36:56.357 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:36:56.357 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:36:56.357 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:36:56.357 -05:00: 
+2025-11-07 11:36:56.357 -05:00: Node.js v23.11.0
+2025-11-07 11:37:11.398 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:37:11.398 -05:00: @ECHO off
+2025-11-07 11:37:11.398 -05:00: ^
+2025-11-07 11:37:11.398 -05:00: 
+2025-11-07 11:37:11.398 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:37:11.398 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:37:11.398 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:37:11.398 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:37:11.398 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:37:11.398 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:37:11.398 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:37:11.398 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:37:11.398 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:37:11.398 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:37:11.398 -05:00: 
+2025-11-07 11:37:11.398 -05:00: Node.js v23.11.0
+2025-11-07 11:37:26.454 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:37:26.454 -05:00: @ECHO off
+2025-11-07 11:37:26.454 -05:00: ^
+2025-11-07 11:37:26.454 -05:00: 
+2025-11-07 11:37:26.454 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:37:26.454 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:37:26.454 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:37:26.454 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:37:26.454 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:37:26.454 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:37:26.454 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:37:26.454 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:37:26.454 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:37:26.454 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:37:26.454 -05:00: 
+2025-11-07 11:37:26.454 -05:00: Node.js v23.11.0
+2025-11-07 11:37:41.505 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:37:41.505 -05:00: @ECHO off
+2025-11-07 11:37:41.505 -05:00: ^
+2025-11-07 11:37:41.505 -05:00: 
+2025-11-07 11:37:41.505 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:37:41.505 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:37:41.505 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:37:41.505 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:37:41.505 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:37:41.505 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:37:41.505 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:37:41.505 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:37:41.505 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:37:41.505 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:37:41.505 -05:00: 
+2025-11-07 11:37:41.505 -05:00: Node.js v23.11.0
+2025-11-07 11:37:56.542 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:37:56.542 -05:00: @ECHO off
+2025-11-07 11:37:56.542 -05:00: ^
+2025-11-07 11:37:56.542 -05:00: 
+2025-11-07 11:37:56.542 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:37:56.542 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:37:56.542 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:37:56.542 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:37:56.542 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:37:56.542 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:37:56.542 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:37:56.542 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:37:56.542 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:37:56.542 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:37:56.542 -05:00: 
+2025-11-07 11:37:56.542 -05:00: Node.js v23.11.0
+2025-11-07 11:38:11.605 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:38:11.605 -05:00: @ECHO off
+2025-11-07 11:38:11.605 -05:00: ^
+2025-11-07 11:38:11.605 -05:00: 
+2025-11-07 11:38:11.605 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:38:11.605 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:38:11.605 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:38:11.605 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:38:11.605 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:38:11.605 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:38:11.605 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:38:11.605 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:38:11.605 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:38:11.605 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:38:11.605 -05:00: 
+2025-11-07 11:38:11.605 -05:00: Node.js v23.11.0
+2025-11-07 11:38:26.653 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:38:26.653 -05:00: @ECHO off
+2025-11-07 11:38:26.653 -05:00: ^
+2025-11-07 11:38:26.653 -05:00: 
+2025-11-07 11:38:26.653 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:38:26.653 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:38:26.653 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:38:26.653 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:38:26.653 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:38:26.653 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:38:26.653 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:38:26.653 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:38:26.653 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:38:26.653 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:38:26.653 -05:00: 
+2025-11-07 11:38:26.653 -05:00: Node.js v23.11.0
+2025-11-07 11:38:41.697 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:38:41.697 -05:00: @ECHO off
+2025-11-07 11:38:41.697 -05:00: ^
+2025-11-07 11:38:41.697 -05:00: 
+2025-11-07 11:38:41.697 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:38:41.697 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:38:41.697 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:38:41.697 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:38:41.697 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:38:41.697 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:38:41.697 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:38:41.697 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:38:41.697 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:38:41.697 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:38:41.697 -05:00: 
+2025-11-07 11:38:41.697 -05:00: Node.js v23.11.0
+2025-11-07 11:38:56.734 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:38:56.734 -05:00: @ECHO off
+2025-11-07 11:38:56.734 -05:00: ^
+2025-11-07 11:38:56.734 -05:00: 
+2025-11-07 11:38:56.734 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:38:56.734 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:38:56.734 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:38:56.734 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:38:56.734 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:38:56.734 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:38:56.734 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:38:56.734 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:38:56.734 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:38:56.734 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:38:56.734 -05:00: 
+2025-11-07 11:38:56.734 -05:00: Node.js v23.11.0
+2025-11-07 11:39:11.777 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:39:11.777 -05:00: @ECHO off
+2025-11-07 11:39:11.777 -05:00: ^
+2025-11-07 11:39:11.777 -05:00: 
+2025-11-07 11:39:11.777 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:39:11.777 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:39:11.777 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:39:11.777 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:39:11.777 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:39:11.777 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:39:11.777 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:39:11.777 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:39:11.777 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:39:11.777 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:39:11.777 -05:00: 
+2025-11-07 11:39:11.777 -05:00: Node.js v23.11.0
+2025-11-07 11:39:26.830 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:39:26.830 -05:00: @ECHO off
+2025-11-07 11:39:26.830 -05:00: ^
+2025-11-07 11:39:26.830 -05:00: 
+2025-11-07 11:39:26.830 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:39:26.830 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:39:26.830 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:39:26.830 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:39:26.830 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:39:26.830 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:39:26.830 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:39:26.830 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:39:26.830 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:39:26.830 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:39:26.830 -05:00: 
+2025-11-07 11:39:26.830 -05:00: Node.js v23.11.0
+2025-11-07 11:39:41.880 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:39:41.880 -05:00: @ECHO off
+2025-11-07 11:39:41.880 -05:00: ^
+2025-11-07 11:39:41.880 -05:00: 
+2025-11-07 11:39:41.880 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:39:41.880 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:39:41.880 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:39:41.880 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:39:41.880 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:39:41.880 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:39:41.880 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:39:41.880 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:39:41.880 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:39:41.880 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:39:41.880 -05:00: 
+2025-11-07 11:39:41.880 -05:00: Node.js v23.11.0
+2025-11-07 11:39:56.927 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:39:56.927 -05:00: @ECHO off
+2025-11-07 11:39:56.927 -05:00: ^
+2025-11-07 11:39:56.927 -05:00: 
+2025-11-07 11:39:56.927 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:39:56.927 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:39:56.927 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:39:56.927 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:39:56.927 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:39:56.927 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:39:56.927 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:39:56.927 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:39:56.927 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:39:56.927 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:39:56.927 -05:00: 
+2025-11-07 11:39:56.927 -05:00: Node.js v23.11.0
+2025-11-07 11:40:11.962 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:40:11.962 -05:00: @ECHO off
+2025-11-07 11:40:11.962 -05:00: ^
+2025-11-07 11:40:11.962 -05:00: 
+2025-11-07 11:40:11.962 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:40:11.962 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:40:11.962 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:40:11.962 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:40:11.962 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:40:11.962 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:40:11.962 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:40:11.962 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:40:11.962 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:40:11.962 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:40:11.962 -05:00: 
+2025-11-07 11:40:11.962 -05:00: Node.js v23.11.0
+2025-11-07 11:40:27.008 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:40:27.008 -05:00: @ECHO off
+2025-11-07 11:40:27.008 -05:00: ^
+2025-11-07 11:40:27.008 -05:00: 
+2025-11-07 11:40:27.008 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:40:27.008 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:40:27.008 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:40:27.008 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:40:27.008 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:40:27.008 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:40:27.008 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:40:27.008 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:40:27.008 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:40:27.008 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:40:27.008 -05:00: 
+2025-11-07 11:40:27.008 -05:00: Node.js v23.11.0
+2025-11-07 11:40:42.059 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:40:42.059 -05:00: @ECHO off
+2025-11-07 11:40:42.059 -05:00: ^
+2025-11-07 11:40:42.059 -05:00: 
+2025-11-07 11:40:42.059 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:40:42.059 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:40:42.059 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:40:42.059 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:40:42.059 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:40:42.059 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:40:42.059 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:40:42.059 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:40:42.059 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:40:42.059 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:40:42.059 -05:00: 
+2025-11-07 11:40:42.059 -05:00: Node.js v23.11.0
+2025-11-07 11:40:57.107 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:40:57.107 -05:00: @ECHO off
+2025-11-07 11:40:57.107 -05:00: ^
+2025-11-07 11:40:57.107 -05:00: 
+2025-11-07 11:40:57.107 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:40:57.107 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:40:57.107 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:40:57.107 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:40:57.107 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:40:57.107 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:40:57.107 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:40:57.107 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:40:57.108 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:40:57.108 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:40:57.108 -05:00: 
+2025-11-07 11:40:57.108 -05:00: Node.js v23.11.0
+2025-11-07 11:41:12.154 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:41:12.154 -05:00: @ECHO off
+2025-11-07 11:41:12.154 -05:00: ^
+2025-11-07 11:41:12.154 -05:00: 
+2025-11-07 11:41:12.154 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:41:12.154 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:41:12.154 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:41:12.154 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:41:12.154 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:41:12.154 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:41:12.154 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:41:12.154 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:41:12.154 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:41:12.154 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:41:12.154 -05:00: 
+2025-11-07 11:41:12.154 -05:00: Node.js v23.11.0
+2025-11-07 11:41:27.203 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:41:27.203 -05:00: @ECHO off
+2025-11-07 11:41:27.203 -05:00: ^
+2025-11-07 11:41:27.203 -05:00: 
+2025-11-07 11:41:27.203 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:41:27.203 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:41:27.203 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:41:27.203 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:41:27.203 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:41:27.203 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:41:27.203 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:41:27.203 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:41:27.203 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:41:27.203 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:41:27.203 -05:00: 
+2025-11-07 11:41:27.203 -05:00: Node.js v23.11.0
+2025-11-07 11:41:42.260 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:41:42.260 -05:00: @ECHO off
+2025-11-07 11:41:42.260 -05:00: ^
+2025-11-07 11:41:42.260 -05:00: 
+2025-11-07 11:41:42.260 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:41:42.260 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:41:42.260 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:41:42.260 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:41:42.260 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:41:42.260 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:41:42.260 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:41:42.260 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:41:42.260 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:41:42.260 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:41:42.260 -05:00: 
+2025-11-07 11:41:42.260 -05:00: Node.js v23.11.0
+2025-11-07 11:41:57.313 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:41:57.313 -05:00: @ECHO off
+2025-11-07 11:41:57.313 -05:00: ^
+2025-11-07 11:41:57.313 -05:00: 
+2025-11-07 11:41:57.313 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:41:57.313 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:41:57.313 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:41:57.313 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:41:57.313 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:41:57.313 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:41:57.313 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:41:57.313 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:41:57.313 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:41:57.313 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:41:57.313 -05:00: 
+2025-11-07 11:41:57.313 -05:00: Node.js v23.11.0
+2025-11-07 11:42:12.364 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:42:12.364 -05:00: @ECHO off
+2025-11-07 11:42:12.364 -05:00: ^
+2025-11-07 11:42:12.364 -05:00: 
+2025-11-07 11:42:12.364 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:42:12.364 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:42:12.364 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:42:12.364 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:42:12.364 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:42:12.364 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:42:12.364 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:42:12.364 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:42:12.364 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:42:12.364 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:42:12.364 -05:00: 
+2025-11-07 11:42:12.364 -05:00: Node.js v23.11.0
+2025-11-07 11:42:27.405 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:42:27.405 -05:00: @ECHO off
+2025-11-07 11:42:27.405 -05:00: ^
+2025-11-07 11:42:27.405 -05:00: 
+2025-11-07 11:42:27.405 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:42:27.405 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:42:27.405 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:42:27.405 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:42:27.405 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:42:27.405 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:42:27.405 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:42:27.405 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:42:27.405 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:42:27.405 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:42:27.406 -05:00: 
+2025-11-07 11:42:27.406 -05:00: Node.js v23.11.0
+2025-11-07 11:42:42.449 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:42:42.449 -05:00: @ECHO off
+2025-11-07 11:42:42.449 -05:00: ^
+2025-11-07 11:42:42.449 -05:00: 
+2025-11-07 11:42:42.449 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:42:42.449 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:42:42.449 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:42:42.449 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:42:42.449 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:42:42.449 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:42:42.449 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:42:42.449 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:42:42.449 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:42:42.449 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:42:42.449 -05:00: 
+2025-11-07 11:42:42.449 -05:00: Node.js v23.11.0
+2025-11-07 11:42:57.492 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:42:57.492 -05:00: @ECHO off
+2025-11-07 11:42:57.492 -05:00: ^
+2025-11-07 11:42:57.492 -05:00: 
+2025-11-07 11:42:57.492 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:42:57.492 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:42:57.492 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:42:57.492 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:42:57.492 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:42:57.492 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:42:57.492 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:42:57.492 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:42:57.492 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:42:57.492 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:42:57.492 -05:00: 
+2025-11-07 11:42:57.492 -05:00: Node.js v23.11.0
+2025-11-07 11:43:12.532 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:43:12.532 -05:00: @ECHO off
+2025-11-07 11:43:12.532 -05:00: ^
+2025-11-07 11:43:12.532 -05:00: 
+2025-11-07 11:43:12.532 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:43:12.532 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:43:12.532 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:43:12.532 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:43:12.532 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:43:12.532 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:43:12.532 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:43:12.532 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:43:12.532 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:43:12.532 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:43:12.532 -05:00: 
+2025-11-07 11:43:12.532 -05:00: Node.js v23.11.0
+2025-11-07 11:43:27.578 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:43:27.578 -05:00: @ECHO off
+2025-11-07 11:43:27.578 -05:00: ^
+2025-11-07 11:43:27.578 -05:00: 
+2025-11-07 11:43:27.578 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:43:27.578 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:43:27.578 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:43:27.578 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:43:27.578 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:43:27.578 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:43:27.578 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:43:27.578 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:43:27.578 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:43:27.578 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:43:27.578 -05:00: 
+2025-11-07 11:43:27.578 -05:00: Node.js v23.11.0
+2025-11-07 11:43:42.652 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:43:42.652 -05:00: @ECHO off
+2025-11-07 11:43:42.652 -05:00: ^
+2025-11-07 11:43:42.652 -05:00: 
+2025-11-07 11:43:42.652 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:43:42.652 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:43:42.652 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:43:42.652 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:43:42.652 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:43:42.652 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:43:42.652 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:43:42.652 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:43:42.652 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:43:42.652 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:43:42.652 -05:00: 
+2025-11-07 11:43:42.652 -05:00: Node.js v23.11.0
+2025-11-07 11:43:57.704 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:43:57.704 -05:00: @ECHO off
+2025-11-07 11:43:57.704 -05:00: ^
+2025-11-07 11:43:57.704 -05:00: 
+2025-11-07 11:43:57.704 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:43:57.704 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:43:57.704 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:43:57.704 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:43:57.704 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:43:57.704 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:43:57.704 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:43:57.704 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:43:57.704 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:43:57.704 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:43:57.704 -05:00: 
+2025-11-07 11:43:57.704 -05:00: Node.js v23.11.0
+2025-11-07 11:44:12.743 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:44:12.743 -05:00: @ECHO off
+2025-11-07 11:44:12.743 -05:00: ^
+2025-11-07 11:44:12.743 -05:00: 
+2025-11-07 11:44:12.743 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:44:12.743 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:44:12.743 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:44:12.743 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:44:12.743 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:44:12.743 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:44:12.743 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:44:12.743 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:44:12.743 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:44:12.743 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:44:12.743 -05:00: 
+2025-11-07 11:44:12.743 -05:00: Node.js v23.11.0
+2025-11-07 11:44:27.798 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:44:27.798 -05:00: @ECHO off
+2025-11-07 11:44:27.798 -05:00: ^
+2025-11-07 11:44:27.798 -05:00: 
+2025-11-07 11:44:27.798 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:44:27.798 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:44:27.798 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:44:27.798 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:44:27.798 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:44:27.798 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:44:27.798 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:44:27.798 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:44:27.798 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:44:27.798 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:44:27.798 -05:00: 
+2025-11-07 11:44:27.798 -05:00: Node.js v23.11.0
+2025-11-07 11:44:42.859 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:44:42.859 -05:00: @ECHO off
+2025-11-07 11:44:42.859 -05:00: ^
+2025-11-07 11:44:42.859 -05:00: 
+2025-11-07 11:44:42.859 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:44:42.859 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:44:42.859 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:44:42.859 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:44:42.859 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:44:42.859 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:44:42.859 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:44:42.859 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:44:42.859 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:44:42.859 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:44:42.859 -05:00: 
+2025-11-07 11:44:42.859 -05:00: Node.js v23.11.0
+2025-11-07 11:44:57.909 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:44:57.909 -05:00: @ECHO off
+2025-11-07 11:44:57.909 -05:00: ^
+2025-11-07 11:44:57.909 -05:00: 
+2025-11-07 11:44:57.909 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:44:57.909 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:44:57.909 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:44:57.909 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:44:57.909 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:44:57.909 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:44:57.909 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:44:57.909 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:44:57.909 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:44:57.909 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:44:57.909 -05:00: 
+2025-11-07 11:44:57.909 -05:00: Node.js v23.11.0
+2025-11-07 11:45:12.958 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:45:12.958 -05:00: @ECHO off
+2025-11-07 11:45:12.958 -05:00: ^
+2025-11-07 11:45:12.958 -05:00: 
+2025-11-07 11:45:12.958 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:45:12.958 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:45:12.958 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:45:12.958 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:45:12.958 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:45:12.958 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:45:12.958 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:45:12.958 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:45:12.958 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:45:12.958 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:45:12.958 -05:00: 
+2025-11-07 11:45:12.958 -05:00: Node.js v23.11.0
+2025-11-07 11:45:28.007 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:45:28.007 -05:00: @ECHO off
+2025-11-07 11:45:28.007 -05:00: ^
+2025-11-07 11:45:28.007 -05:00: 
+2025-11-07 11:45:28.007 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:45:28.007 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:45:28.007 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:45:28.007 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:45:28.007 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:45:28.007 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:45:28.007 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:45:28.007 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:45:28.007 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:45:28.007 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:45:28.007 -05:00: 
+2025-11-07 11:45:28.007 -05:00: Node.js v23.11.0
+2025-11-07 11:45:43.053 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:45:43.053 -05:00: @ECHO off
+2025-11-07 11:45:43.053 -05:00: ^
+2025-11-07 11:45:43.053 -05:00: 
+2025-11-07 11:45:43.053 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:45:43.053 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:45:43.053 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:45:43.053 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:45:43.053 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:45:43.053 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:45:43.053 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:45:43.053 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:45:43.053 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:45:43.053 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:45:43.053 -05:00: 
+2025-11-07 11:45:43.053 -05:00: Node.js v23.11.0
+2025-11-07 11:45:58.096 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:45:58.096 -05:00: @ECHO off
+2025-11-07 11:45:58.096 -05:00: ^
+2025-11-07 11:45:58.096 -05:00: 
+2025-11-07 11:45:58.096 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:45:58.096 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:45:58.096 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:45:58.096 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:45:58.096 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:45:58.096 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:45:58.096 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:45:58.096 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:45:58.096 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:45:58.096 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:45:58.096 -05:00: 
+2025-11-07 11:45:58.096 -05:00: Node.js v23.11.0
+2025-11-07 11:46:13.136 -05:00: C:\USERS\KINGL\APPDATA\ROAMING\NPM\TSX.CMD:1
+2025-11-07 11:46:13.136 -05:00: @ECHO off
+2025-11-07 11:46:13.136 -05:00: ^
+2025-11-07 11:46:13.136 -05:00: 
+2025-11-07 11:46:13.136 -05:00: SyntaxError: Invalid or unexpected token
+2025-11-07 11:46:13.136 -05:00:     at wrapSafe (node:internal/modules/cjs/loader:1666:18)
+2025-11-07 11:46:13.136 -05:00:     at Module._compile (node:internal/modules/cjs/loader:1708:20)
+2025-11-07 11:46:13.136 -05:00:     at Object..js (node:internal/modules/cjs/loader:1899:10)
+2025-11-07 11:46:13.136 -05:00:     at Module.load (node:internal/modules/cjs/loader:1469:32)
+2025-11-07 11:46:13.136 -05:00:     at Function._load (node:internal/modules/cjs/loader:1286:12)
+2025-11-07 11:46:13.136 -05:00:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-11-07 11:46:13.136 -05:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+2025-11-07 11:46:13.136 -05:00:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:151:5)
+2025-11-07 11:46:13.136 -05:00:     at node:internal/main/run_main_module:33:47
+2025-11-07 11:46:13.136 -05:00: 
+2025-11-07 11:46:13.136 -05:00: Node.js v23.11.0

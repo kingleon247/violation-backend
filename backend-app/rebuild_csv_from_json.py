@@ -1,3 +1,5 @@
+# rebuild_csv_from_json.py
+
 #!/usr/bin/env python3
 """
 Rebuild data/violations.csv from existing per-notice JSON files.

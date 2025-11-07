@@ -1,72 +1,162 @@
 // src/app/api/scrape/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { db } from "@db/config/configureClient";
-import { scrapeRequests } from "@/db/migrations/schema";
+import { scrapeRequests } from "@db/migrations/schema";
+import { desc, eq } from "drizzle-orm"; // ⬅️ removed `sql`
 
-// OPTIONAL: if you want to see job status quickly from the UI without making a new route
-import { eq, desc } from "drizzle-orm";
+// --- tiny helpers (no extra deps) ---
+function asString(v: unknown): string | undefined {
+  return typeof v === "string" && v.trim() ? v.trim() : undefined;
+}
+function asBool(v: unknown): boolean | undefined {
+  if (typeof v === "boolean") return v;
+  if (typeof v === "string") return v === "true";
+  return undefined;
+}
+function asInt(v: unknown): number | undefined {
+  const n = Number(v);
+  return Number.isInteger(n) && n > 0 ? n : undefined;
+}
+function asNeighborhoods(v: unknown): string[] | undefined {
+  if (!Array.isArray(v)) return undefined;
+  const set = new Set<string>();
+  for (const raw of v) {
+    const s = String(raw).trim();
+    if (s) set.add(s.toUpperCase());
+  }
+  return set.size ? Array.from(set) : undefined;
+}
 
-/**
- * POST /api/scrape
- * Enqueue a scrape job. The worker (scrapeRunner) will pick it up.
- *
- * Body (all optional; empty payload means "all neighborhoods incremental"):
- * {
- *   "neighborhoods": ["ABELL","ALLENDALE"],
- *   "extract": true,
- *   "ocr": false
- * }
- */
+// POST /api/scrape  -> enqueue job
 export async function POST(req: NextRequest) {
-  const body = await req.json().catch(() => ({} as any));
+  try {
+    const body = await req.json().catch(() => ({} as any));
 
-  const neighborhoods: string[] = Array.isArray(body?.neighborhoods)
-    ? body.neighborhoods
-    : [];
+    const neighborhoods = asNeighborhoods(body?.neighborhoods);
+    const since = asString(body?.since); // "YYYY-MM-DD"
+    const extract = asBool(body?.extract);
+    const ocr = asBool(body?.ocr);
+    const maxPdfsPerNeighborhood = asInt(body?.maxPdfsPerNeighborhood);
 
-  const extract: boolean = !!body?.extract;
-  const ocr: boolean = !!body?.ocr;
+    // compact payload (omit empty/undefined)
+    const payload: Record<string, unknown> = {};
+    if (neighborhoods) payload.neighborhoods = neighborhoods;
+    if (since) payload.since = since;
+    if (extract !== undefined) payload.extract = extract;
+    if (ocr !== undefined) payload.ocr = ocr;
+    if (maxPdfsPerNeighborhood !== undefined)
+      payload.maxPdfsPerNeighborhood = maxPdfsPerNeighborhood;
 
-  const payload = { neighborhoods, extract, ocr };
+    // ✅ Let Drizzle serialize jsonb
+    const [{ id }] = await db
+      .insert(scrapeRequests)
+      .values({ status: "queued", payload })
+      .returning({ id: scrapeRequests.id });
 
-  const [row] = await db
-    .insert(scrapeRequests)
-    .values({ payload }) // status defaults to 'queued'
-    .returning({ id: scrapeRequests.id });
-
-  return NextResponse.json({ ok: true, id: row.id });
+    return new NextResponse(
+      JSON.stringify({ ok: true, id, status: "queued" }),
+      {
+        status: 201,
+        headers: {
+          "content-type": "application/json",
+          "cache-control": "no-store",
+          "x-enqueued-id": id,
+          Location: `/api/scrape?id=${encodeURIComponent(id)}`,
+        },
+      }
+    );
+  } catch (err: any) {
+    console.error("[/api/scrape] enqueue failed:", err?.message ?? err);
+    return new NextResponse(
+      JSON.stringify({ ok: false, error: "enqueue-failed" }),
+      {
+        status: 500,
+        headers: {
+          "content-type": "application/json",
+          "cache-control": "no-store",
+        },
+      }
+    );
+  }
 }
 
 /**
- * GET /api/scrape?id=<jobId>
- * - If id is provided: return the single job’s status.
- * - If id is missing: return the most recent 20 jobs (for a simple “Jobs” panel).
+ * GET /api/scrape?id=<jobId>      -> single job
+ * GET /api/scrape?limit=20&page=1 -> recent jobs (paginated)
  */
 export async function GET(req: NextRequest) {
-  const { searchParams } = new URL(req.url);
-  const id = searchParams.get("id");
+  const url = new URL(req.url);
+  const id = url.searchParams.get("id");
+  const limit = Math.min(
+    Math.max(Number(url.searchParams.get("limit") ?? "20") || 20, 1),
+    100
+  );
+  const page = Math.max(Number(url.searchParams.get("page") ?? "1") || 1, 1);
+  const offset = (page - 1) * limit;
 
-  if (id) {
-    const rows = await db
-      .select()
-      .from(scrapeRequests)
-      .where(eq(scrapeRequests.id, id))
-      .limit(1);
+  try {
+    if (id) {
+      const rows = await db
+        .select()
+        .from(scrapeRequests)
+        .where(eq(scrapeRequests.id, id))
+        .limit(1);
 
-    if (rows.length === 0) {
-      return NextResponse.json(
-        { ok: false, error: "job not found", id },
-        { status: 404 }
-      );
+      if (!rows.length) {
+        return new NextResponse(
+          JSON.stringify({ ok: false, error: "job not found", id }),
+          {
+            status: 404,
+            headers: {
+              "content-type": "application/json",
+              "cache-control": "no-store",
+            },
+          }
+        );
+      }
+
+      return new NextResponse(JSON.stringify({ ok: true, job: rows[0] }), {
+        headers: {
+          "content-type": "application/json",
+          "cache-control": "no-store",
+        },
+      });
     }
-    return NextResponse.json({ ok: true, job: rows[0] });
+
+    // list mode
+    const jobs = await db
+      .select({
+        id: scrapeRequests.id,
+        createdAt: scrapeRequests.createdAt,
+        startedAt: scrapeRequests.startedAt,
+        finishedAt: scrapeRequests.finishedAt,
+        status: scrapeRequests.status,
+        ok: scrapeRequests.ok,
+        error: scrapeRequests.error,
+        payload: scrapeRequests.payload,
+      })
+      .from(scrapeRequests)
+      .orderBy(desc(scrapeRequests.createdAt))
+      .limit(limit)
+      .offset(offset);
+
+    return new NextResponse(JSON.stringify({ ok: true, page, limit, jobs }), {
+      headers: {
+        "content-type": "application/json",
+        "cache-control": "no-store",
+      },
+    });
+  } catch (err: any) {
+    console.error("[/api/scrape] GET failed:", err?.message ?? err);
+    return new NextResponse(
+      JSON.stringify({ ok: false, error: "query-failed" }),
+      {
+        status: 500,
+        headers: {
+          "content-type": "application/json",
+          "cache-control": "no-store",
+        },
+      }
+    );
   }
-
-  const jobs = await db
-    .select()
-    .from(scrapeRequests)
-    .orderBy(desc(scrapeRequests.createdAt))
-    .limit(20);
-
-  return NextResponse.json({ ok: true, jobs });
 }

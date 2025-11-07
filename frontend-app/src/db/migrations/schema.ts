@@ -160,20 +160,40 @@ export const scrapeStatus = pgEnum("scrape_status", [
   "error",
 ]);
 
-export const scrapeRequests = pgTable("scrape_requests", {
-  id: uuid("id").defaultRandom().primaryKey(),
-  createdAt: timestamp("created_at", { withTimezone: true, mode: "date" })
-    .defaultNow()
-    .notNull(),
-  startedAt: timestamp("started_at", { withTimezone: true, mode: "date" }),
-  finishedAt: timestamp("finished_at", { withTimezone: true, mode: "date" }),
+export const scrapeRequests = pgTable(
+  "scrape_requests",
+  {
+    id: uuid("id").defaultRandom().primaryKey(),
 
-  // queued | running | success | error
-  status: scrapeStatus("status").default("queued").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true, mode: "date" })
+      .defaultNow()
+      .notNull(),
+    startedAt: timestamp("started_at", { withTimezone: true, mode: "date" }),
+    finishedAt: timestamp("finished_at", { withTimezone: true, mode: "date" }),
 
-  // Arbitrary JSON payload: { neighborhoods?: string[], extract?: boolean, ocr?: boolean }
-  payload: jsonb("payload").notNull(),
+    // NEW: heartbeat used by the reaper (nullable; only set while running)
+    heartbeatAt: timestamp("heartbeat_at", {
+      withTimezone: true,
+      mode: "date",
+    }),
 
-  ok: boolean("ok"),
-  error: text("error"),
-});
+    status: scrapeStatus("status").default("queued").notNull(),
+
+    // Arbitrary JSON payload: { neighborhoods?: string[], extract?: boolean, ocr?: boolean, ... }
+    payload: jsonb("payload").notNull(),
+
+    ok: boolean("ok"),
+    error: text("error"),
+  },
+  (t) => {
+    return {
+      ixCreated: index("ix_scrape_requests_created_at").on(t.createdAt),
+      ixStatus: index("ix_scrape_requests_status_created").on(
+        t.status,
+        t.createdAt
+      ),
+      ixStarted: index("ix_scrape_requests_started_at").on(t.startedAt),
+      ixHeartbeat: index("ix_scrape_requests_heartbeat_at").on(t.heartbeatAt),
+    };
+  }
+);
