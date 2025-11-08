@@ -54,13 +54,41 @@ export async function GET(req: NextRequest) {
 
     const p = logPathFor(jobId);
     if (!fssync.existsSync(p)) {
+      // Check if job is still running
+      const job = await db
+        .select({ status: scrapeRequests.status })
+        .from(scrapeRequests)
+        .where(eq(scrapeRequests.id, jobId))
+        .limit(1);
+
+      if (job.length > 0 && job[0].status === "running") {
+        // Job is running but log not ready yet; return 202 Accepted
+        return NextResponse.json(
+          {
+            ok: false,
+            pending: true,
+            hint: "log-not-ready",
+            message:
+              "Job is running, log file not yet created. Retry in a moment.",
+          },
+          {
+            status: 202,
+            headers: {
+              "Retry-After": "2",
+              "x-job-id": jobId,
+            },
+          }
+        );
+      }
+
+      // Job is not running, log really doesn't exist
       return NextResponse.json(
         {
           ok: false,
           error: "log-not-found",
           jobId,
           path: p,
-          hint: "If the job is still running, wait for the first stdout write.",
+          hint: "Log file does not exist. Job may have failed to start.",
         },
         { status: 404 }
       );

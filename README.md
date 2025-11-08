@@ -9,34 +9,40 @@ A production-focused monorepo that **scrapes Baltimore City Violation Notices**,
 
 ## Table of Contents
 
-1. [High-level Overview](#high-level-overview)
-2. [What You Get](#what-you-get)
-3. [System Diagram](#system-diagram)
-4. [Repo Layout](#repo-layout)
-5. [Requirements](#requirements)
-6. [Environment Variables](#environment-variables)
-7. [Install & Setup](#install--setup)
-   - [Frontend](#frontend)
-   - [Backend](#backend)
-   - [Database (Drizzle)](#database-drizzle)
-8. [Run (Development)](#run-development)
-   - [One-off Debug Run (Headful)](#one-off-debug-run-headful)
-9. [API](#api)
-   - [POST /api/scrape (enqueue)](#post-apiscrape-enqueue)
-   - [GET /api/violations (query)](#get-apiviolations-query)
-10. [Incremental Strategy](#incremental-strategy)
-11. [Production (DigitalOcean)](#production-digitalocean)
+- [next-scraper — Monorepo README (Production-Ready)](#next-scraper--monorepo-readme-production-ready)
+  - [Table of Contents](#table-of-contents)
+  - [High-level Overview](#high-level-overview)
+  - [What You Get](#what-you-get)
+  - [System Diagram](#system-diagram)
+  - [Repo Layout](#repo-layout)
+  - [Requirements](#requirements)
+  - [Environment Variables](#environment-variables)
+    - [Windows Local Development](#windows-local-development)
+    - [Linux Production (DigitalOcean)](#linux-production-digitalocean)
+  - [Install \& Setup](#install--setup)
+    - [Frontend](#frontend)
+    - [Backend](#backend)
+    - [Database (Drizzle)](#database-drizzle)
+  - [Run (Development)](#run-development)
+    - [Terminal A — Web](#terminal-a--web)
+    - [Terminal B — Worker](#terminal-b--worker)
+    - [One-off Debug Run (Headful Python)](#one-off-debug-run-headful-python)
+  - [API](#api)
+    - [POST /api/scrape (enqueue)](#post-apiscrape-enqueue)
+    - [GET /api/violations (query)](#get-apiviolations-query)
+  - [Incremental Strategy](#incremental-strategy)
+  - [Production (DigitalOcean)](#production-digitalocean)
     - [Base Stack](#base-stack)
     - [Clone + Install](#clone--install)
     - [Env on Server](#env-on-server)
     - [PM2](#pm2)
     - [Nginx](#nginx)
     - [Cron (Daily Incremental)](#cron-daily-incremental)
-12. [Ops: Logging, Locks, Retries, Politeness](#ops-logging-locks-retries-politeness)
-13. [Security & Roles](#security--roles)
-14. [Troubleshooting](#troubleshooting)
-15. [Roadmap (Nice-to-haves)](#roadmap-nice-to-haves)
-16. [Smoke Test](#smoke-test)
+  - [Ops: Logging, Locks, Retries, Politeness](#ops-logging-locks-retries-politeness)
+  - [Security \& Roles](#security--roles)
+  - [Troubleshooting](#troubleshooting)
+  - [Roadmap (Nice-to-haves)](#roadmap-nice-to-haves)
+  - [Smoke Test](#smoke-test)
 
 ---
 
@@ -141,11 +147,11 @@ tesseract -v    # optional
 
 Create `frontend-app/.env.local`:
 
+### Windows Local Development
+
 ```ini
 # --- Database & Auth ---
-# Prefer DB_URL; the app also accepts DB_URL for convenience.
-DB_URL=postgres://USER:PASS@HOST:5432/DBNAME
-# DB_URL=postgres://USER:PASS@HOST:5432/DBNAME
+DB_URL=postgres://USER:PASS@localhost:5432/DBNAME
 
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=REPLACE_WITH_openssl_rand_-base64_32
@@ -154,22 +160,44 @@ NEXTAUTH_SECRET=REPLACE_WITH_openssl_rand_-base64_32
 ALLOWED_ADMIN_EMAILS=you@domain.com,another@domain.com
 
 # --- Scraper wiring (Windows) ---
-SCRAPER_PY=py
-SCRAPER_PY_VERSION=-3.11
-SCRAPER_PATH=C:/Users/you/__code/next-scraper/backend-app/baltimore_violations_scraper.py
-SCRAPER_OUT=C:/Users/you/__code/next-scraper/backend-app/data
+# Point directly to Python executable in venv (NOT py launcher for production)
+SCRAPER_PY=C:/Users/kingl/__code/next-scraper/backend-app/.venv/Scripts/python.exe
+SCRAPER_PATH=C:/Users/kingl/__code/next-scraper/backend-app/baltimore_violations_scraper.py
+SCRAPER_OUT=C:/Users/kingl/__code/next-scraper/backend-app/data
+SCRAPER_TIMEOUT_MS=480000
 TESSDATA_PREFIX=C:/Program Files/Tesseract-OCR/tessdata
 
-# --- Linux/DO example ---
-# SCRAPER_PY=python3
-# SCRAPER_PY_VERSION=
-# SCRAPER_PATH=/srv/next-scraper/backend-app/baltimore_violations_scraper.py
-# SCRAPER_OUT=/srv/next-scraper/backend-app/data
-# TESSDATA_PREFIX=/usr/share/tesseract-ocr/5/tessdata
+# Optional debug flags (set to 1 to enable)
+# SCRAPER_HEADED=1
+# SCRAPER_SLOW_MO=200
+# SCRAPER_SKIP_EXISTING=1
+# SCRAPER_FORCE_EXTRACT=1
+# SCRAPER_MAX_PDFS=1
 ```
 
-> **Important:** Use **absolute** paths for `SCRAPER_PATH` and `SCRAPER_OUT` (avoid relative).  
-> Add Tesseract to PATH if enabling OCR.
+### Linux Production (DigitalOcean)
+
+```ini
+# --- Database & Auth ---
+DB_URL=postgres://USER:PASS@localhost:5432/DBNAME
+
+NEXTAUTH_URL=https://yourdomain.com
+NEXTAUTH_SECRET=REPLACE_WITH_openssl_rand_-base64_32
+
+ALLOWED_ADMIN_EMAILS=admin@yourdomain.com
+
+# --- Scraper wiring (Linux) ---
+# Point directly to Python executable in venv
+SCRAPER_PY=/home/deployuser/next-scraper/backend-app/.venv/bin/python
+SCRAPER_PATH=/home/deployuser/next-scraper/backend-app/baltimore_violations_scraper.py
+SCRAPER_OUT=/home/deployuser/next-scraper/backend-app/data
+SCRAPER_TIMEOUT_MS=480000
+TESSDATA_PREFIX=/usr/share/tesseract-ocr/5/tessdata
+```
+
+> **Critical:** Use **absolute** paths for `SCRAPER_PY`, `SCRAPER_PATH`, and `SCRAPER_OUT`.  
+> On Windows, point SCRAPER_PY directly to `.venv\Scripts\python.exe` (NOT `py` or `py.exe`).  
+> On Linux, point SCRAPER_PY to `.venv/bin/python`.
 
 > **PowerShell tip:** Setting env vars inline like `FOO=bar` is a Unix-ism. In PS use `$env:FOO = "bar"` or, better, put them in `.env.local` as above.
 
@@ -220,24 +248,45 @@ pnpm dev
 
 ### Terminal B — Worker
 
-Use **tsx** (fast, zero-config).
+The worker runs in an **infinite loop** by default, polling for queued jobs every 3 seconds.
 
-```bash
-# one-off
-pnpm dlx tsx src/worker/scrapeRunner.ts
+**Windows:**
 
-# or add scripts
-pnpm add -D tsx typescript @types/node dotenv
-# package.json
-# { "scripts": { "worker:dev": "tsx src/worker/scrapeRunner.ts" } }
+```powershell
+cd frontend-app
 pnpm run worker:dev
 ```
 
-### One-off Debug Run (Headful)
+**Linux/Mac:**
 
 ```bash
-cd next-scraper/backend-app
-# venv should still be active
+cd frontend-app
+pnpm run worker:dev
+```
+
+**Single-shot mode (for testing):**
+
+```bash
+# Process one job and exit
+pnpm run worker:dev --once
+```
+
+The worker will:
+
+- Create log files immediately when jobs start (no more "log-not-found")
+- Send heartbeat updates every 5 seconds
+- Enforce per-neighborhood timeout (`SCRAPER_TIMEOUT_MS`)
+- Reap stale jobs on startup
+- Keep running until manually stopped (unless `--once` is used)
+
+### One-off Debug Run (Headful Python)
+
+```bash
+cd backend-app
+# Activate venv first
+# Windows: .\.venv\Scripts\activate
+# Linux: source .venv/bin/activate
+
 python baltimore_violations_scraper.py --neighborhoods ABELL --since 2025-01-01 --out ./data --extract --headed --slow-mo 150
 ```
 
@@ -306,10 +355,48 @@ Place `.env.local` under `/srv/next-scraper/frontend-app` (Linux paths).
 
 ### PM2
 
+**Important:** On Linux, PM2 should call the Node binary directly (not tsx.cmd which is a Windows-only shim).
+
+The worker uses `tsx` for TypeScript execution. Make sure your `ecosystem.config.js` looks like this:
+
+```javascript
+module.exports = {
+  apps: [
+    {
+      name: "web",
+      script: "node_modules/next/dist/bin/next",
+      args: "start",
+      cwd: "/srv/next-scraper/frontend-app",
+      env: {
+        NODE_ENV: "production",
+      },
+    },
+    {
+      name: "worker",
+      script: "node_modules/.bin/tsx",
+      args: "src/worker/scrapeRunner.ts",
+      cwd: "/srv/next-scraper/frontend-app",
+      env: {
+        NODE_ENV: "production",
+      },
+    },
+  ],
+};
+```
+
+Then start both processes:
+
 ```bash
 cd /srv/next-scraper/frontend-app
 pnpm dlx pm2@latest start ecosystem.config.js
 pm2 save && pm2 startup
+```
+
+**Check logs:**
+
+```bash
+pm2 logs web      # Next.js web server
+pm2 logs worker   # Scrape worker
 ```
 
 ### Nginx
@@ -353,11 +440,42 @@ pip install -r requirements.txt
 python -m playwright install chromium
 ```
 
-**Worker shows “no queued jobs”**  
-It’s waiting. Enqueue via `POST /api/scrape` or the UI page.
+**Worker shows "no queued jobs"**  
+The worker now runs in an **infinite loop** by default. It will keep polling every 3 seconds. Enqueue via `POST /api/scrape` or the UI page at `/scrape/new`.
+
+**"log-not-found" error in UI**  
+This should no longer happen! The worker now creates log files **immediately** when a job starts. If you still see this:
+
+1. Check that `SCRAPER_OUT` is set correctly and the `logs/` subdirectory exists
+2. Verify the worker is actually running (`pnpm run worker:dev`)
+3. Check worker logs for errors during job startup
+
+**Job stays "running" forever**  
+The worker now has:
+
+- Heartbeat updates every 5 seconds
+- A reaper that marks stale jobs as `error` on startup
+- If you kill the worker, restart it and the reaper will clean up stale jobs automatically
 
 **Job shows `error`**  
-Open `backend-app/data/logs/scrape-<jobId>.log` for the full Traceback. Common issues: bad `SCRAPER_PATH`, Playwright not installed in venv, site markup changed.
+Open `backend-app/data/logs/scrape-<jobId>.log` for the full Traceback. Common issues:
+
+- Bad `SCRAPER_PATH` or `SCRAPER_PY` (use absolute paths!)
+- Playwright not installed in venv
+- Python timeout (adjust `SCRAPER_TIMEOUT_MS`)
+- Site markup changed
+
+**Windows: "python is not recognized" or spawn errors**  
+Set `SCRAPER_PY` to the **full path** of your venv Python executable:
+
+```
+SCRAPER_PY=C:/Users/you/__code/next-scraper/backend-app/.venv/Scripts/python.exe
+```
+
+Do NOT use `py` or `python` without an absolute path on Windows for production.
+
+**PM2 on Windows fails with "cannot execute .cmd as JavaScript"**  
+PM2 on Windows has issues with tsx.cmd. For local Windows development, run the worker manually with `pnpm run worker:dev`. For Linux production, PM2 works fine with tsx.
 
 **Windows path bugs**  
 Use absolute forward-slash paths in `.env.local` (e.g., `C:/path/...`).
@@ -381,15 +499,43 @@ In `src/app/api/violations/route.ts`, execute `SET LOCAL` **inside a transaction
 
 ## Smoke Test
 
+**Terminal 1 - Web:**
+
 ```bash
-# Web
 cd frontend-app && pnpm dev
+```
 
-# Worker
-cd frontend-app && pnpm dlx tsx src/worker/scrapeRunner.ts
+**Terminal 2 - Worker:**
 
-# Calls
+```bash
+cd frontend-app && pnpm run worker:dev
+```
+
+**Terminal 3 - Test API:**
+
+```bash
+# List neighborhoods
 curl -s http://localhost:3000/api/neighborhoods
-curl -s -X POST http://localhost:3000/api/scrape -H 'content-type: application/json' -d '{"neighborhoods":["ABELL"],"extract":true,"ocr":false}'
+
+# Enqueue a test job (1 PDF from ABELL)
+curl -s -X POST http://localhost:3000/api/scrape \
+  -H 'content-type: application/json' \
+  -d '{"neighborhoods":["ABELL"],"extract":true,"maxPdfsPerNeighborhood":1}'
+
+# Check job status (replace JOB_ID with the id from previous response)
+curl -s "http://localhost:3000/api/scrape?status=running"
+
+# View log (replace JOB_ID)
+curl -s "http://localhost:3000/api/scrape/log?id=JOB_ID"
+
+# Query violations
 curl -s "http://localhost:3000/api/violations?neighborhood=ABELL&from=2025-01-01"
 ```
+
+**Expected behavior:**
+
+1. Worker picks up job within 3 seconds
+2. Log file is created immediately with header
+3. Heartbeat updates every 5 seconds
+4. Job completes with status `success`
+5. No "log-not-found" errors

@@ -1,14 +1,18 @@
 // src/worker/scrapeRunner.ts
 /**
- * Production-friendly scrape runner:
+ * Production-reliable scrape runner:
  * - single-runner global advisory lock
  * - claims one queued job at a time (SKIP LOCKED)
+ * - creates log file IMMEDIATELY before spawning Python
  * - streams Python logs to file, retries per neighborhood
- * - heartbeats while running; optional reaper elsewhere can use heartbeat_at
+ * - heartbeats every ~5s while running; reaper can detect stale jobs
+ * - infinite loop by default; --once flag for single-shot runs
+ * - timeout enforcement with clear error messages
  *
  * Env:
  *   DB_URL=postgres://...
- *   SCRAPER_PY=C:/Users/kingl/__code/next-scraper/backend-app/.venv/Scripts/python.exe
+ *   SCRAPER_PY=C:/Users/kingl/__code/next-scraper/backend-app/.venv/Scripts/python.exe  (Windows)
+ *   SCRAPER_PY=/home/user/.venv/bin/python  (Linux)
  *   SCRAPER_PATH=C:/Users/kingl/__code/next-scraper/backend-app/baltimore_violations_scraper.py
  *   SCRAPER_OUT=C:/Users/kingl/__code/next-scraper/backend-app/data
  *   SCRAPER_TIMEOUT_MS=480000        # per-neighborhood timeout (default 8m)
@@ -32,7 +36,9 @@ import fs from "node:fs";
 import path from "node:path";
 
 const GLOBAL_LOCK = "scrape:global";
-const PY = process.env.SCRAPER_PY || "py";
+// On Linux, fallback to 'python' if SCRAPER_PY not set; on Windows default to 'py'
+const PY =
+  process.env.SCRAPER_PY || (process.platform === "win32" ? "py" : "python");
 const PY_VERSION = process.env.SCRAPER_PY_VERSION || "";
 const SCRAPER =
   process.env.SCRAPER_PATH ??
@@ -42,6 +48,8 @@ const OUTDIR =
 const PER_NHOOD_TIMEOUT_MS = Number(
   process.env.SCRAPER_TIMEOUT_MS || 8 * 60_000
 );
+const HEARTBEAT_INTERVAL_MS = 5000; // 5 seconds
+const POLL_INTERVAL_MS = 3000; // 3 seconds between job checks
 
 function ensurePaths() {
   if (!fs.existsSync(SCRAPER))
@@ -64,7 +72,14 @@ function runPython(
 ) {
   ensurePaths();
 
-  const logFile = path.join(OUTDIR, "logs", `scrape-${jobId}.log`);
+  // Create log file IMMEDIATELY with a header so UI never gets 404
+  const logDir = path.join(OUTDIR, "logs");
+  if (!fs.existsSync(logDir)) fs.mkdirSync(logDir, { recursive: true });
+
+  const logFile = path.join(logDir, `scrape-${jobId}.log`);
+  const header = `[worker] job ${jobId} starting at ${new Date().toISOString()}\n`;
+  fs.writeFileSync(logFile, header, { flag: "a" });
+
   const logStream = fs.createWriteStream(logFile, { flags: "a" });
 
   const backendDir = path.resolve(SCRAPER, "..");
@@ -73,6 +88,7 @@ function runPython(
   const argv = (PY_VERSION ? [PY_VERSION, SCRAPER] : [SCRAPER]).concat(args);
 
   console.log(`[worker] spawn (cwd=${backendDir}): ${PY} ${argv.join(" ")}`);
+  logStream.write(`[worker] spawn: ${PY} ${argv.join(" ")}\n`);
 
   const child = spawn(PY, argv, {
     cwd: backendDir,
@@ -95,9 +111,9 @@ function runPython(
   let killed = false;
   const timer = setTimeout(() => {
     killed = true;
-    logStream.write(
-      `\n[worker] TIMEOUT after ${timeoutMs}ms — killing process\n`
-    );
+    const msg = `\n[worker] TIMEOUT after ${timeoutMs}ms — killing process\n`;
+    console.error(msg);
+    logStream.write(msg);
     child.kill("SIGTERM");
     setTimeout(() => child.kill("SIGKILL"), 3000);
   }, timeoutMs);
@@ -105,7 +121,7 @@ function runPython(
   return new Promise<{ code: number; logFile: string }>((resolve) => {
     child.on("close", (code) => {
       clearTimeout(timer);
-      if (killed && (code === null || code === 0)) code = 124;
+      if (killed && (code === null || code === 0)) code = 124; // timeout exit code
       logStream.end();
       resolve({ code: code ?? 1, logFile });
     });
@@ -115,17 +131,6 @@ function runPython(
 async function allNeighborhoodsFromSite(): Promise<string[]> {
   // keep trivial fallback; UI normally passes explicit neighborhoods
   return ["ABELL", "ALLENDALE"];
-}
-
-async function heartbeat(jobId: string, stopSignal: { stop: boolean }) {
-  // bump every 10s while running
-  while (!stopSignal.stop) {
-    await db
-      .update(scrapeRequests)
-      .set({ heartbeatAt: new Date() })
-      .where(eq(scrapeRequests.id, jobId));
-    await new Promise((r) => setTimeout(r, 10_000));
-  }
 }
 
 async function processOneRequest(id: string, payload: any) {
@@ -154,16 +159,26 @@ async function processOneRequest(id: string, payload: any) {
 
   const failures: Array<{ neighborhood: string; err: string }> = [];
 
-  // start heartbeat pinger
-  const stop = { stop: false };
-  const hb = heartbeat(id, stop);
+  // Start heartbeat updater: bump every 5s while job is running
+  const heartbeatInterval = setInterval(async () => {
+    try {
+      await db
+        .update(scrapeRequests)
+        .set({ heartbeatAt: new Date() })
+        .where(eq(scrapeRequests.id, id));
+    } catch (err) {
+      console.error(`[worker] heartbeat failed for ${id}:`, err);
+    }
+  }, HEARTBEAT_INTERVAL_MS);
 
   try {
     for (const n of nhoods) {
       console.log(`[worker] neighborhood=${n}`);
+
+      // Best-effort per-neighborhood lock; don't starve the job if lock fails
       const nlock = await tryLock(`scrape:${n}`);
       if (!nlock) {
-        console.log(`[worker] skip ${n} (could not acquire lock)`);
+        console.log(`[worker] skip ${n} (could not acquire lock quickly)`);
         continue;
       }
 
@@ -196,7 +211,7 @@ async function processOneRequest(id: string, payload: any) {
         while (!ok && attempt < 3) {
           attempt++;
           console.log(`[worker] attempt ${attempt} for ${n}`);
-          result = await runPython(id, args);
+          result = await runPython(id, args, PER_NHOOD_TIMEOUT_MS);
           ok = result.code === 0;
           if (!ok) await new Promise((r) => setTimeout(r, attempt * 2000));
         }
@@ -207,7 +222,7 @@ async function processOneRequest(id: string, payload: any) {
             : "no log";
           failures.push({
             neighborhood: n,
-            err: `Python exited ${result.code}. Log: ${result.logFile}\n${tail}`,
+            err: `Python exited ${result.code}. Log: ${result.logFile}\nTail:\n${tail}`,
           });
         }
       } finally {
@@ -215,9 +230,8 @@ async function processOneRequest(id: string, payload: any) {
       }
     }
   } finally {
-    // stop heartbeat
-    stop.stop = true;
-    await hb;
+    // Stop heartbeat
+    clearInterval(heartbeatInterval);
   }
 
   if (failures.length) {
@@ -254,25 +268,86 @@ async function claimOneQueued() {
   return Array.isArray(rows) && rows.length ? rows[0] : null;
 }
 
+/**
+ * Reaper: mark stale running jobs as error.
+ * A job is stale if it's been running for > staleMinutes without a heartbeat update.
+ */
+async function reapStaleRunning(staleMinutes = 15) {
+  try {
+    const rows = await db.execute<{ id: string; started_at: Date }>(sql`
+      update scrape_requests
+         set status = 'error',
+             finished_at = now(),
+             ok = false,
+             error = 'stale running job reaped automatically'
+       where status = 'running'
+         and finished_at is null
+         and coalesce(heartbeat_at, started_at) < now() - (${staleMinutes.toString()} || ' minutes')::interval
+       returning id, started_at
+    `);
+
+    if (Array.isArray(rows) && rows.length > 0) {
+      console.log(
+        `[worker] reaped ${rows.length} stale job(s):`,
+        rows.map((r) => r.id)
+      );
+    }
+  } catch (err) {
+    console.error("[worker] reaper failed:", err);
+  }
+}
+
 async function main() {
+  const args = process.argv.slice(2);
+  const onceMode = args.includes("--once");
+
+  if (onceMode) {
+    console.log("[worker] running in --once mode (single job)");
+  } else {
+    console.log(
+      "[worker] running in infinite loop mode (use --once for single-shot)"
+    );
+  }
+
   const ok = await tryLock(GLOBAL_LOCK);
   if (!ok) {
-    console.error("[worker] another instance is running");
+    console.error("[worker] another instance is running (global lock held)");
     process.exit(0);
   }
+
   try {
-    const job = await claimOneQueued();
-    if (!job) {
-      console.log("[worker] no queued jobs");
-      return;
+    // Run reaper once at startup
+    await reapStaleRunning(15);
+
+    // Main loop
+    while (true) {
+      const job = await claimOneQueued();
+      if (!job) {
+        if (onceMode) {
+          console.log("[worker] no queued jobs (--once mode, exiting)");
+          break;
+        }
+        // In continuous mode, wait and retry
+        await new Promise((r) => setTimeout(r, POLL_INTERVAL_MS));
+        continue;
+      }
+
+      await processOneRequest(job.id, job.payload);
+
+      if (onceMode) {
+        console.log("[worker] job completed (--once mode, exiting)");
+        break;
+      }
+
+      // Small pause between jobs
+      await new Promise((r) => setTimeout(r, 500));
     }
-    await processOneRequest(job.id, job.payload);
   } finally {
     await unlock(GLOBAL_LOCK);
   }
 }
 
 main().catch((e) => {
-  console.error(e);
+  console.error("[worker] fatal error:", e);
   process.exit(1);
 });
