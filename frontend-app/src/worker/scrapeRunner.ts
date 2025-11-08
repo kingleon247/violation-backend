@@ -1,4 +1,23 @@
 // src/worker/scrapeRunner.ts
+/**
+ * Production-friendly scrape runner:
+ * - single-runner global advisory lock
+ * - claims one queued job at a time (SKIP LOCKED)
+ * - streams Python logs to file, retries per neighborhood
+ * - heartbeats while running; optional reaper elsewhere can use heartbeat_at
+ *
+ * Env:
+ *   DB_URL=postgres://...
+ *   SCRAPER_PY=C:/Users/kingl/__code/next-scraper/backend-app/.venv/Scripts/python.exe
+ *   SCRAPER_PATH=C:/Users/kingl/__code/next-scraper/backend-app/baltimore_violations_scraper.py
+ *   SCRAPER_OUT=C:/Users/kingl/__code/next-scraper/backend-app/data
+ *   SCRAPER_TIMEOUT_MS=480000        # per-neighborhood timeout (default 8m)
+ *   SCRAPER_HEADED=0|1               # pass --headed (debug)
+ *   SCRAPER_SLOW_MO=0|200            # pass --slow-mo <ms> (debug)
+ *   SCRAPER_SKIP_EXISTING=0|1        # pass --skip-existing
+ *   SCRAPER_FORCE_EXTRACT=0|1        # pass --force-extract
+ *   SCRAPER_MAX_PDFS=1               # override payload maxPdfsPerNeighborhood if set
+ */
 import { config as loadEnv } from "dotenv";
 loadEnv({ path: ".env.local" });
 
@@ -12,7 +31,6 @@ import { spawn } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 
-// ---------- ENV / PATHS ----------
 const GLOBAL_LOCK = "scrape:global";
 const PY = process.env.SCRAPER_PY || "py";
 const PY_VERSION = process.env.SCRAPER_PY_VERSION || "";
@@ -21,16 +39,18 @@ const SCRAPER =
   path.resolve(process.cwd(), "../backend-app/baltimore_violations_scraper.py");
 const OUTDIR =
   process.env.SCRAPER_OUT ?? path.resolve(process.cwd(), "../backend-app/data");
-
-// Debug helper: run with a visible browser if SCRAPER_HEADED=1
-const HEADED = process.env.SCRAPER_HEADED === "1";
-
-// overall neighborhood timeout (ms)
 const PER_NHOOD_TIMEOUT_MS = Number(
   process.env.SCRAPER_TIMEOUT_MS || 8 * 60_000
 );
 
-// ---------- HELPERS ----------
+function ensurePaths() {
+  if (!fs.existsSync(SCRAPER))
+    throw new Error(`SCRAPER_PATH not found: ${SCRAPER}`);
+  if (!fs.existsSync(OUTDIR)) fs.mkdirSync(OUTDIR, { recursive: true });
+  const logDir = path.join(OUTDIR, "logs");
+  if (!fs.existsSync(logDir)) fs.mkdirSync(logDir, { recursive: true });
+}
+
 async function sinceAsString(n: string, explicit?: string): Promise<string> {
   if (explicit && /^\d{4}-\d{2}-\d{2}$/.test(explicit)) return explicit;
   const s = await getSinceDateForNeighborhood(n);
@@ -42,13 +62,9 @@ function runPython(
   args: string[],
   timeoutMs = PER_NHOOD_TIMEOUT_MS
 ) {
-  if (!fs.existsSync(SCRAPER))
-    throw new Error(`SCRAPER_PATH not found: ${SCRAPER}`);
-  if (!fs.existsSync(OUTDIR)) fs.mkdirSync(OUTDIR, { recursive: true });
+  ensurePaths();
 
-  const logDir = path.join(OUTDIR, "logs");
-  if (!fs.existsSync(logDir)) fs.mkdirSync(logDir, { recursive: true });
-  const logFile = path.join(logDir, `scrape-${jobId}.log`);
+  const logFile = path.join(OUTDIR, "logs", `scrape-${jobId}.log`);
   const logStream = fs.createWriteStream(logFile, { flags: "a" });
 
   const backendDir = path.resolve(SCRAPER, "..");
@@ -97,10 +113,21 @@ function runPython(
 }
 
 async function allNeighborhoodsFromSite(): Promise<string[]> {
+  // keep trivial fallback; UI normally passes explicit neighborhoods
   return ["ABELL", "ALLENDALE"];
 }
 
-// ---------- CORE ----------
+async function heartbeat(jobId: string, stopSignal: { stop: boolean }) {
+  // bump every 10s while running
+  while (!stopSignal.stop) {
+    await db
+      .update(scrapeRequests)
+      .set({ heartbeatAt: new Date() })
+      .where(eq(scrapeRequests.id, jobId));
+    await new Promise((r) => setTimeout(r, 10_000));
+  }
+}
+
 async function processOneRequest(id: string, payload: any) {
   console.log(`[worker] processing job ${id}`);
 
@@ -111,7 +138,15 @@ async function processOneRequest(id: string, payload: any) {
   const ocr: boolean = !!payload?.ocr;
   const sinceOverride: string | undefined =
     typeof payload?.since === "string" ? payload.since : undefined;
-  const max = Number(payload?.maxPdfsPerNeighborhood || 0);
+
+  const maxFromPayload = Number(payload?.maxPdfsPerNeighborhood || 0);
+  const maxOverrideEnv = Number(process.env.SCRAPER_MAX_PDFS || 0);
+  const max =
+    maxOverrideEnv > 0
+      ? maxOverrideEnv
+      : maxFromPayload > 0
+      ? maxFromPayload
+      : 0;
 
   const nhoods = neighborhoods.length
     ? neighborhoods
@@ -119,56 +154,70 @@ async function processOneRequest(id: string, payload: any) {
 
   const failures: Array<{ neighborhood: string; err: string }> = [];
 
-  for (const n of nhoods) {
-    console.log(`[worker] neighborhood=${n}`);
-    const nlock = await tryLock(`scrape:${n}`);
-    if (!nlock) {
-      console.log(`[worker] skip ${n} (could not acquire lock)`);
-      continue;
-    }
+  // start heartbeat pinger
+  const stop = { stop: false };
+  const hb = heartbeat(id, stop);
 
-    try {
-      const since = await sinceAsString(n, sinceOverride);
-      console.log(`[worker] since=${since || "(none)"} max=${max || 0}`);
-
-      const args: string[] = [
-        "--neighborhoods",
-        n,
-        "--out",
-        OUTDIR,
-        "--row-timeout",
-        "12", // seconds: per-row guard in Python
-      ];
-      if (HEADED) args.push("--headed", "--slow-mo", "150");
-      if (since) args.push("--since", since);
-      if (extract) args.push("--extract");
-      if (ocr) args.push("--ocr");
-      if (max > 0) args.push("--max-pdfs-per-neighborhood", String(max));
-
-      let ok = false;
-      let attempt = 0;
-      let result: { code: number; logFile: string } = { code: 1, logFile: "" };
-
-      while (!ok && attempt < 3) {
-        attempt++;
-        console.log(`[worker] attempt ${attempt} for ${n}`);
-        result = await runPython(id, args);
-        ok = result.code === 0;
-        if (!ok) await new Promise((r) => setTimeout(r, attempt * 2000));
+  try {
+    for (const n of nhoods) {
+      console.log(`[worker] neighborhood=${n}`);
+      const nlock = await tryLock(`scrape:${n}`);
+      if (!nlock) {
+        console.log(`[worker] skip ${n} (could not acquire lock)`);
+        continue;
       }
 
-      if (!ok) {
-        const tail = fs.existsSync(result.logFile)
-          ? fs.readFileSync(result.logFile, "utf8").slice(-8000)
-          : "no log";
-        failures.push({
-          neighborhood: n,
-          err: `Python exited ${result.code}. Log: ${result.logFile}\n${tail}`,
-        });
+      try {
+        const since = await sinceAsString(n, sinceOverride);
+        console.log(`[worker] since=${since || "(none)"} max=${max || 0}`);
+
+        const args: string[] = ["--neighborhoods", n, "--out", OUTDIR];
+        if (since) args.push("--since", since);
+        if (extract) args.push("--extract");
+        if (ocr) args.push("--ocr");
+        if (max > 0) args.push("--max-pdfs-per-neighborhood", String(max));
+
+        // env-driven flags to match your manual test
+        if (process.env.SCRAPER_SKIP_EXISTING === "1")
+          args.push("--skip-existing");
+        if (process.env.SCRAPER_FORCE_EXTRACT === "1")
+          args.push("--force-extract");
+        if (process.env.SCRAPER_HEADED === "1") args.push("--headed");
+        const slowMo = Number(process.env.SCRAPER_SLOW_MO || 0);
+        if (slowMo > 0) args.push("--slow-mo", String(slowMo));
+
+        let ok = false;
+        let attempt = 0;
+        let result: { code: number; logFile: string } = {
+          code: 1,
+          logFile: "",
+        };
+
+        while (!ok && attempt < 3) {
+          attempt++;
+          console.log(`[worker] attempt ${attempt} for ${n}`);
+          result = await runPython(id, args);
+          ok = result.code === 0;
+          if (!ok) await new Promise((r) => setTimeout(r, attempt * 2000));
+        }
+
+        if (!ok) {
+          const tail = fs.existsSync(result.logFile)
+            ? fs.readFileSync(result.logFile, "utf8").slice(-8000)
+            : "no log";
+          failures.push({
+            neighborhood: n,
+            err: `Python exited ${result.code}. Log: ${result.logFile}\n${tail}`,
+          });
+        }
+      } finally {
+        await unlock(`scrape:${n}`);
       }
-    } finally {
-      await unlock(`scrape:${n}`);
     }
+  } finally {
+    // stop heartbeat
+    stop.stop = true;
+    await hb;
   }
 
   if (failures.length) {
@@ -188,18 +237,20 @@ async function processOneRequest(id: string, payload: any) {
 }
 
 async function claimOneQueued() {
-  const rows = await db.execute<{ id: string; payload: any }>(
-    sql`update scrape_requests
-        set status = 'running', started_at = now()
-        where id = (
-          select id from scrape_requests
-          where status = 'queued'
-          order by created_at asc
-          for update skip locked
-          limit 1
-        )
-        returning id, payload`
-  );
+  const rows = await db.execute<{ id: string; payload: any }>(sql`
+    update scrape_requests
+       set status = 'running',
+           started_at = now(),
+           heartbeat_at = now()
+     where id = (
+       select id from scrape_requests
+        where status = 'queued'
+        order by created_at asc
+        for update skip locked
+        limit 1
+     )
+     returning id, payload
+  `);
   return Array.isArray(rows) && rows.length ? rows[0] : null;
 }
 
@@ -210,7 +261,7 @@ async function main() {
     process.exit(0);
   }
   try {
-    let job = await claimOneQueued();
+    const job = await claimOneQueued();
     if (!job) {
       console.log("[worker] no queued jobs");
       return;
