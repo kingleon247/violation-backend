@@ -130,14 +130,14 @@ async def extract_rows_on_results(page) -> List[Tuple[str,str,str,str,str,str]]:
 async def _wait_pdf_response(new_page):
     try:
         return await new_page.wait_for_event(
-            "response", lambda r: "pdf" in (r.headers.get("content-type","").lower()), timeout=15000
+            "response", lambda r: "pdf" in (r.headers.get("content-type","").lower()), timeout=25000
         )
     except PWTimeout:
         return None
 
 async def _save_pdf_via_popup(context, page, click_callable, dest_path: Path) -> bool:
     try:
-        async with context.expect_page(timeout=8000) as pinfo:
+        async with context.expect_page(timeout=15000) as pinfo:
             await click_callable()
         new_page = await pinfo.value
         resp = await _wait_pdf_response(new_page)
@@ -148,11 +148,11 @@ async def _save_pdf_via_popup(context, page, click_callable, dest_path: Path) ->
             await new_page.close()
             return True
         # fallback: try direct GET of the new tab URL
-        for _ in range(30):
+        for _ in range(40):
             url = new_page.url or ""
             if url.startswith(("http://","https://")):
                 try:
-                    r = await context.request.get(url, timeout=15000)
+                    r = await context.request.get(url, timeout=25000)
                     ctype = (r.headers or {}).get("content-type","")
                     if "pdf" in ctype.lower() or url.lower().endswith(".pdf"):
                         data = await r.body()
@@ -171,7 +171,7 @@ async def _save_pdf_via_popup(context, page, click_callable, dest_path: Path) ->
 
 async def _save_pdf_via_download(page, click_callable, dest_path: Path) -> bool:
     try:
-        async with page.expect_download(timeout=8000) as dl_info:
+        async with page.expect_download(timeout=15000) as dl_info:
             await click_callable()
         download = await dl_info.value
         suggested = download.suggested_filename
@@ -184,33 +184,33 @@ async def _save_pdf_via_download(page, click_callable, dest_path: Path) -> bool:
 
 async def _save_pdf_via_navigation(context, page, click_callable, dest_path: Path) -> bool:
     try:
-        async with page.expect_navigation(timeout=10000):
+        async with page.expect_navigation(timeout=20000):
             await click_callable()
     except PWTimeout:
         return False
     url = page.url or ""
     if not url.startswith(("http://","https://")):
-        try: await page.go_back(timeout=5000)
+        try: await page.go_back(timeout=8000)
         except Exception: pass
         return False
     try:
-        r = await context.request.get(url, timeout=15000)
+        r = await context.request.get(url, timeout=25000)
         if "pdf" in (r.headers or {}).get("content-type","").lower() or url.lower().endswith(".pdf"):
             data = await r.body()
             dest_path.parent.mkdir(parents=True, exist_ok=True)
             dest_path.write_bytes(data)
-            try: await page.go_back(timeout=5000)
+            try: await page.go_back(timeout=8000)
             except Exception: pass
             return True
     except Exception:
         pass
-    try: await page.go_back(timeout=5000)
+    try: await page.go_back(timeout=8000)
     except Exception: pass
     return False
 
 async def download_all_pdfs_for_results(page, out_dir: Path, rows: List[Tuple[str,str,str,str,str,str]], *,
                                         after_download=None, max_pdfs: Optional[int]=None,
-                                        skip_existing: bool=False, row_timeout_sec: int=12) -> int:
+                                        skip_existing: bool=False, row_timeout_sec: int=45) -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     table = await find_results_table(page)
     trs = table.locator("tr")
@@ -240,8 +240,15 @@ async def download_all_pdfs_for_results(page, out_dir: Path, rows: List[Tuple[st
 
         async def _try_all_click_paths():
             nonlocal got
-            for c in cands:
-                for j in range(await c.count()):
+            elem_count = sum([await c.count() for c in cands])
+            if elem_count == 0:
+                print(f"[row] {human_i} no-clickable-elements")
+                return
+            for idx, c in enumerate(cands):
+                count = await c.count()
+                if count > 0:
+                    print(f"[row] {human_i} trying strategy with {count} element(s)")
+                for j in range(count):
                     elem = c.nth(j)
                     async def click_middle(): await elem.click(button="middle")
                     async def click_ctrl():   await elem.click(modifiers=["Control"])
@@ -264,7 +271,7 @@ async def download_all_pdfs_for_results(page, out_dir: Path, rows: List[Tuple[st
             print(f"[row] {human_i} no-pdf")
 
         if max_pdfs and downloaded >= max_pdfs: break
-        await page.wait_for_timeout(150)
+        await page.wait_for_timeout(500)
 
     return downloaded
 
@@ -371,15 +378,55 @@ async def run(all_neighborhoods: bool,
             since_date = None
 
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=headless, args=["--disable-gpu"] if headless else None)
+        # Use new headless mode which is much harder to detect
+        # Also add stealth args to avoid detection
+        launch_args = [
+            "--disable-blink-features=AutomationControlled",
+        ]
+        if headless:
+            launch_args.extend([
+                "--disable-gpu",
+                "--no-sandbox",
+                "--disable-dev-shm-usage"
+            ])
+        browser = await p.chromium.launch(
+            headless=headless,
+            args=launch_args,
+            channel="chrome" if headless else None  # Use actual Chrome in headless if available
+        )
         context = await browser.new_context(
             accept_downloads=True,
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) PlaywrightScraper/1.0",
-            viewport={"width": 1440, "height": 900}
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            viewport={"width": 1440, "height": 900},
+            # Additional stealth settings
+            locale="en-US",
+            timezone_id="America/New_York",
+            permissions=["geolocation"],
+            extra_http_headers={
+                "Accept-Language": "en-US,en;q=0.9",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                "Accept-Encoding": "gzip, deflate, br",
+                "DNT": "1",
+                "Connection": "keep-alive",
+                "Upgrade-Insecure-Requests": "1"
+            }
         )
+        # Mask automation indicators
+        await context.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', {
+                get: () => undefined
+            });
+            Object.defineProperty(navigator, 'plugins', {
+                get: () => [1, 2, 3, 4, 5]
+            });
+            Object.defineProperty(navigator, 'languages', {
+                get: () => ['en-US', 'en']
+            });
+            window.chrome = { runtime: {} };
+        """)
         page = await context.new_page()
-        page.set_default_timeout(10000)  # Increased from 8s to 10s for "See Notice" links
-        page.set_default_navigation_timeout(12000)  # Increased from 10s to 12s
+        page.set_default_timeout(20000)  # Increased timeout for slow-loading elements
+        page.set_default_navigation_timeout(30000)  # Increased navigation timeout
 
         async def goto(url: str):
             await page.goto(url, timeout=60000)
@@ -471,7 +518,7 @@ if __name__ == "__main__":
     parser.add_argument("--ocr", action="store_true", help="When no text layer, try OCR (needs Tesseract installed).")
     parser.add_argument("--skip-existing", action="store_true", help="Skip rows whose PDF already exists (resume).")
     parser.add_argument("--force-extract", action="store_true", help="Rebuild text/json even if they exist.")
-    parser.add_argument("--row-timeout", type=int, default=12, help="Per-row watchdog in seconds (prevents hangs).")
+    parser.add_argument("--row-timeout", type=int, default=45, help="Per-row watchdog in seconds (prevents hangs).")
     args = parser.parse_args()
 
     try:
