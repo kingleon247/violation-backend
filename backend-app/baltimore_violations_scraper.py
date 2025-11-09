@@ -389,10 +389,11 @@ async def run(all_neighborhoods: bool,
                 "--no-sandbox",
                 "--disable-dev-shm-usage"
             ])
+        # Don't use Chrome channel for headless - it causes issues with new headless mode
+        # Just use Playwright's bundled Chromium which supports new headless
         browser = await p.chromium.launch(
             headless=headless,
-            args=launch_args,
-            channel="chrome" if headless else None  # Use actual Chrome in headless if available
+            args=launch_args
         )
         context = await browser.new_context(
             accept_downloads=True,
