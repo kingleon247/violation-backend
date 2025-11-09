@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ABELL\\2045055A.pdf",
+  "neighborhood": "ABELL",
+  "row": {
+    "address": "3016 VINEYARD",
+    "type": "Exterior",
+    "date_notice": "2021-10-01",
+    "notice_number": "2045055A",
+    "district": "NORTHERN",
+    "neighborhood_cell": "ABELL"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2045055A"
+  },
+  "has_text": true
+}

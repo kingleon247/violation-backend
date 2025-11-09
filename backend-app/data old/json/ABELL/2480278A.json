@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ABELL\\2480278A.pdf",
+  "neighborhood": "ABELL",
+  "row": {
+    "address": "3246 ABELL",
+    "type": "Interior",
+    "date_notice": "2025-02-20",
+    "notice_number": "2480278A",
+    "district": "",
+    "neighborhood_cell": "ABELL"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2483517A"
+  },
+  "has_text": true
+}

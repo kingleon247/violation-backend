@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ABELL\\row-0044.pdf",
+  "neighborhood": "ABELL",
+  "row": {
+    "address": "",
+    "type": "",
+    "date_notice": "",
+    "notice_number": "",
+    "district": "",
+    "neighborhood_cell": ""
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2488165A"
+  },
+  "has_text": true
+}

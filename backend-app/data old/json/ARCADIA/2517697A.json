@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ARCADIA\\2517697A.pdf",
+  "neighborhood": "ARCADIA",
+  "row": {
+    "address": "4420 BELAIR",
+    "type": "Exterior",
+    "date_notice": "2025-06-03",
+    "notice_number": "2517697A",
+    "district": "NORTHEAST",
+    "neighborhood_cell": "ARCADIA"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2517697A"
+  },
+  "has_text": true
+}

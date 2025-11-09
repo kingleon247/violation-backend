@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ABELL\\2499162A.pdf",
+  "neighborhood": "ABELL",
+  "row": {
+    "address": "416 E 30TH",
+    "type": "Exterior",
+    "date_notice": "2025-04-23",
+    "notice_number": "2499162A",
+    "district": "NORTHERN",
+    "neighborhood_cell": "ABELL"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2429861A"
+  },
+  "has_text": true
+}

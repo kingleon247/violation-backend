@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ALLENDALE\\1685522A.pdf",
+  "neighborhood": "ALLENDALE",
+  "row": {
+    "address": "4021 W FRANKLIN",
+    "type": "Vacant",
+    "date_notice": "2018-06-20",
+    "notice_number": "1685522A",
+    "district": "SOUTHWEST",
+    "neighborhood_cell": "ALLENDALE"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "1685522A"
+  },
+  "has_text": true
+}

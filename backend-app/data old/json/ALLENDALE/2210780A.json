@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ALLENDALE\\2210780A.pdf",
+  "neighborhood": "ALLENDALE",
+  "row": {
+    "address": "4010 OLD FREDERICK",
+    "type": "Interior",
+    "date_notice": "2023-03-01",
+    "notice_number": "2210780A",
+    "district": "SOUTHWEST",
+    "neighborhood_cell": "ALLENDALE"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2210780A"
+  },
+  "has_text": true
+}

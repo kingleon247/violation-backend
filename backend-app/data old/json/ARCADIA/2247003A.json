@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ARCADIA\\2247003A.pdf",
+  "neighborhood": "ARCADIA",
+  "row": {
+    "address": "4002 EIERMAN",
+    "type": "Vacant",
+    "date_notice": "2023-05-22",
+    "notice_number": "2247003A",
+    "district": "NORTHEAST",
+    "neighborhood_cell": "ARCADIA"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2247003A"
+  },
+  "has_text": true
+}

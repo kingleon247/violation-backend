@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ARCADIA\\2530442A.pdf",
+  "neighborhood": "ARCADIA",
+  "row": {
+    "address": "3003 OVERLAND",
+    "type": "Exterior",
+    "date_notice": "2025-06-27",
+    "notice_number": "2530442A",
+    "district": "NORTHEAST",
+    "neighborhood_cell": "ARCADIA"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2530442A"
+  },
+  "has_text": true
+}

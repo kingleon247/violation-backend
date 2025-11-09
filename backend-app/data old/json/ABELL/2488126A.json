@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ABELL\\2488126A.pdf",
+  "neighborhood": "ABELL",
+  "row": {
+    "address": "2946 GREENMOUNT",
+    "type": "Interior/Exterior",
+    "date_notice": "2025-03-26",
+    "notice_number": "2488126A",
+    "district": "NORTHERN",
+    "neighborhood_cell": "ABELL"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "1714000A"
+  },
+  "has_text": true
+}

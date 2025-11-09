@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ARCADIA\\2476471A.pdf",
+  "neighborhood": "ARCADIA",
+  "row": {
+    "address": "4400 BELAIR",
+    "type": "Vacant",
+    "date_notice": "2025-02-04",
+    "notice_number": "2476471A",
+    "district": "NORTHEAST",
+    "neighborhood_cell": "ARCADIA"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2476471A"
+  },
+  "has_text": true
+}

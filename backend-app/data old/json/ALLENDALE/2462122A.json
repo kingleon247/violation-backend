@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ALLENDALE\\2462122A.pdf",
+  "neighborhood": "ALLENDALE",
+  "row": {
+    "address": "3929 EDMONDSON",
+    "type": "Interior/Exterior",
+    "date_notice": "2024-12-03",
+    "notice_number": "2462122A",
+    "district": "SOUTHWEST",
+    "neighborhood_cell": "ALLENDALE"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2462122A"
+  },
+  "has_text": true
+}

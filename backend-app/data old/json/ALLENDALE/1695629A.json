@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ALLENDALE\\1695629A.pdf",
+  "neighborhood": "ALLENDALE",
+  "row": {
+    "address": "4001 EDMONDSON",
+    "type": "Exterior",
+    "date_notice": "2018-07-12",
+    "notice_number": "1695629A",
+    "district": "",
+    "neighborhood_cell": "ALLENDALE"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "1695629A"
+  },
+  "has_text": true
+}

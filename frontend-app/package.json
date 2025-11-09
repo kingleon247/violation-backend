@@ -11,7 +11,8 @@
     "migrate": "drizzle-kit migrate",
     "studio": "drizzle-kit studio",
     "worker:dev": "tsx src/worker/scrapeRunner.ts",
-    "worker:start": "NODE_ENV=production tsx src/worker/scrapeRunner.ts"
+    "worker:start": "NODE_ENV=production tsx src/worker/scrapeRunner.ts",
+    "import:violations": "tsx src/scripts/importViolations.ts"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.10.0",

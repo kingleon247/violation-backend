@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ARCADIA\\2411752A.pdf",
+  "neighborhood": "ARCADIA",
+  "row": {
+    "address": "3203 TYNDALE",
+    "type": "Exterior",
+    "date_notice": "2024-07-21",
+    "notice_number": "2411752A",
+    "district": "NORTHEAST",
+    "neighborhood_cell": "ARCADIA"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2411752A"
+  },
+  "has_text": true
+}

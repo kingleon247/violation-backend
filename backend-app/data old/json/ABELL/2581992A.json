@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ABELL\\2581992A.pdf",
+  "neighborhood": "ABELL",
+  "row": {
+    "address": "403 E 31ST",
+    "type": "Exterior",
+    "date_notice": "2025-10-30",
+    "notice_number": "2581992A",
+    "district": "NORTHERN",
+    "neighborhood_cell": "ABELL"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2056787A"
+  },
+  "has_text": true
+}

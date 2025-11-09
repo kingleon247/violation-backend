@@ -28,12 +28,14 @@ export const metadata: Metadata = {
 };
 
 type Violation = {
-  notice_number: string;
+  noticeNumber: string;
   neighborhood: string | null;
   address: string | null;
-  date_notice: string | null; // ISO date string
-  status?: string | null;
-  pdf_url?: string | null;
+  dateNotice: Date | null;
+  district?: string | null;
+  type?: string | null;
+  pdfUrl?: string | null;
+  textUrl?: string | null;
 };
 
 type ViolationsResponse = {
@@ -48,17 +50,17 @@ type SP = Record<string, string | string[] | undefined>;
 
 /* ---------- helpers ---------- */
 
-function formatDate(iso?: string | null) {
-  if (!iso) return "—";
+function formatDate(date?: Date | null) {
+  if (!date) return "—";
   try {
-    const d = new Date(iso);
+    const d = date instanceof Date ? date : new Date(date);
     return d.toLocaleDateString(undefined, {
       year: "numeric",
       month: "short",
       day: "numeric",
     });
   } catch {
-    return iso ?? "—";
+    return "—";
   }
 }
 
@@ -221,16 +223,16 @@ export default async function ViolationsPage(props: {
             </TableRow>
           ) : (
             rows.map((v) => (
-              <TableRow key={v.notice_number}>
-                <TableCell>{v.notice_number}</TableCell>
+              <TableRow key={v.noticeNumber}>
+                <TableCell>{v.noticeNumber}</TableCell>
                 <TableCell className="text-zinc-500">
-                  {formatDate(v.date_notice)}
+                  {formatDate(v.dateNotice)}
                 </TableCell>
                 <TableCell>{v.neighborhood ?? "—"}</TableCell>
                 <TableCell>{v.address ?? "—"}</TableCell>
                 <TableCell>
-                  {v.pdf_url ? (
-                    <Button href={v.pdf_url} plain target="_blank">
+                  {v.pdfUrl ? (
+                    <Button href={v.pdfUrl} plain target="_blank">
                       Open
                     </Button>
                   ) : (

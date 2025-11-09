@@ -8,6 +8,12 @@ from typing import List, Optional, Tuple
 from playwright.async_api import async_playwright, TimeoutError as PWTimeout
 
 try:
+    import psycopg2
+    from psycopg2.extras import execute_values
+except ImportError:
+    psycopg2 = None
+
+try:
     import pdfplumber
 except Exception:
     pdfplumber = None
@@ -23,6 +29,58 @@ SENTINEL_NEIGHBORHOODS = [
 ]
 
 def norm_ws(s: str) -> str: return " ".join((s or "").split())
+
+# ---------- database helpers ----------
+def get_db_connection():
+    """Get PostgreSQL connection from environment variable DB_URL"""
+    db_url = os.getenv("DB_URL")
+    if not db_url or psycopg2 is None:
+        return None
+    try:
+        return psycopg2.connect(db_url)
+    except Exception as e:
+        print(f"[warn] Could not connect to database: {e}")
+        return None
+
+def upsert_violation(conn, violation: dict) -> bool:
+    """Insert or update a violation in the database"""
+    if not conn:
+        return False
+    
+    try:
+        with conn.cursor() as cur:
+            cur.execute("""
+                INSERT INTO violations (
+                    notice_number, address, type, district, neighborhood,
+                    date_notice, pdf_url, text_url, created_at, updated_at
+                )
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, NOW(), NOW())
+                ON CONFLICT (notice_number) 
+                DO UPDATE SET
+                    address = EXCLUDED.address,
+                    type = EXCLUDED.type,
+                    district = EXCLUDED.district,
+                    neighborhood = EXCLUDED.neighborhood,
+                    date_notice = EXCLUDED.date_notice,
+                    pdf_url = EXCLUDED.pdf_url,
+                    text_url = EXCLUDED.text_url,
+                    updated_at = NOW()
+            """, (
+                violation['notice_number'],
+                violation['address'],
+                violation['type'],
+                violation.get('district'),
+                violation['neighborhood'],
+                violation['date_notice'],
+                violation.get('pdf_url'),
+                violation.get('text_url')
+            ))
+        conn.commit()
+        return True
+    except Exception as e:
+        print(f"[warn] Database upsert failed for {violation.get('notice_number')}: {e}")
+        conn.rollback()
+        return False
 
 def parse_date(s: str) -> Optional[str]:
     s = (s or "").strip()
@@ -352,6 +410,13 @@ async def run(all_neighborhoods: bool,
     out_dir.mkdir(parents=True, exist_ok=True)
     csv_path = out_dir / "violations.csv"
 
+    # Initialize database connection
+    db_conn = get_db_connection()
+    if db_conn:
+        print("[info] Connected to PostgreSQL database")
+    else:
+        print("[warn] No database connection - data will only be saved to CSV")
+
     file_exists = csv_path.exists()
     csv_file = open(csv_path, "a", newline="", encoding="utf-8")
     writer = csv.writer(csv_file)
@@ -494,14 +559,39 @@ async def run(all_neighborhoods: bool,
                     continue
                 pdf_path = os.path.relpath(pdf_files[key].as_posix(), out_dir.as_posix()) if key in pdf_files else ""
                 text_path = os.path.relpath(text_files[key].as_posix(), out_dir.as_posix()) if key in text_files else ""
+                
+                # Write to CSV
                 writer.writerow([addr, typ, date_notice, notice_num, district, neighborhood, pdf_path, text_path])
                 csv_file.flush(); os.fsync(csv_file.fileno())
+                
+                # Write to database if connection available
+                if db_conn and notice_num:
+                    # Convert paths to URLs (relative to /violations/)
+                    pdf_url = f"/violations/{pdf_path.replace(os.sep, '/')}" if pdf_path else None
+                    text_url = f"/violations/{text_path.replace(os.sep, '/')}" if text_path else None
+                    
+                    violation = {
+                        'notice_number': notice_num,
+                        'address': addr or 'Unknown',
+                        'type': typ or 'Unknown',
+                        'district': district or None,
+                        'neighborhood': neighborhood,
+                        'date_notice': date_notice,
+                        'pdf_url': pdf_url,
+                        'text_url': text_url
+                    }
+                    upsert_violation(db_conn, violation)
+                
                 if key: existing_notices.add(key)
 
             await page.wait_for_timeout(300)
 
         await browser.close()
+    
     csv_file.close()
+    if db_conn:
+        db_conn.close()
+        print("[info] Database connection closed")
     print(f"\nDone. CSV: {csv_path}")
 
 if __name__ == "__main__":

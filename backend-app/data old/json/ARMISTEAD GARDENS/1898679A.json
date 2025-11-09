@@ -1,0 +1,16 @@
+{
+  "source_pdf": "C:\\Users\\kingl\\__code\\next-scraper\\backend-app\\data\\pdf\\ARMISTEAD GARDENS\\1898679A.pdf",
+  "neighborhood": "ARMISTEAD GARDENS",
+  "row": {
+    "address": "1230-1 HORNERS",
+    "type": "Exterior",
+    "date_notice": "2020-05-19",
+    "notice_number": "1898679A",
+    "district": "NORTHEAST",
+    "neighborhood_cell": "ARMISTEAD GARDENS"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "1898679A"
+  },
+  "has_text": true
+}

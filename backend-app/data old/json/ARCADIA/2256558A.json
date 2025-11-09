@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ARCADIA\\2256558A.pdf",
+  "neighborhood": "ARCADIA",
+  "row": {
+    "address": "4014 EIERMAN",
+    "type": "Interior",
+    "date_notice": "2023-07-07",
+    "notice_number": "2256558A",
+    "district": "NORTHEAST",
+    "neighborhood_cell": "ARCADIA"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2256558A"
+  },
+  "has_text": true
+}

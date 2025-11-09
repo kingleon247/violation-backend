@@ -1,0 +1,16 @@
+{
+  "source_pdf": "data\\pdf\\ALLENDALE\\2507650A.pdf",
+  "neighborhood": "ALLENDALE",
+  "row": {
+    "address": "505 DENISON",
+    "type": "Vacant",
+    "date_notice": "2025-05-10",
+    "notice_number": "2507650A",
+    "district": "SOUTHWEST",
+    "neighborhood_cell": "ALLENDALE"
+  },
+  "extracted_fields": {
+    "notice_number_from_pdf": "2507650A"
+  },
+  "has_text": true
+}
