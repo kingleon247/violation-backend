@@ -88,6 +88,7 @@ function runPython(
   const argv = (PY_VERSION ? [PY_VERSION, SCRAPER] : [SCRAPER]).concat(args);
 
   console.log(`[worker] spawn (cwd=${backendDir}): ${PY} ${argv.join(" ")}`);
+  console.log(`[worker] log file: ${logFile}`);
   logStream.write(`[worker] spawn: ${PY} ${argv.join(" ")}\n`);
 
   const child = spawn(PY, argv, {

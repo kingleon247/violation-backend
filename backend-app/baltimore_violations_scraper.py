@@ -378,8 +378,8 @@ async def run(all_neighborhoods: bool,
             viewport={"width": 1440, "height": 900}
         )
         page = await context.new_page()
-        page.set_default_timeout(8000)
-        page.set_default_navigation_timeout(10000)
+        page.set_default_timeout(10000)  # Increased from 8s to 10s for "See Notice" links
+        page.set_default_navigation_timeout(12000)  # Increased from 10s to 12s
 
         async def goto(url: str):
             await page.goto(url, timeout=60000)
