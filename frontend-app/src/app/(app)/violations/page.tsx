@@ -211,13 +211,16 @@ export default async function ViolationsPage(props: {
             <TableHeader>Date</TableHeader>
             <TableHeader>Neighborhood</TableHeader>
             <TableHeader>Address</TableHeader>
+            <TableHeader>Type</TableHeader>
+            <TableHeader>District</TableHeader>
+            <TableHeader>Text</TableHeader>
             <TableHeader>PDF</TableHeader>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.length === 0 ? (
             <TableRow>
-              <TableCell colSpan={5} className="text-zinc-500">
+              <TableCell colSpan={8} className="text-zinc-500">
                 No results.
               </TableCell>
             </TableRow>
@@ -230,9 +233,30 @@ export default async function ViolationsPage(props: {
                 </TableCell>
                 <TableCell>{v.neighborhood ?? "—"}</TableCell>
                 <TableCell>{v.address ?? "—"}</TableCell>
+                <TableCell>{v.type ?? "—"}</TableCell>
+                <TableCell>{v.district ?? "—"}</TableCell>
+                <TableCell>
+                  {v.textUrl ? (
+                    <Button
+                      href={v.textUrl}
+                      plain
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Open
+                    </Button>
+                  ) : (
+                    "—"
+                  )}
+                </TableCell>
                 <TableCell>
                   {v.pdfUrl ? (
-                    <Button href={v.pdfUrl} plain target="_blank">
+                    <Button
+                      href={v.pdfUrl}
+                      plain
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       Open
                     </Button>
                   ) : (

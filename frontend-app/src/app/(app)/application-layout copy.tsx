@@ -1,5 +1,3 @@
-// frontend-app/src/app/(app)/application-layout.tsx
-
 "use client";
 
 import { Avatar } from "@components/catalyst/avatar";
@@ -41,9 +39,6 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/16/solid";
 import {
-  DocumentTextIcon,
-  QueueListIcon,
-  PlusCircleIcon,
   Cog6ToothIcon,
   HomeIcon,
   QuestionMarkCircleIcon,
@@ -151,7 +146,6 @@ export function ApplicationLayout({
                 <HomeIcon />
                 <SidebarLabel>Home</SidebarLabel>
               </SidebarItem>
-
               <SidebarItem
                 href="/events"
                 current={pathname.startsWith("/events")}
@@ -159,7 +153,6 @@ export function ApplicationLayout({
                 <Square2StackIcon />
                 <SidebarLabel>Events</SidebarLabel>
               </SidebarItem>
-
               <SidebarItem
                 href="/orders"
                 current={pathname.startsWith("/orders")}
@@ -167,33 +160,6 @@ export function ApplicationLayout({
                 <TicketIcon />
                 <SidebarLabel>Orders</SidebarLabel>
               </SidebarItem>
-
-              {/* NEW: Violations top-level link */}
-              <SidebarItem
-                href="/violations"
-                current={pathname.startsWith("/violations")}
-              >
-                <DocumentTextIcon />
-                <SidebarLabel>Violations</SidebarLabel>
-              </SidebarItem>
-
-              {/* NEW: Scrape section */}
-              <SidebarHeading>Scrape</SidebarHeading>
-              <SidebarItem
-                href="/scrape/new"
-                current={pathname.startsWith("/scrape/new")}
-              >
-                <PlusCircleIcon />
-                <SidebarLabel>New Job</SidebarLabel>
-              </SidebarItem>
-              <SidebarItem
-                href="/scrape/jobs"
-                current={pathname.startsWith("/scrape/jobs")}
-              >
-                <QueueListIcon />
-                <SidebarLabel>Jobs</SidebarLabel>
-              </SidebarItem>
-
               <SidebarItem
                 href="/settings"
                 current={pathname.startsWith("/settings")}
